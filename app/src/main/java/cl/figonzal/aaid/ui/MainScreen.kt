@@ -1,5 +1,7 @@
 package cl.figonzal.aaid.ui
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -16,7 +18,10 @@ fun MainScreen(viewModel: AAIDViewModel) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            CardAAID(viewModel.aaid)
+            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
+            Column(verticalArrangement = Arrangement.Bottom) {
+                BannerView()
+            }
         }
     }
 }
@@ -31,6 +36,9 @@ fun PreviewMainScreen() {
             color = MaterialTheme.colorScheme.background
         ) {
             CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
+            Column(verticalArrangement = Arrangement.Bottom) {
+                BannerView()
+            }
         }
     }
 }

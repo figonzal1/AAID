@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">AAID</string>
 
     <string name="cd_icon_copy_content">Copy content</string>
     <string name="cd_background_image">Background image</string>
