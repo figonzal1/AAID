@@ -11,6 +11,9 @@ buildscript {
         //FIREBASE CRASHLYTICS
         classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.2")
 
+        //FIREBASE PERFORMANCE
+        classpath("com.google.firebase:perf-plugin:1.4.2")
+
         //Google maps secrets
         classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
     }

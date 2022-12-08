@@ -33,7 +33,7 @@
 
         <meta-data
             android:name="firebase_performance_collection_enabled"
-            android:value="false" /> <!-- TODO: Habilitar para produccion -->
+            android:value="true" /> <!-- TODO: Habilitar para produccion -->
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="true" />
