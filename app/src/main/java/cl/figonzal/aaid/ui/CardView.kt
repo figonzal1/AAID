@@ -20,6 +20,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.utils.Utils.copyToClipBoard
 import cl.figonzal.aaid.utils.Utils.shareAAID
@@ -96,12 +98,26 @@ private fun CardContent(aaid: String) {
 
 @Composable
 private fun ActionsButtons(context: Context, clipboardManager: ClipboardManager, aaid: String) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.End
-    ) {
-        ClipBoardButton(context, clipboardManager, aaid)
-        ShareButton(context, clipboardManager)
+    Row {
+
+        Box(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                modifier = Modifier.align(Alignment.BottomStart),
+                text = "v${BuildConfig.VERSION_NAME}",
+                style = MaterialTheme.typography.bodySmall,
+                fontSize = 10.sp,
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
+            )
+            Row(
+                modifier = Modifier.align(Alignment.BottomEnd),
+                verticalAlignment = Alignment.Bottom
+            ) {
+                ClipBoardButton(context, clipboardManager, aaid)
+                ShareButton(context, clipboardManager)
+            }
+        }
     }
 }
 
