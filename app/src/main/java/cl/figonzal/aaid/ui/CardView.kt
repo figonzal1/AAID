@@ -1,11 +1,11 @@
 package cl.figonzal.aaid.ui
 
 import android.content.Context
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentCopy
+import androidx.compose.material.icons.rounded.Help
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -29,7 +29,6 @@ import cl.figonzal.aaid.utils.Utils.shareAAID
 import cl.figonzal.aaid.utils.toast
 
 @Preview(showBackground = true)
-@Preview(uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun DefaultCardAAID() {
     CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
@@ -73,10 +72,34 @@ private fun CardContent(aaid: String) {
                 contentScale = ContentScale.Fit
             )
 
-            Text(
-                stringResource(R.string.cv_title),
-                style = MaterialTheme.typography.headlineMedium
-            )
+            Column {
+                Text(
+                    stringResource(R.string.cv_title),
+                    style = MaterialTheme.typography.headlineMedium
+                )
+                Text(
+                    text = "v${BuildConfig.VERSION_NAME}",
+                    style = MaterialTheme.typography.bodySmall,
+                    fontSize = 10.sp,
+                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
+                )
+            }
+
+            Column(
+                modifier = Modifier
+                    .align(Alignment.TopEnd),
+                verticalArrangement = Arrangement.Top
+            ) {
+
+                IconButton(
+                    onClick = {}
+                ) {
+                    Icon(
+                        imageVector = Icons.Rounded.Help,
+                        contentDescription = stringResource(R.string.cd_about_button)
+                    )
+                }
+            }
         }
 
         //Subtitle
@@ -101,26 +124,14 @@ private fun CardContent(aaid: String) {
 
 @Composable
 private fun ActionsButtons(context: Context, clipboardManager: ClipboardManager, aaid: String) {
-    Row {
 
-        Box(
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(
-                modifier = Modifier.align(Alignment.BottomStart),
-                text = "v${BuildConfig.VERSION_NAME}",
-                style = MaterialTheme.typography.bodySmall,
-                fontSize = 10.sp,
-                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
-            )
-            Row(
-                modifier = Modifier.align(Alignment.BottomEnd),
-                verticalAlignment = Alignment.Bottom
-            ) {
-                ClipBoardButton(context, clipboardManager, aaid)
-                ShareButton(context, clipboardManager, aaid)
-            }
-        }
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.End
+    ) {
+        ClipBoardButton(context, clipboardManager, aaid)
+        ShareButton(context, clipboardManager, aaid)
     }
 }
 

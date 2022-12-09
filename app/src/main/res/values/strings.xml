@@ -6,6 +6,7 @@
     <string name="btn_copy">Copy</string>
     <string name="cd_copy_btn">Copy ID button</string>
     <string name="cd_share_id_btn">Share ID button</string>
+    <string name="cd_about_button">About button</string>
     <string name="btn_share">Share</string>
     <string name="intent_chooser">Share AAID</string>
     <string name="cv_title">AAID</string>
