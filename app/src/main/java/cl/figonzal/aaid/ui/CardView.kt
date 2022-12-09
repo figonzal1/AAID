@@ -1,6 +1,7 @@
 package cl.figonzal.aaid.ui
 
 import android.content.Context
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -25,8 +26,10 @@ import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.utils.Utils.copyToClipBoard
 import cl.figonzal.aaid.utils.Utils.shareAAID
+import cl.figonzal.aaid.utils.toast
 
 @Preview(showBackground = true)
+@Preview(uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun DefaultCardAAID() {
     CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
@@ -115,7 +118,7 @@ private fun ActionsButtons(context: Context, clipboardManager: ClipboardManager,
                 verticalAlignment = Alignment.Bottom
             ) {
                 ClipBoardButton(context, clipboardManager, aaid)
-                ShareButton(context, clipboardManager)
+                ShareButton(context, clipboardManager, aaid)
             }
         }
     }
@@ -130,7 +133,10 @@ private fun ClipBoardButton(
 ) {
 
     Button(
-        onClick = { copyToClipBoard(context, clipboardManager, aaid) },
+        onClick = {
+            copyToClipBoard(clipboardManager, aaid)
+            context.toast(R.string.copy_to_clipboard)
+        },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
         modifier = Modifier.padding(end = 8.dp)
     ) {
@@ -143,10 +149,14 @@ private fun ClipBoardButton(
 @Composable
 private fun ShareButton(
     context: Context,
-    clipboardManager: ClipboardManager
+    clipboardManager: ClipboardManager,
+    aaid: String
 ) {
     Button(
-        onClick = { shareAAID(context, clipboardManager) },
+        onClick = {
+            copyToClipBoard(clipboardManager, aaid)
+            shareAAID(context, clipboardManager)
+        },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding
     ) {
         Icon(Icons.Rounded.Share, stringResource(R.string.cd_share_id_btn))

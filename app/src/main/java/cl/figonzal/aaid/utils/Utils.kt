@@ -9,12 +9,10 @@ import cl.figonzal.aaid.R
 object Utils {
 
     fun copyToClipBoard(
-        context: Context,
         clipboardManager: ClipboardManager,
         aaid: String
     ) {
         clipboardManager.setText(AnnotatedString(aaid))
-        context.toast(R.string.copy_to_clipboard)
     }
 
     fun shareAAID(
