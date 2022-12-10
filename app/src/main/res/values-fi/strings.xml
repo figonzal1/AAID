@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Kopioi sisältö</string>
+    <string name="cd_background_image">" Taustakuva"</string>
+    <string name="copy_to_clipboard">Kopioi leikepöydälle</string>
+    <string name="btn_copy">Kopio</string>
+    <string name="cd_copy_btn">Kopioi ID-painike</string>
+    <string name="cd_share_id_btn">Jaa ID-painike</string>
+    <string name="cd_about_button">Tietoja-painike</string>
+    <string name="btn_share">Jaa</string>
+    <string name="intent_chooser">Jaa AAID</string>
+    <string name="cv_subtitle">Tämän laitteen mainostunnus on:</string>
+</resources>

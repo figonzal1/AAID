@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Kopier indhold</string>
+    <string name="cd_background_image">Baggrundsbillede</string>
+    <string name="copy_to_clipboard">Kopier til udklipsholder</string>
+    <string name="btn_copy">Kopier</string>
+    <string name="cd_copy_btn">Kopier ID-knappen</string>
+    <string name="cd_share_id_btn">Del ID-knappen</string>
+    <string name="cd_about_button">Om knappen</string>
+    <string name="btn_share">Del</string>
+    <string name="intent_chooser">Del AAID</string>
+    <string name="cv_subtitle">Reklame-ID for denne enhed er:</string>
+</resources>

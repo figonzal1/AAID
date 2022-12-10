@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">İçeriği kopyala</string>
+    <string name="cd_background_image">Arka plan görüntüsü</string>
+    <string name="copy_to_clipboard">Panoya kopyala</string>
+    <string name="btn_copy">Anlaşıldı</string>
+    <string name="cd_copy_btn">Kimlik Kopyala düğmesi</string>
+    <string name="cd_share_id_btn">Kimlik Paylaş düğmesi</string>
+    <string name="cd_about_button">Düğme hakkında</string>
+    <string name="btn_share">Paylaş</string>
+    <string name="intent_chooser">AAID\'yi paylaşın</string>
+    <string name="cv_subtitle">Bu cihaz için reklam kimliği şöyledir:</string>
+</resources>

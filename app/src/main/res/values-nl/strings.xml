@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Inhoud kopiëren</string>
+    <string name="cd_background_image">Achtergrond afbeelding</string>
+    <string name="copy_to_clipboard">Kopieer naar klembord</string>
+    <string name="btn_copy">Kopiëren</string>
+    <string name="cd_copy_btn">Kopieer ID-knop</string>
+    <string name="cd_share_id_btn">Deel ID-knop</string>
+    <string name="cd_about_button">Over knop</string>
+    <string name="btn_share">Deel</string>
+    <string name="intent_chooser">AAID delen</string>
+    <string name="cv_subtitle">De advertentie-ID voor dit apparaat is:</string>
+</resources>

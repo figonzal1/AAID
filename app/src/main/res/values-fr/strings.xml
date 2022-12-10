@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Contenu de la copie</string>
+    <string name="cd_background_image">Image de fond</string>
+    <string name="copy_to_clipboard">Copier dans le presse-papiers</string>
+    <string name="btn_copy">Copie</string>
+    <string name="cd_copy_btn">Bouton Copie ID</string>
+    <string name="cd_share_id_btn">Bouton Partager ID</string>
+    <string name="cd_about_button">À propos du bouton</string>
+    <string name="btn_share">Partager</string>
+    <string name="intent_chooser">Partager aaid</string>
+    <string name="cv_subtitle">L\'ID publicitaire de ce dispositif est:</string>
+</resources>

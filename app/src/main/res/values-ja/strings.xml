@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">コピーコンテンツ</string>
+    <string name="cd_background_image">背景画像</string>
+    <string name="copy_to_clipboard">クリップボードにコピーする</string>
+    <string name="btn_copy">コピー</string>
+    <string name="cd_copy_btn">コピーIDボタン</string>
+    <string name="cd_share_id_btn">シェアIDボタン</string>
+    <string name="cd_about_button">ボタンについて</string>
+    <string name="btn_share">シェア</string>
+    <string name="intent_chooser">AAIDをシェアする</string>
+    <string name="cv_subtitle">このデバイスの広告IDは</string>
+</resources>

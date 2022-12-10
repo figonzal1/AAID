@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Kopiera innehåll</string>
+    <string name="cd_background_image">Bakgrundsbild</string>
+    <string name="copy_to_clipboard">Kopiera till urklipp</string>
+    <string name="btn_copy">Kopiera</string>
+    <string name="cd_copy_btn">Kopiera ID-knappen</string>
+    <string name="cd_share_id_btn">Dela ID-knappen</string>
+    <string name="cd_about_button">Om-knappen</string>
+    <string name="btn_share">Dela</string>
+    <string name="intent_chooser">Dela AAID</string>
+    <string name="cv_subtitle">Reklam-ID för den här enheten är:</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">复制内容</string>
+    <string name="cd_background_image">背景图片</string>
+    <string name="copy_to_clipboard">复制到剪贴板</string>
+    <string name="btn_copy">复制</string>
+    <string name="cd_copy_btn">复制 ID 按钮</string>
+    <string name="cd_share_id_btn">共享 ID 按钮</string>
+    <string name="cd_about_button">关于按钮</string>
+    <string name="btn_share">分享</string>
+    <string name="intent_chooser">分享AAID</string>
+    <string name="cv_subtitle">此设备的广告 ID 是：</string>
+</resources>

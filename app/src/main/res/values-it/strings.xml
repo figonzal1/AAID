@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_icon_copy_content">Copiare i contenuti</string>
+    <string name="cd_background_image">Immagine di sfondo</string>
+    <string name="copy_to_clipboard">Copia negli appunti</string>
+    <string name="btn_copy">Copia</string>
+    <string name="cd_copy_btn">Pulsante Copia ID</string>
+    <string name="cd_share_id_btn">Pulsante ID di condivisione</string>
+    <string name="cd_about_button">Informazioni sul pulsante</string>
+    <string name="btn_share">Condividi</string>
+    <string name="intent_chooser">Condividi AAID</string>
+    <string name="cv_subtitle">L\'ID pubblicitario di questo dispositivo è:</string>
+</resources>

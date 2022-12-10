@@ -1,14 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="cd_copy_btn">Copy ID button</string>
     <string name="cd_icon_copy_content">Copy content</string>
     <string name="cd_background_image">Background image</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="btn_copy">Copy</string>
-    <string name="cd_copy_btn">Copy ID button</string>
     <string name="cd_share_id_btn">Share ID button</string>
     <string name="cd_about_button">About button</string>
     <string name="btn_share">Share</string>
     <string name="intent_chooser">Share AAID</string>
-    <string name="cv_title" translatable="false">AAID</string>
     <string name="cv_subtitle">The advertising ID for this device is:</string>
 </resources>
