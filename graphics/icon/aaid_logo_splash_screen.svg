@@ -1,0 +1,572 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="512" width="512"
+    xmlns="http://www.w3.org/2000/svg">
+    <style>
+        <![CDATA[.B{fill:#b391d9}.C{fill:#aa81d9}.D{fill:#a375d9}.E{fill:#a478d9}.F{fill:#9964d8}.G{fill:#b594da}.H{fill:#9761d7}.I{fill:#945dd7}.J{fill:#a67bd9}.K{fill:#ac86da}.L{fill:#a77dd9}.M{fill:#935bd8}.N{fill:#a87ed9}.O{fill:#8e51d8}.P{fill:#9259d8}.Q{fill:#a070d8}.R{fill:#9256d8}.S{fill:#9660d7}.T{fill:#9053d8}.U{fill:#aa83d9}.V{fill:#925ad8}.W{fill:#a273d9}.X{fill:#955ed7}.Y{fill:#ab84da}.Z{fill:#a980d9}.a{fill:#bda1da}.b{fill:#9056d8}.c{fill:#b493d9}.d{fill:#8e50d7}.e{fill:#b99bda}.f{fill:#b898da}.g{fill:#9e6ad8}.h{fill:#9155d8}.i{fill:#a97fd9}.j{fill:#955dd7}.k{fill:#ae89da}.l{fill:#9d6bd8}.m{fill:#ac85da}.n{fill:#9e6cd8}.o{fill:#9e6dd8}.p{fill:#a77cd9}.q{fill:#a579d9}.r{fill:#9862d8}.s{fill:#ab82d9}.t{fill:#b799da}.u{fill:#9863d8}.v{fill:#b695da}.w{fill:#9d69d8}.x{fill:#965fd7}.y{fill:#b28eda}.z{fill:#a171d8}.AA{fill:#b18dda}.AB{fill:#af8ada}.AC{fill:#b99cda}.AD{fill:#a172d8}.AE{fill:#9f6ed8}.AF{fill:#bea5db}.AG{fill:#9b67d8}.AH{fill:#9a66d8}.AI{fill:#ae88da}.AJ{fill:#b797da}.AK{fill:#b696da}.AL{fill:#a377d9}.AM{fill:#b38fd9}.AN{fill:#8f52d8}.AO{fill:#9054d8}.AP{fill:#b08cda}.AQ{fill:#8e53d8}.AR{fill:#8d50d7}.AS{fill:#a476d9}.AT{fill:#dcdcdc}.AU{fill:#b08eda}.AV{fill:#9157d8}.AW{fill:#9c67d8}.AX{fill:#c0abdb}.AY{fill:#ad87da}.AZ{fill:#b290d9}.Aa{fill:#9a65d8}.Ab{fill:#9c6ad8}.Ac{fill:#a274d9}]]></style>
+    <path d="M0 0v512h512V0H0z" fill="#6712d4" />
+    <path class="B" d="M79.667 90.333c-.444.444.611.389.667.333.445-.445-.611-.389-.667-.333z" />
+    <path class="AT"
+        d="M121 188c-12.75 5.682-24.333 19.577-33.271 30-24.271 28.306-41.57 60.821-50.603 97-3.735 14.961-13.988 45.848 5.874 53.437 9.111 3.481 20.137-.46 24.427-9.437 3.494-7.311 2.919-18.003 4.576-26 3.127-15.096 7.945-30.153 14.753-44C117.511 226.445 177.679 184.767 247 178.17c71.551-6.809 146.059 37.793 179.691 99.83 10.423 19.227 18.235 40.357 21.719 62 1.855 11.518 1.142 24.411 14.59 28.775 11.213 3.639 22.279-3.366 24.38-14.775 2.398-13.013-3.185-29.4-6.25-42-8.495-34.924-26.568-66.836-49.859-94-9.201-10.73-20.529-23.496-33.271-30 3.741-7.328 9.897-13.569 14.997-20l25.214-32c4.856-6.168 11.572-12.451 14.179-20 6.215-17.993-13.727-32.842-29.3-21.891-6.247 4.392-10.633 11.963-15.301 17.891L380 147l-10.35 12.995c-1.486 1.871-3.11 4.523-5.74 4.764-2.362.217-4.892-1.511-6.91-2.512A188.68 188.68 0 0 0 343 156c-14.765-5.888-30.29-10.139-46-12.576-36.028-5.587-72.017-3.192-107 7.347-12.787 3.852-24.717 10.122-37 15.229-3.305-6.634-8.588-12.235-13.2-18l-21.4-27c-6.738-8.422-13.078-19.498-21.571-26.211C84.749 85.241 64.817 92.373 65.261 109c.29 10.869 9.242 19.016 15.529 27l26.861 34c4.533 5.856 9.974 11.386 13.35 18z" />
+    <path class="i" d="M87.667 90.333c-.444.444.611.389.667.333.445-.445-.611-.389-.667-.333z" />
+    <path class="a" d="M430.667 90.333c-.445.444.611.389.666.333.445-.444-.611-.389-.666-.333z" />
+    <use class="AU" xlink:href="#B" />
+    <path class="j" d="M76 91l1 1-1-1z" />
+    <path class="k" d="M91 91l1 1-1-1z" />
+    <path class="K" d="M427 91l1 1-1-1z" />
+    <path class="M" d="M442 91l1 1-1-1z" />
+    <path class="b" d="M74 92l1 1-1-1z" />
+    <path class="G" d="M93 92l1 1-1-1z" />
+    <path class="c" d="M425 92l1 1-1-1z" />
+    <path class="b" d="M444 92l1 1-1-1z" />
+    <path class="F" d="M95 93l1 1-1-1z" />
+    <path class="H" d="M423 93l1 1-1-1z" />
+    <path class="G" d="M96 94l1 1-1-1z" />
+    <path class="B" d="M422 94l1 1-1-1z" />
+    <path d="M99 97l1 1-1-1z" fill="#ad88da" />
+    <path class="K" d="M419 97l1 1-1-1z" />
+    <path class="S" d="M100 98l1 1-1-1z" />
+    <path class="I" d="M418 98l1 1-1-1z" />
+    <path class="AV" d="M67 99l1 1-1-1m384 0l1 1-1-1z" />
+    <path class="H" d="M66 101l1 1-1-1z" />
+    <path class="x" d="M452 101l1 1-1-1z" />
+    <path class="C" d="M103 102l1 1-1-1z" />
+    <path class="N" d="M415 102l1 1-1-1z" />
+    <path class="P" d="M104 103l1 1-1-1z" />
+    <path class="b" d="M414 103l1 1-1-1z" />
+    <path class="y"
+        d="M65.333 104.667c-.056.055-.111 1.111.333.666.055-.055.111-1.111-.333-.666z" />
+    <use class="G" xlink:href="#C" />
+    <path class="J" d="M107 107l1 1-1-1z" />
+    <path class="E" d="M411 107l1 1-1-1z" />
+    <path class="d" d="M108 108l1 1-1-1z" />
+    <use class="a" xlink:href="#D" />
+    <path class="e" d="M110 111l1 1-1-1z" />
+    <path class="f" d="M408 111l1 1-1-1z" />
+    <use fill="#bca2da" x="388" xlink:href="#D" />
+    <path class="z" d="M111 112l1 1-1-1z" />
+    <path class="Q" d="M407 112l1 1-1-1z" />
+    <path class="C" d="M66 116l1 1-1-1z" />
+    <path class="c" d="M114 116l1 1-1-1z" />
+    <path class="B" d="M404 116l1 1-1-1z" />
+    <path class="C" d="M452 116l1 1-1-1z" />
+    <path class="l" d="M115 117l1 1-1-1z" />
+    <path class="AW" d="M403 117l1 1-1-1z" />
+    <path class="k" d="M67 118l1 1-1-1z" />
+    <path d="M451 118l1 1-1-1z" fill="#b08bda" />
+    <path class="O" d="M68 120l1 1-1-1z" />
+    <path class="T" d="M450 120l1 1-1-1z" />
+    <path class="U" d="M69 121l1 1-1-1z" />
+    <path class="AA" d="M118 121l1 1-1-1z" />
+    <path class="k" d="M400 121l1 1-1-1z" />
+    <path class="K" d="M449 121l1 1-1-1z" />
+    <path class="F" d="M119 122l1 1-1-1z" />
+    <path class="H" d="M399 122l1 1-1-1m-327 3l1 1-1-1z" />
+    <path class="F" d="M446 125l1 1-1-1z" />
+    <path class="AB" d="M73 126l1 1-1-1z" />
+    <path class="m" d="M122 126l1 1-1-1z" />
+    <path class="U" d="M396 126l1 1-1-1z" />
+    <path class="AA" d="M445 126l1 1-1-1z" />
+    <path class="M" d="M123 127l1 1-1-1z" />
+    <path class="V" d="M395 127l1 1-1-1z" />
+    <path d="M76 130l1 1-1-1z" fill="#9c68d8" />
+    <path class="l" d="M442 130l1 1-1-1z" />
+    <path class="B" d="M77 131l1 1-1-1z" />
+    <path class="L" d="M126 131l1 1-1-1z" />
+    <path class="J" d="M392 131l1 1-1-1z" />
+    <path class="c" d="M441 131l1 1-1-1z" />
+    <path class="b" d="M127 132l1 1-1-1z" />
+    <path class="O" d="M391 132l1 1-1-1z" />
+    <path class="Q" d="M80 135l1 1-1-1z" />
+    <path class="AC" d="M389 135l1 1-1-1z" />
+    <path class="AD" d="M438 135l1 1-1-1z" />
+    <path class="f" d="M81 136l1 1-1-1z" />
+    <path class="E" d="M130 136l1 1-1-1z" />
+    <path class="W" d="M388 136l1 1-1-1z" />
+    <path class="e" d="M437 136l1 1-1-1z" />
+    <path class="d" d="M435 139l1 1-1-1z" />
+    <path class="E" d="M84 140l1 1-1-1z" />
+    <path class="f" d="M133 140l1 1-1-1z" />
+    <use class="X" xlink:href="#E" />
+    <use fill="#c0a9db" x="5" xlink:href="#E" />
+    <path d="M266 140c2.613 1.098 5.165.993 8 1-2.613-1.098-5.164-.993-8-1z" fill="#c5b1db" />
+    <use class="n" x="-163" y="50" xlink:href="#B" />
+    <use fill="#7f39d6" x="-160" y="50" xlink:href="#B" />
+    <path class="G" d="M385 140l1 1-1-1z" />
+    <path class="J" d="M434 140l1 1-1-1z" />
+    <path class="AE" d="M134 141l1 1-1-1z" />
+    <use fill="#8949d7" xlink:href="#F" />
+    <use class="J" x="2" xlink:href="#F" />
+    <use class="AF" x="4" xlink:href="#F" />
+    <use fill="#bca2da" x="52" xlink:href="#F" />
+    <use class="E" x="-153" y="51" xlink:href="#B" />
+    <path class="o" d="M384 141l1 1-1-1z" />
+    <use class="g" x="-6" y="1" xlink:href="#F" />
+    <use fill="#bfa7db" x="-4" y="1" xlink:href="#F" />
+    <use fill="#bda3da" x="-147" y="52" xlink:href="#B" />
+    <use fill="#8949d7" x="63" y="1" xlink:href="#F" />
+    <use class="o" x="-12" y="2" xlink:href="#F" />
+    <use fill="#c5b1db" x="-10" y="2" xlink:href="#F" />
+    <use fill="#b08bda" x="-140" y="53" xlink:href="#B" />
+    <path class="R" d="M87 144l1 1-1-1z" />
+    <use class="D" x="-17" y="3" xlink:href="#F" />
+    <use class="Q" x="-134" y="54" xlink:href="#B" />
+    <path class="P" d="M431 144l1 1-1-1z" />
+    <path class="N" d="M88 145l1 1-1-1z" />
+    <path class="B"
+        d="M137 145l1 1-1-1m72.667.333c-.445.445.611.389.666.334.445-.445-.611-.389-.666-.334z" />
+    <use class="H" x="78" y="4" xlink:href="#F" />
+    <path class="y" d="M381 145l1 1-1-1z" />
+    <path class="C" d="M430 145l1 1-1-1z" />
+    <path class="AG" d="M138 146l1 1-1-1z" />
+    <use fill="#bba1da" x="-25" y="5" xlink:href="#F" />
+    <use class="g" x="82" y="5" xlink:href="#F" />
+    <path class="F" d="M380 146l1 1-1-1z" />
+    <use class="a" x="-29" y="6" xlink:href="#F" />
+    <use class="AH" x="86" y="6" xlink:href="#F" />
+    <use class="B" x="-33" y="7" xlink:href="#F" />
+    <use class="d" x="90" y="7" xlink:href="#F" />
+    <path class="I" d="M91 149l1 1-1-1z" />
+    <use class="AX" x="-36" y="8" xlink:href="#F" />
+    <path class="S" d="M427 149l1 1-1-1z" />
+    <path class="K" d="M92 150l1 1-1-1z" />
+    <path class="AI" d="M141 150l1 1-1-1z" />
+    <path class="E" d="M327 150l1 1-1-1z" />
+    <path class="K" d="M377 150l1 1-1-1z" />
+    <path class="AI" d="M426 150l1 1-1-1z" />
+    <path class="H" d="M142 151l1 1-1-1z" />
+    <path class="L" d="M330 151l1 1-1-1z" />
+    <path class="I" d="M376 151l1 1-1-1z" />
+    <path class="Y" d="M185 152l1 1-1-1z" />
+    <path class="p" d="M333 152l1 1-1-1z" />
+    <path class="q" d="M182 153l1 1-1-1z" />
+    <path class="o" d="M336 153l1 1-1-1z" />
+    <path class="F" d="M95 154l1 1-1-1z" />
+    <path class="r" d="M179 154l1 1-1-1z" />
+    <path class="h" d="M339 154l1 1-1-1z" />
+    <path class="AG" d="M423 154l1 1-1-1z" />
+    <path class="AU" d="M96 155l1 1-1-1z" />
+    <path class="U" d="M145 155l1 1-1-1z" />
+    <path class="B" d="M177 155l1 1-1-1z" />
+    <path class="K" d="M341 155l1 1-1-1z" />
+    <path class="N" d="M373 155l1 1-1-1z" />
+    <path class="B" d="M422 155l1 1-1-1z" />
+    <path class="P" d="M146 156l1 1-1-1z" />
+    <path class="g" d="M174 156l1 1-1-1z" />
+    <path class="X" d="M344 156l1 1-1-1z" />
+    <path class="R" d="M372 156l1 1-1-1z" />
+    <path class="AU" d="M172 157l1 1-1-1z" />
+    <path class="s" d="M346 157l1 1-1-1z" />
+    <path class="R" d="M169 158l1 1-1-1z" />
+    <path class="n" d="M99 159l1 1-1-1z" />
+    <path class="AE" d="M167 159l1 1-1-1z" />
+    <path class="F" d="M351 159l1 1-1-1z" />
+    <path class="AE" d="M419 159l1 1-1-1z" />
+    <path class="G" d="M100 160l1 1-1-1z" />
+    <path class="J" d="M149 160l1 1-1-1z" />
+    <path class="Y" d="M165 160l1 1-1-1z" />
+    <path class="q" d="M353 160l1 1-1-1z" />
+    <path class="E" d="M369 160l1 1-1-1z" />
+    <path class="AJ" d="M418 160l1 1-1-1z" />
+    <path class="O" d="M150 161l1 1-1-1z" />
+    <path class="G" d="M163 161l1 1-1-1z" />
+    <path class="AY" d="M355 161l1 1-1-1z" />
+    <path class="c" d="M357 162l1 1-1-1z" />
+    <path class="AK" d="M359 163l1 1-1-1z" />
+    <path class="W" d="M103 164l1 1-1-1z" />
+    <path class="e" d="M152 164l1 1-1-1z" />
+    <path d="M361 164l1 1-1-1z" fill="#b698da" />
+    <path class="t" d="M366 164l1 1-1-1z" />
+    <path class="AL" d="M415 164l1 1-1-1z" />
+    <path class="e" d="M104 165l1 1-1-1z" />
+    <use fill="#803cd6" x="-77" y="24" xlink:href="#F" />
+    <path class="G" d="M363 165l1 1-1-1z" />
+    <path class="Q" d="M365 165l1 1-1-1z" />
+    <path class="O" d="M106 168l1 1-1-1z" />
+    <path class="h" d="M412 168l1 1-1-1z" />
+    <path class="J" d="M107 169l1 1-1-1z" />
+    <path class="L" d="M411 169l1 1-1-1z" />
+    <path class="P" d="M110 173l1 1-1-1z" />
+    <path class="M" d="M408 173l1 1-1-1z" />
+    <path class="U" d="M111 174l1 1-1-1z" />
+    <path class="m" d="M407 174l1 1-1-1z" />
+    <path class="H" d="M114 178l1 1-1-1z" />
+    <path class="e" d="M244 178c2.052.874 3.747.953 6 1-2.052-.874-3.747-.953-6-1z" />
+    <path class="V" d="M250 178c4.471 1.876 10.183 1 15 1-4.471-1.876-10.183-1-15-1z" />
+    <use class="q" x="26" y="38" xlink:href="#E" />
+    <use class="AC" x="-167" y="88" xlink:href="#B" />
+    <path class="u" d="M404 178l1 1-1-1z" />
+    <path class="AI" d="M115 179l1 1-1-1z" />
+    <use class="AF" x="-202" y="89" xlink:href="#B" />
+    <use fill="#945cd7" x="8" y="38" xlink:href="#F" />
+    <use fill="#8847d7" x="47" y="38" xlink:href="#F" />
+    <use class="D" x="-158" y="89" xlink:href="#B" />
+    <path class="AA" d="M403 179l1 1-1-1z" />
+    <use class="C" x="-208" y="90" xlink:href="#B" />
+    <use class="AW" x="56" y="39" xlink:href="#F" />
+    <use class="AX" x="58" y="39" xlink:href="#F" />
+    <use class="AM" x="-7" y="40" xlink:href="#F" />
+    <use fill="#8745d7" x="-5" y="40" xlink:href="#F" />
+    <use class="l" x="-145" y="91" xlink:href="#B" />
+    <use class="H" x="-11" y="41" xlink:href="#F" />
+    <use class="AZ" x="68" y="41" xlink:href="#F" />
+    <path class="AG" d="M118 183l1 1-1-1z" />
+    <use class="T" x="-15" y="42" xlink:href="#F" />
+    <use class="C" x="72" y="42" xlink:href="#F" />
+    <path class="l" d="M400 183l1 1-1-1z" />
+    <path class="B" d="M119 184l1 1-1-1z" />
+    <use fill="#8847d7" x="-19" y="43" xlink:href="#F" />
+    <use class="m" x="76" y="43" xlink:href="#F" />
+    <path class="c" d="M399 184l1 1-1-1z" />
+    <use class="r" x="-23" y="44" xlink:href="#F" />
+    <use fill="#b89ada" x="80" y="44" xlink:href="#F" />
+    <use fill="#8542d7" x="-26" y="45" xlink:href="#F" />
+    <path class="Q" d="M120 187l1 1-1-1z" />
+    <path class="J" d="M201 187l1 1-1-1z" />
+    <path class="L" d="M317 187l1 1-1-1z" />
+    <path class="F" d="M398 187l1 1-1-1z" />
+    <path class="J" d="M198 188l1 1-1-1z" />
+    <path class="N" d="M320 188l1 1-1-1z" />
+    <path d="M399 188l1 1-1-1z" fill="#b492d9" />
+    <path class="C" d="M195 189l1 1-1-1z" />
+    <path d="M323 189l1 1-1-1z" fill="#af8bda" />
+    <path class="h" d="M116 190l1 1-1-1z" />
+    <path class="AN" d="M193 190l1 1-1-1z" />
+    <path class="AO" d="M325 190l1 1-1-1z" />
+    <path class="p" d="M115 191l1 1-1-1z" />
+    <path class="z" d="M190 191l1 1-1-1z" />
+    <path class="D" d="M328 191l1 1-1-1z" />
+    <path class="g" d="M403 191l1 1-1-1z" />
+    <path class="v" d="M187 192l1 1-1-1z" />
+    <path class="T" d="M330 192l1 1-1-1z" />
+    <path class="AM" d="M404 192l1 1-1-1z" />
+    <path class="N" d="M185 193l1 1-1-1z" />
+    <path class="AP" d="M333 193l1 1-1-1z" />
+    <path class="Aa" d="M183 194l1 1-1-1z" />
+    <path class="AE" d="M335 194l1 1-1-1z" />
+    <path class="b" d="M110 195l1 1-1-1z" />
+    <path class="AO" d="M337 195l1 1-1-1z" />
+    <path class="Q" d="M109 196l1 1-1-1z" />
+    <path class="AC" d="M178 196l1 1-1-1z" />
+    <path class="F" d="M409 196l1 1-1-1z" />
+    <path class="AB" d="M108 197l1 1-1-1z" />
+    <path class="t" d="M176 197l1 1-1-1z" />
+    <path d="M410 197l1 1-1-1z" fill="#a57ad9" />
+    <path class="AJ" d="M174 198l1 1-1-1z" />
+    <path class="AM" d="M411 198l1 1-1-1z" />
+    <path class="G" d="M172 199l1 1-1-1z" />
+    <path class="h" d="M349 201l1 1-1-1z" />
+    <path class="I" d="M167 202l1 1-1-1z" />
+    <path class="Ab" d="M351 202l1 1-1-1z" />
+    <path d="M165 203l1 1-1-1z" fill="#aa80d9" />
+    <path class="y" d="M353 203l1 1-1-1z" />
+    <path class="h" d="M354 204l1 1-1-1z" />
+    <path class="R" d="M159 208l1 1-1-1z" />
+    <path class="b" d="M359 208l1 1-1-1z" />
+    <path class="M" d="M157 209l1 1-1-1z" />
+    <path class="j" d="M361 209l1 1-1-1z" />
+    <path d="M154 210l1 1-1-1z" fill="#ac85d9" />
+    <path class="AK" d="M364 210l1 1-1-1z" />
+    <path class="f" d="M152 211l1 1-1-1z" />
+    <path class="M" d="M151 212l1 1-1-1z" />
+    <path class="w" d="M367 212l1 1-1-1z" />
+    <path class="D" d="M148 214l1 1-1-1z" />
+    <path class="AA" d="M370 214l1 1-1-1z" />
+    <path class="R" d="M371 215l1 1-1-1z" />
+    <path class="AJ" d="M88 217l1 1-1-1z" />
+    <path class="Q" d="M144 217l1 1-1-1z" />
+    <path class="L" d="M374 217l1 1-1-1z" />
+    <path class="AP" d="M430 217l1 1-1-1z" />
+    <path class="C" d="M87 218l1 1-1-1z" />
+    <path class="O" d="M375 218l1 1-1-1z" />
+    <path class="D" d="M431 218l1 1-1-1z" />
+    <path class="w" d="M86 219l1 1-1-1z" />
+    <path class="X" d="M432 219l1 1-1-1z" />
+    <path class="AI" d="M140 220l1 1-1-1z" />
+    <path class="t" d="M378 220l1 1-1-1z" />
+    <path class="F" d="M139 221l1 1-1-1z" />
+    <path class="D" d="M379 221l1 1-1-1z" />
+    <path class="O" d="M380 222l1 1-1-1z" />
+    <path class="B" d="M82 224l1 1-1-1z" />
+    <path class="AY" d="M436 224l1 1-1-1z" />
+    <path class="AH" d="M81 225l1 1-1-1z" />
+    <path class="B" d="M134 225l1 1-1-1z" />
+    <path class="u" d="M437 225l1 1-1-1z" />
+    <path class="E" d="M133 226l1 1-1-1z" />
+    <path class="B" d="M385 226l1 1-1-1z" />
+    <path class="F" d="M132 227l1 1-1-1z" />
+    <path class="E" d="M386 227l1 1-1-1z" />
+    <path class="T" d="M131 228l1 1-1-1z" />
+    <path class="H" d="M387 228l1 1-1-1z" />
+    <path class="K" d="M78 229l1 1-1-1z" />
+    <path class="AQ" d="M388 229l1 1-1-1z" />
+    <path class="K" d="M440 229l1 1-1-1z" />
+    <path class="M" d="M77 230l1 1-1-1z" />
+    <path class="V" d="M441 230l1 1-1-1z" />
+    <path class="v" d="M75 233l1 1-1-1z" />
+    <path class="y" d="M443 233l1 1-1-1z" />
+    <path class="S" d="M74 234l1 1-1-1z" />
+    <path class="M" d="M444 234l1 1-1-1z" />
+    <path class="C" d="M72 237l1 1-1-1z" />
+    <path class="E" d="M446 237l1 1-1-1z" />
+    <path class="G" d="M70 240l1 1-1-1z" />
+    <path class="AR" d="M119 240l1 1-1-1z" />
+    <path class="T" d="M399 240l1 1-1-1z" />
+    <path class="AB" d="M448 240l1 1-1-1z" />
+    <path class="AQ" d="M69 241l1 1-1-1z" />
+    <path class="P" d="M118 241l1 1-1-1z" />
+    <path class="AH" d="M400 241l1 1-1-1z" />
+    <path class="w" d="M117 242l1 1-1-1z" />
+    <path class="D" d="M401 242l1 1-1-1z" />
+    <path class="v" d="M68 243l1 1-1-1z" />
+    <path class="C" d="M116 243l1 1-1-1z" />
+    <path class="AP" d="M402 243l1 1-1-1z" />
+    <path class="B" d="M450 243l1 1-1-1z" />
+    <path class="AQ" d="M67 244l1 1-1-1z" />
+    <path class="AJ" d="M115 244l1 1-1-1z" />
+    <path class="AP" d="M66 246l1 1-1-1z" />
+    <path class="K" d="M452 246l1 1-1-1z" />
+    <use class="Z" x="-54" y="107" xlink:href="#F" />
+    <path class="AT"
+        d="M178 248.465c-3.913.687-7.735 2.044-10.999 4.335-23.155 16.252-8.511 54.832 19.999 49.735 3.915-.699 7.73-2.04 10.999-4.335 23.217-16.295 8.544-54.745-19.999-49.735z" />
+    <use class="a" x="-252" y="158" xlink:href="#B" />
+    <use class="i" x="98" y="107" xlink:href="#F" />
+    <path class="AT"
+        d="M330 248.465c-3.913.687-7.735 2.044-10.999 4.335-23.155 16.252-8.511 54.832 19.999 49.735 3.915-.699 7.73-2.04 10.999-4.335 23.184-16.272 8.53-54.743-19.999-49.735z" />
+    <use class="a" x="-100" y="158" xlink:href="#B" />
+    <path class="V" d="M406 248l1 1-1-1z" />
+    <path class="E" d="M64 249l1 1-1-1z" />
+    <path class="q" d="M111 249l1 1-1-1z" />
+    <path class="W" d="M173 249l1 1-1-1z" />
+    <path class="D" d="M191 249l1 1-1-1z" />
+    <path class="AD" d="M325 249l1 1-1-1z" />
+    <path class="Ac" d="M343 249l1 1-1-1z" />
+    <path class="L" d="M407 249l1 1-1-1z" />
+    <path d="M454 249l1 1-1-1z" fill="#a071d8" />
+    <path class="T" d="M62 252l1 1-1-1z" />
+    <path class="Z" d="M167 252l1 1-1-1z" />
+    <path class="C" d="M197 252l1 1-1-1z" />
+    <path class="i" d="M319 252l1 1-1-1z" />
+    <path class="C" d="M349 252l1 1-1-1z" />
+    <path class="d" d="M456 252l1 1-1-1z" />
+    <path class="P" d="M108 253l1 1-1-1z" />
+    <path d="M410 253l1 1-1-1z" fill="#935ad8" />
+    <path class="q" d="M61 254l1 1-1-1z" />
+    <path class="s" d="M107 254l1 1-1-1z" />
+    <path class="AR" d="M200 254l1 1-1-1z" />
+    <path class="k" d="M411 254l1 1-1-1z" />
+    <path class="z" d="M457 254l1 1-1-1z" />
+    <path class="j" d="M163 255l1 1-1-1z" />
+    <path class="S" d="M201 255l1 1-1-1z" />
+    <path class="x" d="M315 255l1 1-1-1z" />
+    <path class="j" d="M353 255l1 1-1-1z" />
+    <path class="AK" d="M60 256l1 1-1-1z" />
+    <path class="X" d="M162 256l1 1-1-1m40 0l1 1-1-1m112 0l1 1-1-1m40 0l1 1-1-1z" />
+    <path class="G" d="M458 256l1 1-1-1z" />
+    <path d="M105 257l1 1-1-1z" fill="#945cd7" />
+    <path class="d" d="M203 257l1 1-1-1z" />
+    <path class="V" d="M413 257l1 1-1-1z" />
+    <path d="M104 258l1 1-1-1z" fill="#b492d9" />
+    <path class="B" d="M414 258l1 1-1-1z" />
+    <path class="R" d="M58 259l1 1-1-1z" />
+    <path class="AN" d="M460 259l1 1-1-1z" />
+    <path class="C" d="M159 260l1 1-1-1z" />
+    <path class="s" d="M205 260l1 1-1-1z" />
+    <path class="N" d="M311 260l1 1-1-1z" />
+    <path class="Z" d="M357 260l1 1-1-1z" />
+    <path class="Ab" d="M57 261l1 1-1-1z" />
+    <path class="Ac" d="M102 261l1 1-1-1z" />
+    <path class="E" d="M416 261l1 1-1-1z" />
+    <path d="M461 261l1 1-1-1z" fill="#9c68d8" />
+    <path class="E" d="M56 263l1 1-1-1z" />
+    <path class="W" d="M462 263l1 1-1-1z" />
+    <path class="n" d="M100 264l1 1-1-1z" />
+    <path d="M418 264l1 1-1-1z" fill="#a071d8" />
+    <path class="N" d="M55 265l1 1-1-1z" />
+    <path class="p" d="M463 265l1 1-1-1z" />
+    <path class="Ac" d="M156 266l1 1-1-1z" />
+    <path class="D" d="M208 266l1 1-1-1z" />
+    <path class="z" d="M308 266l1 1-1-1z" />
+    <path class="W" d="M360 266l1 1-1-1z" />
+    <path class="U" d="M54 267l1 1-1-1z" />
+    <path class="AS" d="M98 267l1 1-1-1z" />
+    <path class="J" d="M420 267l1 1-1-1z" />
+    <path class="i" d="M464 267l1 1-1-1m-411 2l1 1-1-1z" />
+    <use class="Z" x="-298" y="165" xlink:href="#C" />
+    <use class="U" x="-244" y="165" xlink:href="#C" />
+    <use class="p" x="-146" y="165" xlink:href="#C" />
+    <use class="N" x="-92" y="165" xlink:href="#C" />
+    <path class="L" d="M465 269l1 1-1-1z" />
+    <path class="G" d="M96 270l1 1-1-1m326 0l1 1-1-1z" />
+    <path class="J" d="M52 271l1 1-1-1z" />
+    <path class="E" d="M466 271l1 1-1-1z" />
+    <path class="o" d="M95 272l1 1-1-1z" />
+    <path class="w" d="M423 272l1 1-1-1z" />
+    <path class="n" d="M51 273l1 1-1-1z" />
+    <path class="g" d="M467 273l1 1-1-1z" />
+    <path class="j" d="M50 275l1 1-1-1z" />
+    <path class="e" d="M93 275l1 1-1-1z" />
+    <path class="f" d="M425 275l1 1-1-1z" />
+    <path class="I" d="M468 275l1 1-1-1z" />
+    <path class="L" d="M92 277l1 1-1-1z" />
+    <path class="m" d="M426 277l1 1-1-1z" />
+    <path class="Ab" d="M91 279l1 1-1-1z" />
+    <use class="Z" x="90" y="168" xlink:href="#D" />
+    <use class="L" x="242" y="168" xlink:href="#D" />
+    <use class="i" x="296" y="168" xlink:href="#D" />
+    <path class="AL" d="M427 279l1 1-1-1z" />
+    <path class="Y" d="M48 280l1 1-1-1z" />
+    <use fill="#935ad8" x="-244" y="176" xlink:href="#C" />
+    <path class="Y" d="M470 280l1 1-1-1z" />
+    <path class="I" d="M90 281l1 1-1-1z" />
+    <path class="AG" d="M428 281l1 1-1-1z" />
+    <path class="Aa" d="M47 282l1 1-1-1z" />
+    <path class="u" d="M471 282l1 1-1-1z" />
+    <path class="AO" d="M89 283l1 1-1-1z" />
+    <path class="R" d="M429 283l1 1-1-1z" />
+    <path class="D" d="M156 284l1 1-1-1z" />
+    <path class="AS" d="M208 284l1 1-1-1z" />
+    <path class="AD" d="M308 284l1 1-1-1z" />
+    <path class="W" d="M360 284l1 1-1-1z" />
+    <path class="B" d="M46 285l1 1-1-1z" />
+    <path class="R" d="M88 285l1 1-1-1z" />
+    <path class="I" d="M430 285l1 1-1-1z" />
+    <path class="B" d="M472 285l1 1-1-1z" />
+    <path class="AH" d="M45 287l1 1-1-1z" />
+    <path class="H" d="M87 287l1 1-1-1z" />
+    <path class="F" d="M431 287l1 1-1-1m42 0l1 1-1-1z" />
+    <path class="g" d="M86 289l1 1-1-1z" />
+    <path class="n" d="M432 289l1 1-1-1z" />
+    <path class="C" d="M44 290l1 1-1-1z" />
+    <path class="s" d="M159 290l1 1-1-1z" />
+    <path class="Y" d="M205 290l1 1-1-1z" />
+    <path class="Z" d="M311 290l1 1-1-1z" />
+    <path class="C" d="M357 290l1 1-1-1z" />
+    <path class="s" d="M474 290l1 1-1-1z" />
+    <path class="D" d="M85 291l1 1-1-1m348 0l1 1-1-1z" />
+    <path class="B" d="M43 293l1 1-1-1z" />
+    <path class="k" d="M84 293l1 1-1-1z" />
+    <path class="O" d="M161 293l1 1-1-1z" />
+    <path class="T" d="M203 293l1 1-1-1z" />
+    <path class="d" d="M355 293l1 1-1-1z" />
+    <path class="AM" d="M434 293l1 1-1-1z" />
+    <path class="B" d="M475 293l1 1-1-1z" />
+    <path class="X" d="M162 294l1 1-1-1m40 0l1 1-1-1m112 0l1 1-1-1m40 0l1 1-1-1z" />
+    <path class="P" d="M42 295l1 1-1-1z" />
+    <path class="S" d="M163 295l1 1-1-1z" />
+    <path class="r" d="M201 295l1 1-1-1z" />
+    <path class="H" d="M315 295l1 1-1-1z" />
+    <path class="S" d="M353 295l1 1-1-1z" />
+    <path class="P" d="M476 295l1 1-1-1z" />
+    <path class="AR" d="M164 296l1 1-1-1z" />
+    <path class="AN" d="M200 296l1 1-1-1z" />
+    <path class="O" d="M316 296l1 1-1-1z" />
+    <path class="AR" d="M352 296l1 1-1-1z" />
+    <path class="V" d="M435 296l1 1-1-1z" />
+    <path class="AV" d="M41 298l1 1-1-1z" />
+    <path class="W" d="M82 298l1 1-1-1z" />
+    <path class="m" d="M167 298l1 1-1-1z" />
+    <path class="Y" d="M197 298l1 1-1-1z" />
+    <path d="M319 298l1 1-1-1z" fill="#ab85da" />
+    <path class="K" d="M349 298l1 1-1-1z" />
+    <path class="E" d="M436 298l1 1-1-1z" />
+    <path class="V" d="M477 298l1 1-1-1z" />
+    <path d="M81 300l1 1-1-1z" fill="#b698da" />
+    <path class="t" d="M437 300l1 1-1-1z" />
+    <use class="AZ" xlink:href="#G" />
+    <path class="D" d="M173 301l1 1-1-1z" />
+    <path class="AL" d="M191 301l1 1-1-1z" />
+    <path class="D" d="M325 301l1 1-1-1z" />
+    <path class="AS" d="M343 301l1 1-1-1z" />
+    <use class="B" x="25" y="197" xlink:href="#C" />
+    <path class="C" d="M176 302c1.248.685 1.549.749 3 1-1.248-.685-1.548-.749-3-1z" />
+    <use class="I" x="-43" y="161" xlink:href="#F" />
+    <use class="C" x="-109" y="212" xlink:href="#B" />
+    <use class="I" x="109" y="161" xlink:href="#F" />
+    <path class="p" d="M80 303l1 1-1-1z" />
+    <path class="J" d="M438 303l1 1-1-1z" />
+    <path class="l" d="M79 306l1 1-1-1z" />
+    <path class="w" d="M439 306l1 1-1-1z" />
+    <use class="f" x="-2" y="7" xlink:href="#G" />
+    <use fill="#b89bda" x="27" y="204" xlink:href="#C" />
+    <path class="u" d="M78 309l1 1-1-1z" />
+    <path class="H" d="M440 309l1 1-1-1z" />
+    <use class="AF" x="-3" y="11" xlink:href="#G" />
+    <path class="Aa" d="M77 312l1 1-1-1z" />
+    <path class="F" d="M441 312l1 1-1-1z" />
+    <use fill="#bfa7db" x="28" y="208" xlink:href="#C" />
+    <use fill="#7f38d6" xlink:href="#H" />
+    <path class="D" d="M442 315l1 1-1-1z" />
+    <use fill="#bda5db" x="-4" y="15" xlink:href="#G" />
+    <use class="AF" x="29" y="212" xlink:href="#C" />
+    <use class="X" x="-1" y="3" xlink:href="#H" />
+    <use class="h" x="-10" y="214" xlink:href="#C" />
+    <use class="B" x="-5" y="19" xlink:href="#G" />
+    <use class="G" x="30" y="216" xlink:href="#C" />
+    <use class="AN" x="-2" y="7" xlink:href="#H" />
+    <use fill="#8a4ad7" x="-9" y="218" xlink:href="#C" />
+    <use class="Q" x="-6" y="23" xlink:href="#G" />
+    <use class="AD" x="31" y="220" xlink:href="#C" />
+    <use class="AQ" x="-3" y="11" xlink:href="#H" />
+    <use class="O" x="-8" y="222" xlink:href="#C" />
+    <use class="r" x="-7" y="28" xlink:href="#G" />
+    <use class="F" x="32" y="225" xlink:href="#C" />
+    <use class="o" x="-4" y="15" xlink:href="#H" />
+    <use class="AW" x="-7" y="226" xlink:href="#C" />
+    <use class="AX" x="-7" y="30" xlink:href="#G" />
+    <use fill="#c1acdb" x="32" y="227" xlink:href="#C" />
+    <use class="v" x="382" y="223" xlink:href="#D" />
+    <use class="X" x="-8" y="34" xlink:href="#G" />
+    <use class="D" x="6" y="224" xlink:href="#D" />
+    <use class="H" x="33" y="231" xlink:href="#C" />
+    <use class="t" x="-33" y="226" xlink:href="#D" />
+    <use class="AC" x="33" y="233" xlink:href="#C" />
+    <use class="AK" x="5" y="229" xlink:href="#D" />
+    <use class="c" x="383" y="229" xlink:href="#D" />
+    <use class="AO" x="-9" y="41" xlink:href="#G" />
+    <use class="AV" x="34" y="238" xlink:href="#C" />
+    <use fill="#823ed6" x="-6" y="28" xlink:href="#H" />
+    <use fill="#803cd6" x="-5" y="239" xlink:href="#C" />
+    <use class="Z" x="-34" y="233" xlink:href="#D" />
+    <use class="U" x="422" y="233" xlink:href="#D" />
+    <use class="a" x="4" y="236" xlink:href="#D" />
+    <use fill="#bb9eda" x="-4" y="243" xlink:href="#C" />
+    <use class="AS" x="384" y="238" xlink:href="#D" />
+    <use class="F" x="4" y="239" xlink:href="#D" />
+    <use class="G" x="-34" y="242" xlink:href="#D" />
+    <use class="v" x="422" y="242" xlink:href="#D" />
+    <path class="E" d="M68 356l1 1-1-1z" />
+    <path class="D" d="M450 356l1 1-1-1z" />
+    <path class="H" d="M32 358l1 1-1-1m454 0l1 1-1-1z" />
+    <path class="M" d="M33 360l1 1-1-1z" />
+    <path class="S" d="M485 360l1 1-1-1z" />
+    <path class="r" d="M65 362l1 1-1-1z" />
+    <path class="M" d="M453 362l1 1-1-1z" />
+    <path class="C" d="M64 363l1 1-1-1m390 0l1 1-1-1z" />
+    <path class="AB" d="M63 364l1 1-1-1z" />
+    <path class="AY" d="M455 364l1 1-1-1z" />
+    <path class="AL" d="M62 365l1 1-1-1z" />
+    <path class="D" d="M456 365l1 1-1-1z" />
+    <path class="I" d="M40 367l1 1-1-1z" />
+    <path d="M59 367l1 1-1-1z" fill="#ab85da" />
+    <path class="Y" d="M459 367l1 1-1-1z" />
+    <path class="I" d="M478 367l1 1-1-1z" />
+    <path class="x" d="M42 368l1 1-1-1z" />
+    <path class="N" d="M57 368l1 1-1-1z" />
+    <path class="L" d="M461 368l1 1-1-1z" />
+    <path class="x" d="M476 368l1 1-1-1z" />
+    <path class="AZ" d="M45.667 369.333c-.444.445.611.389.667.334.444-.445-.611-.389-.667-.334z" />
+    <path class="D" d="M53.667 369.333c-.444.445.611.389.667.334.444-.445-.611-.389-.667-.334z" />
+    <use fill="#ba9eda" x="234" y="228" xlink:href="#F" />
+    <use class="u" x="242" y="228" xlink:href="#F" />
+    <defs>
+        <path d="M437 90c1.248.685 1.548.749 3 1-1.248-.685-1.548-.749-3-1z" id="B" />
+        <path d="M453.333 104.667c-.055.055-.111 1.111.334.666.055-.055.111-1.111-.334-.666z"
+            id="C" />
+        <path d="M65 111v3c.696-1.554.696-1.446 0-3z" id="D" />
+        <path d="M239 140c1.769.779 3.036.912 5 1-1.769-.779-3.036-.912-5-1z" id="E" />
+        <path d="M230.667 141.333c-.445.445.611.389.666.334.445-.445-.611-.389-.666-.334z" id="F" />
+        <path d="M40.333 301.667c-.056.055-.111 1.111.333.666.056-.055.111-1.111-.333-.666z"
+            id="G" />
+        <path d="M76.333 315.667c-.055.055-.111 1.111.333.666.056-.055.111-1.111-.333-.666z"
+            id="H" />
+    </defs>
+</svg>
