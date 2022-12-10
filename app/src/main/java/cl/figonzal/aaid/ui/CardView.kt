@@ -1,6 +1,7 @@
 package cl.figonzal.aaid.ui
 
 import android.content.Context
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -29,6 +30,7 @@ import cl.figonzal.aaid.utils.Utils.shareAAID
 import cl.figonzal.aaid.utils.toast
 
 @Preview(showBackground = true)
+@Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun DefaultCardAAID() {
     CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
