@@ -42,6 +42,18 @@ android {
     }
 
     buildTypes {
+
+        getByName("debug") {
+            isDebuggable = true
+            isMinifyEnabled = false
+            versionNameSuffix = "-debug"
+            applicationIdSuffix = ".debug"
+            signingConfig = signingConfigs.getByName("debug")
+
+            resValue("string", "app_name", "AAID-debug")
+            resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-3940256099942544/6300978111")
+        }
+
         getByName("release") {
             isMinifyEnabled = true
             isDebuggable = false
@@ -49,15 +61,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
             signingConfig = signingConfigs.getByName("aaidsign")
+
             resValue("string", "app_name", "AAID")
-        }
-        getByName("debug") {
-            isDebuggable = true
-            isMinifyEnabled = false
-            versionNameSuffix = "-debug"
-            resValue("string", "app_name", "AAID-debug")
-            applicationIdSuffix = ".debug"
-            signingConfig = signingConfigs.getByName("debug")
+            resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-6355378855577476/1471561473")
         }
     }
     compileOptions {
