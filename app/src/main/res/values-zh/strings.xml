@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cd_icon_copy_content">复制内容</string>
     <string name="cd_background_image">背景图片</string>
     <string name="copy_to_clipboard">复制到剪贴板</string>
     <string name="btn_copy">复制</string>

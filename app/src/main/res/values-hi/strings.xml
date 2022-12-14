@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cd_icon_copy_content">कॉपी सामग्री</string>
     <string name="cd_background_image">पृष्ठभूमि छवि</string>
     <string name="copy_to_clipboard">क्लिपबोर्ड पर कॉपी करें</string>
     <string name="btn_copy">प्रतिलिपि</string>

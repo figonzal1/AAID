@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cd_icon_copy_content">Kopioi sisältö</string>
     <string name="cd_background_image">" Taustakuva"</string>
     <string name="copy_to_clipboard">Kopioi leikepöydälle</string>
     <string name="btn_copy">Kopio</string>

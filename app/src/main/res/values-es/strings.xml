@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cd_copy_btn">Botón copiar ID</string>
-    <string name="cd_icon_copy_content">Copiar contenido</string>
     <string name="cd_background_image">Imagen de fondo</string>
     <string name="copy_to_clipboard">Copiado al portapapeles</string>
     <string name="btn_copy">Copiar</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cd_icon_copy_content">Inhoud kopiëren</string>
     <string name="cd_background_image">Achtergrond afbeelding</string>
     <string name="copy_to_clipboard">Kopieer naar klembord</string>
     <string name="btn_copy">Kopiëren</string>

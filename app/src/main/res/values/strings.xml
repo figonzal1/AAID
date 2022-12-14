@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="cd_icon_copy_content">Copy content</string>
     <string name="cd_background_image">Background image</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="btn_copy">Copy</string>
