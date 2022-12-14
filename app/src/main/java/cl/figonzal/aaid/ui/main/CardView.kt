@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.utils.Utils.copyToClipBoard
-import cl.figonzal.aaid.utils.Utils.shareAAID
+import cl.figonzal.aaid.utils.copyToClipBoard
+import cl.figonzal.aaid.utils.shareAAID
 import cl.figonzal.aaid.utils.toast
 
 @Preview(showBackground = true)
@@ -174,7 +174,7 @@ private fun ShareButton(
     Button(
         onClick = {
             copyToClipBoard(clipboardManager, aaid)
-            shareAAID(context, clipboardManager)
+            context.shareAAID(clipboardManager)
         },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding
     ) {

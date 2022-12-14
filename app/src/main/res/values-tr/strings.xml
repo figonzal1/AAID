@@ -19,4 +19,5 @@
     <string name="email_chooser_title">İle e-posta gönder:</string>
     <string name="email_intent_fail">Bizimle iletişime geçmek için herhangi bir e-posta uygulamanız yok</string>
     <string name="cd_about">Hakkında bölümü</string>
+    <string name="cd_navigate_up">Yukarı git</string>
 </resources>

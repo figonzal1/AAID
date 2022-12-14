@@ -19,4 +19,5 @@
     <string name="email_chooser_title">Skicka e-post med:</string>
     <string name="email_intent_fail">Du har ingen e-postapp för att kontakta oss</string>
     <string name="cd_about">Om avsnitt</string>
+    <string name="cd_navigate_up">Navigera upp</string>
 </resources>

@@ -19,4 +19,5 @@
     <string name="email_chooser_title">发送电子邮件：</string>
     <string name="email_intent_fail">您没有任何电子邮件应用程序可以联系我们</string>
     <string name="cd_about">关于部分</string>
+    <string name="cd_navigate_up">向上导航</string>
 </resources>

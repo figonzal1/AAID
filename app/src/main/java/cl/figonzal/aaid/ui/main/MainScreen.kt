@@ -18,7 +18,7 @@ fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1", onSettingsClick)
+            CardAAID(viewModel.aaid, onSettingsClick)
             Column(verticalArrangement = Arrangement.Bottom) {
                 BannerView()
             }

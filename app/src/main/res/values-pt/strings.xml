@@ -19,4 +19,5 @@
     <string name="email_chooser_title">Enviar e-mail com:</string>
     <string name="email_intent_fail">Você não tem nenhum aplicativo de e-mail para entrar em contato conosco</string>
     <string name="cd_about">Sobre a seção</string>
+    <string name="cd_navigate_up">Navegar para cima</string>
 </resources>

@@ -15,7 +15,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.SettingsToolbar
 
 
 @Preview(showBackground = true)
@@ -33,7 +32,10 @@ fun SettingsView(
 
     Scaffold(
         topBar = {
-            SettingsToolbar(title = "Settings", onNavigateUp = onNavigateUp)
+            SettingsToolbar(
+                title = stringResource(R.string.about_preference_title),
+                onNavigateUp = onNavigateUp
+            )
         },
         modifier = Modifier.fillMaxSize()
     ) { padding ->

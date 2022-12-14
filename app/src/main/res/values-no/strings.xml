@@ -19,4 +19,5 @@
     <string name="email_chooser_title">Send e-post med:</string>
     <string name="email_intent_fail">Du har ingen e-postapp for å kontakte oss</string>
     <string name="cd_about">Om delen</string>
+    <string name="cd_navigate_up">Naviger opp</string>
 </resources>

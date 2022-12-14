@@ -23,7 +23,7 @@ class AAIDViewModel : ViewModel() {
             when {
                 adInfo.id != null -> {
                     aaid = adInfo.id!!
-                    Log.i("VIEW_MODEL", "Adverstising id: $aaid")
+                    Log.i("VIEW_MODEL", "Advertising id: $aaid")
                 }
                 else -> {
                     Log.e("VIEW_MODEL", "AAID information not available")
