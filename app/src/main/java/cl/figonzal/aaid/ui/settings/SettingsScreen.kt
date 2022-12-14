@@ -1,6 +1,8 @@
 package cl.figonzal.aaid.ui.settings
 
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Divider
@@ -32,7 +34,8 @@ fun SettingsView(
     Scaffold(
         topBar = {
             SettingsToolbar(title = "Settings", onNavigateUp = onNavigateUp)
-        }
+        },
+        modifier = Modifier.fillMaxSize()
     ) { padding ->
         SettingsPreferenceList(onDevContact, padding)
     }
@@ -45,6 +48,7 @@ private fun SettingsPreferenceList(
     padding: PaddingValues
 ) {
     LazyColumn(
+        modifier = Modifier.fillMaxSize(),
         content = {
 
             item {
@@ -59,7 +63,7 @@ private fun SettingsPreferenceList(
                     title = "",
                     subTitle = stringResource(R.string.about_app_description),
                     isTitlePresent = false,
-                    modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+                    modifier = Modifier.padding(bottom = 8.dp)
                 ) { }
             }
 
@@ -82,7 +86,9 @@ private fun SettingsPreferenceList(
                     subTitle = stringResource(R.string.suggestions_problems),
                     onClick = onDevContact,
                     isTitlePresent = true,
-                    modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .padding(top = 8.dp, bottom = 8.dp)
                 )
             }
         },

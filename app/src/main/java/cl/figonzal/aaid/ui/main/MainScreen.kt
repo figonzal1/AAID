@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui
+package cl.figonzal.aaid.ui.main
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

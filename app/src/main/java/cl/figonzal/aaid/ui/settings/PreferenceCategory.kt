@@ -1,6 +1,5 @@
 package cl.figonzal.aaid.ui.settings
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContactSupport
@@ -28,14 +27,11 @@ fun PreferenceCategory(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
-            .clickable(
-                enabled = true,
-                onClick = {}
-            )
     ) {
 
         Column(
-            modifier = modifier.padding(start = 16.dp)
+            modifier = modifier.padding(start = 16.dp),
+            verticalArrangement = Arrangement.Center
         ) {
             Icon(
                 imageVector = Icons.Rounded.ContactSupport,
@@ -45,7 +41,7 @@ fun PreferenceCategory(
 
         Column(
             modifier = modifier.padding(start = 32.dp),
-            verticalArrangement = Arrangement.Top
+            verticalArrangement = Arrangement.Center
         ) {
             Text(title, color = MaterialTheme.colorScheme.primary)
         }

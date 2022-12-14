@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui
+package cl.figonzal.aaid.ui.main
 
 import android.content.Context
 import android.util.Log

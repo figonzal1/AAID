@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui
+package cl.figonzal.aaid.ui.main
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
