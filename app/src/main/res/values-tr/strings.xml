@@ -10,4 +10,13 @@
     <string name="btn_share">Paylaş</string>
     <string name="intent_chooser">AAID\'yi paylaşın</string>
     <string name="cv_subtitle">Bu cihaz için reklam kimliği şöyledir:</string>
+    <string name="about_preference_title">Hakkında</string>
+    <string name="about_app_description">AAID uygulaması, reklam kimliğinizi kolayca alın</string>
+    <string name="version">Sürüm</string>
+    <string name="contact_developer">Geliştiriciyle iletişim kurun</string>
+    <string name="suggestions_problems">Öneriler? Sorunlar mı?</string>
+    <string name="email_subject">AAID geliştirici iletişim</string>
+    <string name="email_chooser_title">İle e-posta gönder:</string>
+    <string name="email_intent_fail">Bizimle iletişime geçmek için herhangi bir e-posta uygulamanız yok</string>
+    <string name="cd_about">Hakkında bölümü</string>
 </resources>

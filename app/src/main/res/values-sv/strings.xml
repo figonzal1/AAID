@@ -10,4 +10,13 @@
     <string name="btn_share">Dela</string>
     <string name="intent_chooser">Dela AAID</string>
     <string name="cv_subtitle">Reklam-ID för den här enheten är:</string>
+    <string name="about_preference_title">Handla om</string>
+    <string name="about_app_description">AAID-app, få ditt reklam-ID enkelt</string>
+    <string name="version">Version</string>
+    <string name="contact_developer">Kontakta utvecklare</string>
+    <string name="suggestions_problems">Förslag? Problem?</string>
+    <string name="email_subject">AAID utvecklarkontakt</string>
+    <string name="email_chooser_title">Skicka e-post med:</string>
+    <string name="email_intent_fail">Du har ingen e-postapp för att kontakta oss</string>
+    <string name="cd_about">Om avsnitt</string>
 </resources>

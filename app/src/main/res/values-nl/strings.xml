@@ -10,4 +10,13 @@
     <string name="btn_share">Deel</string>
     <string name="intent_chooser">AAID delen</string>
     <string name="cv_subtitle">De advertentie-ID voor dit apparaat is:</string>
+    <string name="about_preference_title">Over</string>
+    <string name="about_app_description">AAID-app, krijg eenvoudig uw advertentie-ID</string>
+    <string name="version">Versie</string>
+    <string name="contact_developer">Neem contact op met de desarrollador</string>
+    <string name="suggestions_problems">Suggesties? Problemen?</string>
+    <string name="email_subject">Contactpersoon AAID-ontwikkelaar</string>
+    <string name="email_chooser_title">E-mail sturen met:</string>
+    <string name="email_intent_fail">U heeft geen e-mailapp om contact met ons op te nemen</string>
+    <string name="cd_about">Over sectie</string>
 </resources>

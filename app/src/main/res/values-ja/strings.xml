@@ -10,4 +10,13 @@
     <string name="btn_share">シェア</string>
     <string name="intent_chooser">AAIDをシェアする</string>
     <string name="cv_subtitle">このデバイスの広告IDは</string>
+    <string name="about_preference_title">約</string>
+    <string name="about_app_description">AAID アプリ、広告 ID を簡単に取得</string>
+    <string name="version">バージョン</string>
+    <string name="contact_developer">開発者に連絡する</string>
+    <string name="suggestions_problems">提案？問題？</string>
+    <string name="email_subject">AAID 開発者の連絡先</string>
+    <string name="email_chooser_title">メールを送信:</string>
+    <string name="email_intent_fail">お問い合わせ用のメールアプリがありません</string>
+    <string name="cd_about">セクションについて</string>
 </resources>

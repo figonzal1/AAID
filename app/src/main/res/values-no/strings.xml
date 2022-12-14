@@ -10,4 +10,13 @@
     <string name="btn_share">Dele</string>
     <string name="intent_chooser">Del AAID</string>
     <string name="cv_subtitle">Annonserings-ID-en for denne enheten er:</string>
+    <string name="about_preference_title">Om</string>
+    <string name="about_app_description">AAID-app, få din annonse-ID enkelt</string>
+    <string name="version">Versjon</string>
+    <string name="contact_developer">Kontakt utvikler</string>
+    <string name="suggestions_problems">Forslag? Problemer?</string>
+    <string name="email_subject">AAID-utviklerkontakt</string>
+    <string name="email_chooser_title">Send e-post med:</string>
+    <string name="email_intent_fail">Du har ingen e-postapp for å kontakte oss</string>
+    <string name="cd_about">Om delen</string>
 </resources>

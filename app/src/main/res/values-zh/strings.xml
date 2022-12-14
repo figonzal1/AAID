@@ -10,4 +10,13 @@
     <string name="btn_share">分享</string>
     <string name="intent_chooser">分享AAID</string>
     <string name="cv_subtitle">此设备的广告 ID 是：</string>
+    <string name="about_preference_title">关于</string>
+    <string name="about_app_description">AAID app，轻松获取你的广告ID</string>
+    <string name="version">版本</string>
+    <string name="contact_developer">联系开发者</string>
+    <string name="suggestions_problems">建议？问题？</string>
+    <string name="email_subject">AAID 开发人员联系方式</string>
+    <string name="email_chooser_title">发送电子邮件：</string>
+    <string name="email_intent_fail">您没有任何电子邮件应用程序可以联系我们</string>
+    <string name="cd_about">关于部分</string>
 </resources>

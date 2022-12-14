@@ -10,4 +10,13 @@
     <string name="btn_share">शेयर करना</string>
     <string name="intent_chooser">एएआईडी साझा करें</string>
     <string name="cv_subtitle">इस डिवाइस की विज्ञापन आईडी है:</string>
+    <string name="about_preference_title">के बारे में</string>
+    <string name="about_app_description">एएआईडी ऐप, अपनी विज्ञापन आईडी आसानी से प्राप्त करें</string>
+    <string name="version">संस्करण</string>
+    <string name="contact_developer">डेवलपर से संपर्क करें</string>
+    <string name="suggestions_problems">सुझाव? समस्या?</string>
+    <string name="email_subject">AID डेवलपर संपर्क</string>
+    <string name="email_chooser_title">इसके साथ ईमेल भेजें:</string>
+    <string name="email_intent_fail">हमसे संपर्क करने के लिए आपके पास कोई ईमेल ऐप नहीं है</string>
+    <string name="cd_about">खंड के बारे में</string>
 </resources>

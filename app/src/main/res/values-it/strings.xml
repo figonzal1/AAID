@@ -10,4 +10,13 @@
     <string name="btn_share">Condividi</string>
     <string name="intent_chooser">Condividi AAID</string>
     <string name="cv_subtitle">L\'ID pubblicitario di questo dispositivo è:</string>
+    <string name="about_preference_title">Di</string>
+    <string name="about_app_description">App AAID, ottieni facilmente il tuo ID pubblicitario</string>
+    <string name="version">Versione</string>
+    <string name="contact_developer">Contatta lo sviluppatore</string>
+    <string name="suggestions_problems">Suggerimenti? I problemi?</string>
+    <string name="email_subject">Contatto sviluppatore AAID</string>
+    <string name="email_chooser_title">Invia email con:</string>
+    <string name="email_intent_fail">Non hai nessuna app di posta elettronica per contattarci</string>
+    <string name="cd_about">Informazioni sulla sezione</string>
 </resources>
