@@ -33,11 +33,14 @@ import cl.figonzal.aaid.utils.toast
 @Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun DefaultCardAAID() {
-    CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
+    CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1") {}
 }
 
 @Composable
-fun CardAAID(aaid: String) {
+fun CardAAID(
+    aaid: String,
+    onSettingsClick: () -> Unit
+) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -46,13 +49,16 @@ fun CardAAID(aaid: String) {
             .padding(16.dp)
     ) {
         Card(modifier = Modifier.fillMaxWidth()) {
-            CardContent(aaid)
+            CardContent(aaid, onSettingsClick)
         }
     }
 }
 
 @Composable
-private fun CardContent(aaid: String) {
+private fun CardContent(
+    aaid: String,
+    onSettingsClick: () -> Unit
+) {
     Column(
         modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.Center
@@ -94,7 +100,7 @@ private fun CardContent(aaid: String) {
             ) {
 
                 IconButton(
-                    onClick = {}
+                    onClick = onSettingsClick
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.Help,

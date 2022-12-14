@@ -11,4 +11,9 @@
     <string name="intent_chooser">Share AAID</string>
     <string name="cv_title" translatable="false">AAID</string>
     <string name="cv_subtitle">The advertising ID for this device is:</string>
+    <string name="about_preference_title">About</string>
+    <string name="about_app_description">AAID app, get your advertising ID easily</string>
+    <string name="version">Version</string>
+    <string name="contact_developer">Contacto desarrollador</string>
+    <string name="suggestions_problems">Suggestions? Problems?</string>
 </resources>

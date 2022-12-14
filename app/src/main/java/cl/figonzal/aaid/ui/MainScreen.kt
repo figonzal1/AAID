@@ -11,14 +11,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import cl.figonzal.aaid.ui.theme.AAIDTheme
 
 @Composable
-fun MainScreen(viewModel: AAIDViewModel) {
+fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
     AAIDTheme {
         // A surface container using the 'background' color from the theme
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
+            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1", onSettingsClick)
             Column(verticalArrangement = Arrangement.Bottom) {
                 BannerView()
             }
@@ -35,7 +35,7 @@ fun PreviewMainScreen() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")
+            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1") {}
             Column(verticalArrangement = Arrangement.Bottom) {
                 BannerView()
             }

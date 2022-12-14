@@ -10,4 +10,9 @@
     <string name="btn_share">Compartir</string>
     <string name="intent_chooser">Compartir AAID</string>
     <string name="cv_subtitle">El ID de publicidad para este dispositivo es:</string>
+    <string name="about_preference_title">Acerca</string>
+    <string name="version">Versión</string>
+    <string name="about_app_description">AAID app, obtén tu identificador de publicidad fácilmente</string>
+    <string name="contact_developer">Contacto desarrollador</string>
+    <string name="suggestions_problems">¿Sugerencias? ¿Problemas?</string>
 </resources>

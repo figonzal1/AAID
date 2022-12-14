@@ -1,0 +1,75 @@
+package cl.figonzal.aaid.ui.settings
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ContactSupport
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewPreference() {
+    Column {
+        Preference(
+            "Contacto desarrollador",
+            "¿Sugerencias? ¿Problemas?", isTitlePresent = true
+        ) {}
+    }
+}
+
+@Composable
+fun Preference(
+    title: String,
+    subTitle: String,
+    modifier: Modifier = Modifier,
+    isTitlePresent: Boolean = false,
+    onClick: () -> Unit
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(
+                enabled = true,
+                onClick = onClick
+            )
+
+    ) {
+
+        Column(
+            modifier = modifier.padding(start = 16.dp)
+        ) {
+            Icon(
+                modifier = Modifier.alpha(0f),
+                imageVector = Icons.Rounded.ContactSupport,
+                contentDescription = "Sección Acerca"
+            )
+        }
+
+        Column(
+            modifier = modifier.padding(start = 32.dp),
+            verticalArrangement = Arrangement.Top
+        ) {
+            if (isTitlePresent) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+            Text(
+                text = subTitle,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+            )
+        }
+    }
+}

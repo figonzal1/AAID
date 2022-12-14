@@ -86,6 +86,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:1.3.2")
     implementation("androidx.compose.material:material-icons-extended:1.3.1")
 
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
+    //Animation
+    implementation("com.google.accompanist:accompanist-navigation-animation:0.28.0")
+
     //AAID
     implementation("com.google.android.gms:play-services-ads-identifier:18.0.1")
 
