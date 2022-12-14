@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.*
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,6 +11,20 @@ plugins {
 }
 
 android {
+
+    val prop = Properties().apply {
+        load(FileInputStream(File(rootProject.rootDir, "keystore.properties")))
+    }
+
+    signingConfigs {
+        create("aaidsign") {
+            storeFile = file(prop.getProperty("storeFile"))
+            storePassword = prop.getProperty("storePassword").toString()
+            keyPassword = prop.getProperty("keyPassword").toString()
+            keyAlias = prop.getProperty("keyAlias").toString()
+        }
+    }
+
     namespace = "cl.figonzal.aaid"
     compileSdk = 33
 
@@ -31,6 +48,7 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("aaidsign")
             resValue("string", "app_name", "AAID")
         }
         getByName("debug") {
