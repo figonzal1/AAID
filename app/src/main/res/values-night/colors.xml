@@ -2,4 +2,5 @@
 <resources>
     <color name="figonzal_purple">#FF9D71EC</color>
     <color name="figonzal_aqua">#FF94FFE6</color>
+    <color name="splash_screen">#FF1C1B1F</color>
 </resources>

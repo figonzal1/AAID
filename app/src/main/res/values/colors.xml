@@ -2,4 +2,6 @@
 <resources>
     <color name="figonzal_purple">#FF5919CF</color>
     <color name="figonzal_aqua">#FF26D6AD</color>
+    <color name="splash_screen">#FF1C1B1F</color>
+    //Not used
 </resources>
