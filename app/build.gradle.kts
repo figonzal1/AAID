@@ -133,11 +133,15 @@ dependencies {
 
     //TIMBER
     implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("androidx.test.uiautomator:uiautomator:2.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.4")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.test.ext:truth:1.5.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.2")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.0")
 
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.3.2")
