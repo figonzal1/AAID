@@ -1,7 +1,6 @@
 package cl.figonzal.aaid.ui.main
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -10,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class AAIDViewModel : ViewModel() {
 
@@ -23,10 +23,10 @@ class AAIDViewModel : ViewModel() {
             when {
                 adInfo.id != null -> {
                     aaid = adInfo.id!!
-                    Log.i("VIEW_MODEL", "Advertising id: $aaid")
+                    Timber.d("Advertising id: $aaid")
                 }
                 else -> {
-                    Log.e("VIEW_MODEL", "AAID information not available")
+                    Timber.e("AAID information not available")
                 }
             }
 

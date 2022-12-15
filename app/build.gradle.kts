@@ -5,9 +5,9 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
     id("com.google.firebase.crashlytics")
     id("com.google.firebase.firebase-perf")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -131,6 +131,8 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     implementation("com.google.firebase:firebase-perf-ktx")
 
+    //TIMBER
+    implementation("com.jakewharton.timber:timber:5.0.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.4")
@@ -140,4 +142,14 @@ dependencies {
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.3.2")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.2")
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectName", "AAID")
+        property("sonar.projectKey", "AAID")
+        property("sonar.test.inclusions", "**/*Test*/**")
+        property("sonar.sourceEncoding", "UTF-8")
+        property("sonar.sources", "src/main/java")
+    }
 }
