@@ -1,5 +1,6 @@
-package cl.figonzal.aaid.ui.settings
+package cl.figonzal.aaid.ui.screens.settings
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,12 +16,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
+import cl.figonzal.aaid.ui.screens.core.BaseContainer
 
 
 @Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES, name = "NightScreen")
 @Composable
 fun PreviewSettingsView() {
-    SettingsView(onNavigateUp = {}, onDevContact = {})
+    BaseContainer(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        SettingsView(onNavigateUp = {}, onDevContact = {})
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -30,16 +37,20 @@ fun SettingsView(
     onDevContact: () -> Unit
 ) {
 
-    Scaffold(
-        topBar = {
-            SettingsToolbar(
-                title = stringResource(R.string.about_preference_title),
-                onNavigateUp = onNavigateUp
-            )
-        },
+    BaseContainer(
         modifier = Modifier.fillMaxSize()
-    ) { padding ->
-        SettingsPreferenceList(onDevContact, padding)
+    ) {
+        Scaffold(
+            topBar = {
+                SettingsToolbar(
+                    title = stringResource(R.string.about_preference_title),
+                    onNavigateUp = onNavigateUp
+                )
+            },
+            modifier = Modifier.fillMaxSize()
+        ) { padding ->
+            SettingsPreferenceList(onDevContact, padding)
+        }
     }
 
 }

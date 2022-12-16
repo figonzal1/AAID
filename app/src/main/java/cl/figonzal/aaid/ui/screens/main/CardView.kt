@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui.main
+package cl.figonzal.aaid.ui.screens.main
 
 import android.content.Context
 import android.content.res.Configuration.UI_MODE_NIGHT_YES

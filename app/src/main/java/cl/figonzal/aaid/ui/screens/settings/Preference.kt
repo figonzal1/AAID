@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui.settings
+package cl.figonzal.aaid.ui.screens.settings
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource

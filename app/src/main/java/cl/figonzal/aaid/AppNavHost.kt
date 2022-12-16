@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui.main
+package cl.figonzal.aaid
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -7,7 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import cl.figonzal.aaid.ui.navigation.NavigationItem
-import cl.figonzal.aaid.ui.settings.SettingsView
+import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
+import cl.figonzal.aaid.ui.screens.main.MainScreen
+import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import cl.figonzal.aaid.utils.contactIntent
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable

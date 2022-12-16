@@ -11,8 +11,8 @@ import androidx.navigation.testing.TestNavHostController
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.FakeAppNavHost
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.ui.main.AAIDViewModel
 import cl.figonzal.aaid.ui.navigation.NavigationItem
+import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import com.google.common.truth.Truth
 import org.junit.Before
 import org.junit.Rule

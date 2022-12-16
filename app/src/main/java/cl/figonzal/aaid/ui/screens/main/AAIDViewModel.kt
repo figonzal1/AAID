@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui.main
+package cl.figonzal.aaid.ui.screens.main
 
 import android.content.Context
 import androidx.compose.runtime.getValue

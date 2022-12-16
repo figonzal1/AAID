@@ -6,7 +6,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.ui.settings.SettingsView
+import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

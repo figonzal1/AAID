@@ -1,4 +1,4 @@
-package cl.figonzal.aaid
+package cl.figonzal.aaid.core
 
 import android.util.Log
 import com.google.firebase.crashlytics.ktx.crashlytics

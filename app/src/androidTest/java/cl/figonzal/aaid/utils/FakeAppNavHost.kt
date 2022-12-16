@@ -5,10 +5,10 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import cl.figonzal.aaid.ui.main.AAIDViewModel
-import cl.figonzal.aaid.ui.main.MainScreen
 import cl.figonzal.aaid.ui.navigation.NavigationItem
-import cl.figonzal.aaid.ui.settings.SettingsView
+import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
+import cl.figonzal.aaid.ui.screens.main.MainScreen
+import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import cl.figonzal.aaid.utils.contactIntent
 
 @Composable

@@ -5,7 +5,7 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.ui.settings.PreferenceCategory
+import cl.figonzal.aaid.ui.screens.settings.PreferenceCategory
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

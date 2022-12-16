@@ -8,7 +8,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.ui.main.CardAAID
+import cl.figonzal.aaid.ui.screens.main.CardAAID
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

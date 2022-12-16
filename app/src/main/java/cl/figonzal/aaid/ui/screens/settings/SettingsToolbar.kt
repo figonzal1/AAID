@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.ui.settings
+package cl.figonzal.aaid.ui.screens.settings
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons

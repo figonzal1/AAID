@@ -20,7 +20,7 @@ import androidx.test.uiautomator.UiDevice
 import cl.figonzal.aaid.FakeAppNavHost
 import cl.figonzal.aaid.MainActivity
 import cl.figonzal.aaid.R
-import cl.figonzal.aaid.ui.main.AAIDViewModel
+import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Rule

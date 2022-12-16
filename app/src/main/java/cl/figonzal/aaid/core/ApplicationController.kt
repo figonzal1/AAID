@@ -1,6 +1,7 @@
-package cl.figonzal.aaid
+package cl.figonzal.aaid.core
 
 import android.app.Application
+import cl.figonzal.aaid.BuildConfig
 import com.google.android.gms.ads.MobileAds
 import timber.log.Timber
 
