@@ -39,4 +39,4 @@ This app allows the user to find the AAID code of their Android device with the 
 
 # Screenshots
 
-<img src="https://github.com/figonzal1/AAID/blob/main/graphics/screenshots/Screenshot_20221210_173628.png" width="216" height="500"> <img src="https://github.com/figonzal1/AAID/blob/main/graphics/screenshots/Screenshot_20221210_173700.png" width="216" height="500"> 
+<img src="https://github.com/figonzal1/AAID/blob/main/graphics/screenshots/Screenshot_20221217_131738.png" width="216" height="500"> <img src="https://github.com/figonzal1/AAID/blob/main/graphics/screenshots/Screenshot_20221217_131809.png" width="216" height="500"> 
