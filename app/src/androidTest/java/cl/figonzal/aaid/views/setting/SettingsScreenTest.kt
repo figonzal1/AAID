@@ -1,4 +1,4 @@
-package cl.figonzal.aaid.views
+package cl.figonzal.aaid.views.setting
 
 import android.content.Context
 import androidx.compose.ui.test.*

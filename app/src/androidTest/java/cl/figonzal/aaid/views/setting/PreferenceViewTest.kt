@@ -14,7 +14,6 @@ class PreferenceViewTest {
     @get:Rule
     val composeTestRule = createComposeRule()
 
-
     @Test
     fun appNavHost_verifyResources_whenTitleIsPresent() {
 
@@ -36,7 +35,7 @@ class PreferenceViewTest {
     }
 
     @Test
-    fun appNavHost_verifyResources_whenTitleIsAusent() {
+    fun appNavHost_verifyResources_whenTitleIsAbsent() {
 
         composeTestRule.setContent {
             Preference(title = "Test title", subTitle = "test subtitle", isTitlePresent = false) {}
