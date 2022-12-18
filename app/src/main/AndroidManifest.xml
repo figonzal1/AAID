@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ This file is subject to the terms and conditions defined in
+  ~ file 'LICENSE', which is part of this source code package
+  ~
+  ~ Author: Felipe González Alarcón
+  ~ email: felipe.gonzalezalarcon94@gmail.com
+  ~
+  ~ Copyright (c) 2022
+  ~
+  ~ Project: AAID
+  ~ Module: AAID.app.main
+  ~ Last modified: 15-12-22 22:46
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -7,9 +20,6 @@
 
     <application
         android:name=".core.ApplicationController"
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
