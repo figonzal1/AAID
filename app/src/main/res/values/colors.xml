@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ This file is subject to the terms and conditions defined in
+  ~ file 'LICENSE', which is part of this source code package
+  ~
+  ~ Author: Felipe González Alarcón
+  ~ email: felipe.gonzalezalarcon94@gmail.com
+  ~
+  ~ Copyright (c) 2022
+  ~
+  ~ Project: AAID
+  ~ Module: AAID.app.main
+  ~ Last modified: 15-12-22 20:22
+  -->
+
 <resources>
     <color name="figonzal_purple">#FF5919CF</color>
     <color name="figonzal_aqua">#FF26D6AD</color>

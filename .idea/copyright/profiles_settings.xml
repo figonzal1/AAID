@@ -1,0 +1,8 @@
+<component name="CopyrightManager">
+  <settings default="aaid-gpl3">
+    <module2copyright>
+      <element module="All" copyright="aaid-gpl3" />
+    </module2copyright>
+    <LanguageOptions name="__TEMPLATE__" />
+  </settings>
+</component>

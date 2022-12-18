@@ -1,3 +1,17 @@
+/*
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package
+ *
+ * Author: Felipe González Alarcón
+ * email: felipe.gonzalezalarcon94@gmail.com
+ *
+ * Copyright (c) 2022
+ *
+ * Project: AAID
+ * Module: AAID.app.androidTest
+ * Last modified: 17-12-22 12:03
+ */
+
 package cl.figonzal.aaid.views.setting
 
 import androidx.compose.ui.test.assertIsDisplayed
