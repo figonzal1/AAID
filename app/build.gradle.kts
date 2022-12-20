@@ -106,7 +106,6 @@ android {
         }
         create("prod") {
             dimension = "version"
-            versionNameSuffix = "-prod"
         }
     }
 }
