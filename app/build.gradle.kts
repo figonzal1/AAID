@@ -136,7 +136,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
     //GOOGLE PLAY
-    implementation("com.google.android.gms:play-services-ads:21.3.0")
+    implementation("com.google.android.gms:play-services-ads:21.4.0")
 
     //FIREBASE BOM
     implementation(platform("com.google.firebase:firebase-bom:31.1.0"))

@@ -12,6 +12,8 @@
  * Last modified: 18-12-22 11:40
  */
 
+@file:OptIn(ExperimentalAnimationApi::class)
+
 package cl.figonzal.aaid
 
 import androidx.compose.animation.AnimatedContentScope
@@ -30,7 +32,6 @@ import com.google.accompanist.navigation.animation.composable
 
 private const val ANIMATION_DURATION = 300
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppNavHost(
     navController: NavHostController,
@@ -48,7 +49,6 @@ fun AppNavHost(
     }
 }
 
-@OptIn(ExperimentalAnimationApi::class)
 fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
 
     composable(
@@ -73,7 +73,6 @@ fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
     }
 }
 
-@OptIn(ExperimentalAnimationApi::class)
 fun NavGraphBuilder.mainScreenComposable(
     viewModel: AAIDViewModel,
     navController: NavHostController
