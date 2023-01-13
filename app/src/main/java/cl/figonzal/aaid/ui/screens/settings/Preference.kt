@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2023
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 15-12-22 22:46
+ * Last modified: 13-01-23 17:48
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -80,19 +80,23 @@ fun Preference(
         }
 
         Column(
-            modifier = modifier.padding(start = 32.dp),
+            modifier = modifier
+                .fillMaxWidth()
+                .padding(start = 32.dp, end = 16.dp),
             verticalArrangement = Arrangement.Top
         ) {
             if (isTitlePresent) {
                 Text(
                     text = title,
-                    style = MaterialTheme.typography.bodyLarge
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
             Text(
                 text = subTitle,
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+                modifier = Modifier.fillMaxWidth()
             )
         }
     }

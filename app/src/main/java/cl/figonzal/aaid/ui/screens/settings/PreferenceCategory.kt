@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2023
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 15-12-22 22:46
+ * Last modified: 13-01-23 16:58
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -56,10 +56,15 @@ fun PreferenceCategory(
         }
 
         Column(
-            modifier = modifier.padding(start = 32.dp),
+            modifier = modifier
+                .padding(start = 32.dp, end = 16.dp)
+                .fillMaxWidth(),
             verticalArrangement = Arrangement.Center
         ) {
-            Text(title, color = MaterialTheme.colorScheme.primary)
+            Text(
+                title, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     }
 }

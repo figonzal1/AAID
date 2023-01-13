@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2023
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 14-12-22 19:28
+ * Last modified: 13-01-23 17:48
  */
 
 package cl.figonzal.aaid.ui.theme
@@ -23,7 +23,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
     primary = figonzalPurpleNight,
@@ -62,9 +62,16 @@ fun AAIDTheme(
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
+        /* getting the current window by tapping into the Activity */
+        val currentWindow = (view.context as? Activity)?.window
+            ?: throw Exception("Not in an activity - unable to get Window reference")
+
         SideEffect {
-            (view.context as Activity).window.statusBarColor = colorScheme.primary.toArgb()
-            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = darkTheme
+            /* the default code did the same cast here - might as well use our new variable! */
+            currentWindow.statusBarColor = colorScheme.primary.toArgb()
+            /* accessing the insets controller to change appearance of the status bar, with 100% less deprecation warnings */
+            WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =
+                darkTheme
         }
     }
 
