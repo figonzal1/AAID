@@ -24,8 +24,18 @@ import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import tools.fastlane.screengrab.Screengrab
+import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
+import tools.fastlane.screengrab.cleanstatusbar.BluetoothState
+import tools.fastlane.screengrab.cleanstatusbar.CleanStatusBar
+import tools.fastlane.screengrab.cleanstatusbar.MobileDataType
+import tools.fastlane.screengrab.locale.LocaleTestRule
 
 class SettingsScreenTest {
+
+    @Rule
+    @JvmField
+    val localeTestRule = LocaleTestRule()
 
     @get:Rule
     val composeTestRule = createComposeRule()
@@ -34,6 +44,14 @@ class SettingsScreenTest {
 
     @Before
     fun setupAppNavHost() {
+
+        Screengrab.setDefaultScreenshotStrategy(
+            UiAutomatorScreenshotStrategy()
+        )
+        CleanStatusBar()
+            .setBluetoothState(BluetoothState.DISCONNECTED)
+            .setMobileNetworkDataType(MobileDataType.LTE)
+            .enable()
 
         composeTestRule.setContent {
             SettingsView(onNavigateUp = { }, onDevContact = {})
@@ -79,5 +97,7 @@ class SettingsScreenTest {
                 useUnmergedTree = true
             )
             .assertIsDisplayed()
+
+        Screengrab.screenshot("settings_activity")
     }
 }
