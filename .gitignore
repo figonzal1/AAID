@@ -18,3 +18,4 @@ local.properties
 /app/google-services.json
 /app/key_pkcs.jks
 /keystore.properties
+/fastlane/google-play-fastlane.json

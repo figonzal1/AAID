@@ -144,6 +144,7 @@
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+                  <entry key="Nexus_6_API_29" value="120" />
                   <entry key="Pixel_3_XL_API_31" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
