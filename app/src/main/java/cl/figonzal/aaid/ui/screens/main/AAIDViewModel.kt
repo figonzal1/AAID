@@ -21,9 +21,12 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException
+import com.google.android.gms.common.GooglePlayServicesRepairableException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.io.IOException
 
 class AAIDViewModel : ViewModel() {
 
@@ -32,18 +35,25 @@ class AAIDViewModel : ViewModel() {
     fun requestAAID(context: Context, dispatcher: CoroutineDispatcher) {
         viewModelScope.launch(dispatcher) {
 
-            val adInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
+            try {
+                val adInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
+                when {
+                    adInfo.id != null -> {
+                        aaid = adInfo.id!!
+                        Timber.d("Advertising id: $aaid")
 
-            when {
-                adInfo.id != null -> {
-                    aaid = adInfo.id!!
-                    Timber.d("Advertising id: $aaid")
+                    }
+                    else -> {
+                        Timber.e("AAID information not available")
+                    }
                 }
-                else -> {
-                    Timber.e("AAID information not available")
-                }
+            } catch (e: GooglePlayServicesNotAvailableException) {
+                Timber.e("AAID information not available: ${e.message}")
+            } catch (e: GooglePlayServicesRepairableException) {
+                Timber.e("AAID information not available: ${e.message}")
+            } catch (e: IOException) {
+                Timber.e("AAID information not available: ${e.message}")
             }
-
         }
     }
 }
