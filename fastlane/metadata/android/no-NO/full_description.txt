@@ -1,0 +1,1 @@
+Denne appen lar brukeren finne AAID-koden til sin Android-enhet med muligheten til å enkelt kopiere og dele den via andre apper.

@@ -1,0 +1,1 @@
+Esta aplicación permite al usuario encontrar el código AAID de su dispositivo Android con la opción de copiarlo y compartirlo fácilmente a través de otras aplicaciones.
