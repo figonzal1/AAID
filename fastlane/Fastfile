@@ -36,9 +36,11 @@ platform :android do
   end
 
   desc "Upload screenshots to Google Play Store"
-    lane :upload_screenshots do
-      upload_to_play_store
-    end
+  lane :upload_screenshots do
+    upload_to_play_store(
+      skip_upload_changelogs: true
+    )
+  end
 
   desc "Runs all the tests"
   lane :test do
