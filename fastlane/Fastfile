@@ -35,6 +35,11 @@ platform :android do
     screengrab
   end
 
+  desc "Upload screenshots to Google Play Store"
+    lane :upload_screenshots do
+      upload_to_play_store
+    end
+
   desc "Runs all the tests"
   lane :test do
     build_android_app(task: "test")

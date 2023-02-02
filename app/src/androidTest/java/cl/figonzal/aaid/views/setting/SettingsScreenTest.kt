@@ -51,6 +51,8 @@ class SettingsScreenTest {
         CleanStatusBar()
             .setBluetoothState(BluetoothState.DISCONNECTED)
             .setMobileNetworkDataType(MobileDataType.LTE)
+            .setClock("0900")
+            .setBatteryLevel(100)
             .enable()
 
         composeTestRule.setContent {

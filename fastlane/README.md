@@ -32,6 +32,14 @@ Build debug and test APK
 
 Capture screenshots
 
+### android upload_screenshots
+
+```sh
+[bundle exec] fastlane android upload_screenshots
+```
+
+Upload screenshots to Google Play Store
+
 ### android test
 
 ```sh
