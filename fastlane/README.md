@@ -40,26 +40,18 @@ Capture screenshots
 
 Upload screenshots to Google Play Store
 
-### android test
+### android release
 
 ```sh
-[bundle exec] fastlane android test
+[bundle exec] fastlane android release
 ```
 
-Runs all the tests
+Build release version
 
-### android beta
-
-```sh
-[bundle exec] fastlane android beta
-```
-
-Submit a new Beta Build to Crashlytics Beta
-
-### android deploy
+### android googleplay
 
 ```sh
-[bundle exec] fastlane android deploy
+[bundle exec] fastlane android googleplay
 ```
 
 Deploy a new version to the Google Play

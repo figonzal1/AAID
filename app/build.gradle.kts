@@ -9,7 +9,7 @@
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 17-01-23 11:41
+ * Last modified: 02-02-23 19:27
  */
 
 import java.io.FileInputStream
@@ -47,8 +47,8 @@ android {
         applicationId = "cl.figonzal.aaid"
         minSdk = 23
         targetSdk = 33
-        versionCode = 2
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

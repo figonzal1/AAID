@@ -19,3 +19,4 @@ local.properties
 /app/key_pkcs.jks
 /keystore.properties
 /fastlane/google-play-fastlane.json
+/fastlane/.env

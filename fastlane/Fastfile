@@ -20,6 +20,7 @@ platform :android do
   desc "Build debug and test APK"
   lane :build do
     build_android_app(task: "clean")
+    build_android_app(task: "test")
     build_android_app(
         task: 'assemble',
         build_type: 'Debug'
@@ -38,27 +39,36 @@ platform :android do
   desc "Upload screenshots to Google Play Store"
   lane :upload_screenshots do
     upload_to_play_store(
-      skip_upload_changelogs: true
+      skip_upload_changelogs: true,
+      skip_upload_aab: true,
+      skip_upload_apk: true
     )
   end
 
-  desc "Runs all the tests"
-  lane :test do
-    build_android_app(task: "test")
-  end
-
-  desc "Submit a new Beta Build to Crashlytics Beta"
-  lane :beta do
-    gradle(task: "clean assembleRelease")
-    crashlytics
-  
-    # sh "your_script.sh"
-    # You can also use other beta testing services here
+  desc "Build release version"
+  lane :release do
+    build_android_app(task: "clean")
+    build_android_app(
+        task: 'bundle',
+        flavor: 'prod',
+        build_type: 'Release',
+        properties: {
+             "android.injected.signing.store.file" => ENV['storeFile'],
+             "android.injected.signing.store.password" => ENV['storePassword'],
+             "android.injected.signing.key.alias" => ENV['keyAlias'],
+             "android.injected.signing.key.password" => ENV['keyPassword'],
+          }
+    )
   end
 
   desc "Deploy a new version to the Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
-  end
+    lane :googleplay do
+      upload_to_play_store(
+          release_status: 'draft',
+          track: 'production',
+          aab: 'app/build/outputs/bundle/prodRelease/app-prod-release.aab',
+          skip_upload_screenshots: true,
+          skip_upload_images: true
+      )
+    end
 end
