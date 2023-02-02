@@ -22,7 +22,7 @@
     <string name="btn_share">Condividi</string>
     <string name="intent_chooser">Condividi AAID</string>
     <string name="cv_subtitle">L\'ID pubblicitario di questo dispositivo è:</string>
-    <string name="about_preference_title">Di</string>
+    <string name="about_preference_title">Circa</string>
     <string name="about_app_description">App AAID, ottieni facilmente il tuo ID pubblicitario</string>
     <string name="version">Versione</string>
     <string name="contact_developer">Contatta lo sviluppatore</string>

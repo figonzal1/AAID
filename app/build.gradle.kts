@@ -153,11 +153,13 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test.ext:truth:1.5.0")
+    androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
     androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
+    androidTestImplementation("tools.fastlane:screengrab:2.1.1")
 
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
+    //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
 }

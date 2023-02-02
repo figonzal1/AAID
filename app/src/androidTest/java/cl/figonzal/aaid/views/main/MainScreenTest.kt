@@ -39,8 +39,19 @@ import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import tools.fastlane.screengrab.Screengrab
+import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
+import tools.fastlane.screengrab.cleanstatusbar.BluetoothState
+import tools.fastlane.screengrab.cleanstatusbar.CleanStatusBar
+import tools.fastlane.screengrab.cleanstatusbar.MobileDataType
+import tools.fastlane.screengrab.locale.LocaleTestRule
+
 
 class MainScreenTest {
+
+    @Rule
+    @JvmField
+    val localeTestRule = LocaleTestRule()
 
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
@@ -50,6 +61,16 @@ class MainScreenTest {
 
     @Before
     fun setupAppNavHost() {
+
+        Screengrab.setDefaultScreenshotStrategy(
+            UiAutomatorScreenshotStrategy()
+        )
+        CleanStatusBar()
+            .setBluetoothState(BluetoothState.DISCONNECTED)
+            .setMobileNetworkDataType(MobileDataType.LTE)
+            .setClock("0900")
+            .setBatteryLevel(100)
+            .enable()
 
         composeTestRule.activity.setContent {
             navController = TestNavHostController(LocalContext.current)
@@ -63,6 +84,8 @@ class MainScreenTest {
     @Test
     fun appNavHost_verifyResources() {
 
+        Thread.sleep(2000)
+
         //Buttons
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_copy))
@@ -71,6 +94,8 @@ class MainScreenTest {
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_share))
             .assertIsDisplayed()
+
+        Screengrab.screenshot("main_activity")
     }
 
     @Test

@@ -25,7 +25,7 @@
     <string name="about_preference_title">Noin</string>
     <string name="about_app_description">AAID-sovellus, saat mainostunnuksesi helposti</string>
     <string name="version">Versio</string>
-    <string name="contact_developer">Ota yhteyttä desarrolladoriin</string>
+    <string name="contact_developer">Ota yhteyttä developer</string>
     <string name="suggestions_problems">Ehdotukset? Ongelmia?</string>
     <string name="email_subject">AAID-kehittäjän yhteystiedot</string>
     <string name="email_chooser_title">Lähetä sähköpostia osoitteella:</string>
