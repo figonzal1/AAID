@@ -3,12 +3,12 @@
     <testsuite name="fastlane.lanes">
 
 
-        <testcase name="0: default_platform" classname="fastlane.lanes" time="0.001804">
+        <testcase name="0: default_platform" classname="fastlane.lanes" time="0.0026444">
 
         </testcase>
 
 
-        <testcase name="1: upload_to_play_store" classname="fastlane.lanes" time="171.018171">
+        <testcase name="1: upload_to_play_store" classname="fastlane.lanes" time="49.7860406">
 
         </testcase>
 
