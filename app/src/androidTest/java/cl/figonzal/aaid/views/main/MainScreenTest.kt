@@ -31,10 +31,10 @@ import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasExtra
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
-import cl.figonzal.aaid.FakeAppNavHost
 import cl.figonzal.aaid.MainActivity
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
+import cl.figonzal.aaid.utils.FakeAppNavHost
 import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Rule
@@ -55,7 +55,7 @@ class MainScreenTest {
 
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
-    lateinit var navController: TestNavHostController
+    private lateinit var navController: TestNavHostController
 
     private val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
 

@@ -12,7 +12,9 @@
  * Last modified: 15-12-22 22:59
  */
 
-package cl.figonzal.aaid
+@file:Suppress("TestFunctionName")
+
+package cl.figonzal.aaid.utils
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
@@ -23,7 +25,6 @@ import cl.figonzal.aaid.ui.navigation.NavigationItem
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import cl.figonzal.aaid.ui.screens.main.MainScreen
 import cl.figonzal.aaid.ui.screens.settings.SettingsView
-import cl.figonzal.aaid.utils.contactIntent
 
 @Composable
 fun FakeAppNavHost(

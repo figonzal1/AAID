@@ -23,10 +23,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.platform.app.InstrumentationRegistry
-import cl.figonzal.aaid.FakeAppNavHost
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.navigation.NavigationItem
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
+import cl.figonzal.aaid.utils.FakeAppNavHost
 import com.google.common.truth.Truth
 import org.junit.Before
 import org.junit.Rule
@@ -36,7 +36,7 @@ class NavigateTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
-    lateinit var navController: TestNavHostController
+    private lateinit var navController: TestNavHostController
 
     private val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
 
