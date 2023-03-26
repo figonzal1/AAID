@@ -17,10 +17,10 @@ buildscript {
     dependencies {
 
         //FIREBASE CRASH ANALYTICS
-        classpath("com.google.gms:google-services:4.3.14")
+        classpath("com.google.gms:google-services:4.3.15")
 
         //FIREBASE CRASHLYTICS
-        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.2")
+        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.4")
 
         //FIREBASE PERFORMANCE
         classpath("com.google.firebase:perf-plugin:1.4.2")
@@ -30,8 +30,8 @@ buildscript {
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "7.4.0" apply false
-    id("com.android.library") version "7.4.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.7.20" apply false
-    id("org.sonarqube") version "3.5.0.2730"
+    id("com.android.application") version "7.4.2" apply false
+    id("com.android.library") version "7.4.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    id("org.sonarqube") version "4.0.0.2929"
 }
