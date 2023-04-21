@@ -47,8 +47,8 @@ android {
         applicationId = "cl.figonzal.aaid"
         minSdk = 23
         targetSdk = 33
-        versionCode = 4
-        versionName = "1.2"
+        versionCode = 5
+        versionName = "1.2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
