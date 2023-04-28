@@ -109,15 +109,15 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.10.0")
-    implementation("androidx.activity:activity-compose:1.7.0")
+    implementation("androidx.activity:activity-compose:1.7.1")
 
     implementation("androidx.compose.material3:material3:1.0.1") // Material 3
-    implementation("androidx.core:core-splashscreen:1.0.0") //splash screen
+    implementation("androidx.core:core-splashscreen:1.0.1") //splash screen
 
     //Compose
-    implementation("androidx.compose.ui:ui:1.4.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.1")
-    implementation("androidx.compose.material:material-icons-extended:1.4.1")
+    implementation("androidx.compose.ui:ui:1.4.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.2")
+    implementation("androidx.compose.material:material-icons-extended:1.4.2")
 
     //Compose navigation
     implementation("androidx.navigation:navigation-compose:2.5.3")
@@ -149,14 +149,14 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test.ext:truth:1.5.0")
     androidTestImplementation("androidx.test:rules:1.5.0")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.2")
     androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
     androidTestImplementation("tools.fastlane:screengrab:2.1.1")
 
     //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.1")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.1")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.4.2")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.2")
 }
 
 sonarqube {
