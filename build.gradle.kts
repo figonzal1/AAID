@@ -11,27 +11,55 @@
  * Module: AAID
  * Last modified: 13-01-23 15:28
  */
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
-buildscript {
-
-    dependencies {
-
-        //FIREBASE CRASH ANALYTICS
-        classpath("com.google.gms:google-services:4.3.15")
-
-        //FIREBASE CRASHLYTICS
-        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.5")
-
-        //FIREBASE PERFORMANCE
-        classpath("com.google.firebase:perf-plugin:1.4.2")
-
-        //Google maps secrets
-        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
-    }
-}// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "8.0.0" apply false
-    id("com.android.library") version "8.0.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
-    id("org.sonarqube") version "4.0.0.2929"
+    alias(libs.plugins.com.android.application) apply false
+    alias(libs.plugins.com.android.library) apply false
+    alias(libs.plugins.org.jetbrains.kotlin.android) apply false
+
+    //FIREBASE CRASH ANALYTICS
+    alias(libs.plugins.com.google.gms.google.services) apply false
+
+    //Crashlytics Gradle plugin
+    alias(libs.plugins.com.google.firebase.crashlytics) apply false
+
+    // Performance Monitoring plugin
+    alias(libs.plugins.com.google.firebase.firebase.perf) apply false
+
+    //Google maps secrets
+    alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
+
+    //Sonaqube
+    alias(libs.plugins.org.sonarqube)
+
+    //Version catalog updater
+    alias(libs.plugins.com.github.ben.manes.versions)
+    alias(libs.plugins.nl.littlerobots.version.catalog.update)
+}
+
+versionCatalogUpdate {
+    // These options will be set as default for all version catalogs
+    sortByKey.set(false)
+}
+
+
+// https://github.com/ben-manes/gradle-versions-plugin
+tasks.withType<DependencyUpdatesTask> {
+    resolutionStrategy {
+        componentSelection {
+            all {
+                if (isNonStable(candidate.version) && !isNonStable(currentVersion)) {
+                    reject("Release candidate")
+                }
+            }
+        }
+    }
+}
+
+fun isNonStable(version: String): Boolean {
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
+    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+    val isStable = stableKeyword || regex.matches(version)
+    return isStable.not()
 }

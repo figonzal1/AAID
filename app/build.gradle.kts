@@ -16,12 +16,12 @@ import java.io.FileInputStream
 import java.util.Properties
 
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-    id("com.google.firebase.firebase-perf")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.com.google.gms.google.services)
+    alias(libs.plugins.com.google.firebase.crashlytics)
+    alias(libs.plugins.com.google.firebase.firebase.perf)
+    alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -109,55 +109,47 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.10.0")
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation(libs.androidx.core.core.ktx)
+    implementation(libs.androidx.activity.activity.compose)
 
-    implementation("androidx.compose.material3:material3:1.0.1") // Material 3
-    implementation("androidx.core:core-splashscreen:1.0.1") //splash screen
+    implementation(libs.androidx.core.core.splashscreen)
 
     //Compose
-    implementation("androidx.compose.ui:ui:1.4.2")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.2")
-    implementation("androidx.compose.material:material-icons-extended:1.4.2")
+    implementation(libs.bundles.compose)
 
     //Compose navigation
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation(libs.androidx.navigation.navigation.compose)
 
     //Animation
-    implementation("com.google.accompanist:accompanist-navigation-animation:0.28.0")
+    implementation(libs.com.google.accompanist.accompanist.navigation.animation)
 
     //AAID
-    implementation("com.google.android.gms:play-services-ads-identifier:18.0.1")
+    implementation(libs.bundles.google.play.ads)
 
     //LIFECYCLE
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-
-    //GOOGLE PLAY
-    implementation("com.google.android.gms:play-services-ads:22.0.0")
+    implementation(libs.androidx.lifecycle.lifecycle.viewmodel.compose)
 
     //FIREBASE BOM
-    implementation(platform("com.google.firebase:firebase-bom:31.5.0"))
-    implementation("com.google.firebase:firebase-analytics-ktx")
-    implementation("com.google.firebase:firebase-crashlytics-ktx")
-    implementation("com.google.firebase:firebase-perf-ktx")
+    implementation(platform(libs.com.google.firebase.firebase.bom))
+    implementation(libs.bundles.firebase)
 
     //TIMBER
-    implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("androidx.test.uiautomator:uiautomator:2.2.0")
+    implementation(libs.com.jakewharton.timber)
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test.ext:truth:1.5.0")
-    androidTestImplementation("androidx.test:rules:1.5.0")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.2")
-    androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
-    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
-    androidTestImplementation("tools.fastlane:screengrab:2.1.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.rules)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.ext.truth)
+    androidTestImplementation(libs.androidx.test.espresso.espresso.core)
+    androidTestImplementation(libs.androidx.test.espresso.espresso.intents)
+    androidTestImplementation(libs.androidx.test.uiautomator)
+    androidTestImplementation(libs.androidx.compose.ui.ui.test.junit4)
+    androidTestImplementation(libs.androidx.navigation.navigation.testing)
+    androidTestImplementation(libs.tools.fastlane.screengrab)
 
     //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.2")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.2")
+    debugImplementation(libs.androidx.compose.ui.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
 }
 
 sonarqube {
