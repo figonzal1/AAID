@@ -1,5 +1,5 @@
 [versions]
-androidx-activity = "1.7.1"
+androidx-activity = "1.7.2"
 androidx-compose-material = "1.4.3"
 androidx-compose-ui = "1.4.3"
 androidx-lifecycle = "2.6.1"
@@ -21,13 +21,13 @@ androidx-navigation-navigation-compose = { module = "androidx.navigation:navigat
 androidx-navigation-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "androidx-navigation" }
 com-jakewharton-timber = "com.jakewharton.timber:timber:5.0.1"
 #ADS
-com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:22.0.0"
+com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:22.1.0"
 com-google-android-gms-play-services-ads-identifier = "com.google.android.gms:play-services-ads-identifier:18.0.1"
 #LIFECYCLE
 androidx-lifecycle-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
 #FIREBASE
-com-google-firebase-firebase-bom = "com.google.firebase:firebase-bom:32.0.0"
-com-google-firebase-firebase-analytics-ktx = "com.google.firebase:firebase-analytics-ktx:21.2.2"
+com-google-firebase-firebase-bom = "com.google.firebase:firebase-bom:32.1.0"
+com-google-firebase-firebase-analytics-ktx = "com.google.firebase:firebase-analytics-ktx:21.3.0"
 com-google-firebase-firebase-crashlytics-ktx = "com.google.firebase:firebase-crashlytics-ktx:18.3.7"
 com-google-firebase-firebase-perf-ktx = "com.google.firebase:firebase-perf-ktx:20.3.2"
 # TESTING
@@ -60,8 +60,8 @@ compose = [
 ]
 
 [plugins]
-com-android-application = "com.android.application:8.0.1"
-com-android-library = "com.android.library:8.0.1"
+com-android-application = "com.android.application:8.0.2"
+com-android-library = "com.android.library:8.0.2"
 com-github-ben-manes-versions = "com.github.ben-manes.versions:0.46.0"
 com-google-android-libraries-mapsplatform-secrets-gradle-plugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:2.0.1"
 com-google-firebase-crashlytics = "com.google.firebase.crashlytics:2.9.5"
