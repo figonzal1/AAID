@@ -95,16 +95,6 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.2"
     }
-    flavorDimensions += listOf("version")
-    productFlavors {
-        create("dev") {
-            dimension = "version"
-            versionNameSuffix = "-dev"
-        }
-        create("prod") {
-            dimension = "version"
-        }
-    }
 }
 
 dependencies {

@@ -8,8 +8,8 @@ use_adb_root(true)
 app_package_name('cl.figonzal.aaid.debug')
 
 # 4
-app_apk_path('app/build/outputs/apk/dev/debug/app-dev-debug.apk')
-tests_apk_path('app/build/outputs/apk/androidTest/dev/debug/app-dev-debug-androidTest.apk')
+app_apk_path('app/build/outputs/apk/debug/app-debug.apk')
+tests_apk_path('app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk')
 
 # 5
 locales(['da-DK','de-DE','en-US','es-419','es-US','fi-FI','fr-FR','hi-IN','it-IT','ja-JP','nl-NL','no-NO','pt-BR','pt-PT','sv-SE','tr-TR','zh-CN'])

@@ -17,18 +17,26 @@ default_platform(:android)
 
 platform :android do
 
-  desc "Build debug and test APK"
-  lane :build do
-    build_android_app(task: "clean")
-    build_android_app(task: "test")
-    build_android_app(
+  # UI TEST (DEBUG)
+  desc "AndroidTest Instrumentation"
+      lane :ui_test do
+        build_android_app(
+          task: 'connected',
+          build_type: 'Debug'
+        )
+  end
+
+  desc "Build test apks (DEBUG)"
+    lane :build do
+      build_android_app(task: "clean")
+      build_android_app(
         task: 'assemble',
         build_type: 'Debug'
-        )
-    build_android_app(
+      )
+      build_android_app(
         task: 'assemble',
         build_type: 'AndroidTest'
-    )
+      )
   end
 
   desc "Capture screenshots"
@@ -41,7 +49,8 @@ platform :android do
     upload_to_play_store(
       skip_upload_changelogs: true,
       skip_upload_aab: true,
-      skip_upload_apk: true
+      skip_upload_apk: true,
+      changes_not_sent_for_review: true
     )
   end
 
@@ -50,7 +59,6 @@ platform :android do
     build_android_app(task: "clean")
     build_android_app(
         task: 'bundle',
-        flavor: 'prod',
         build_type: 'Release',
         properties: {
              "android.injected.signing.store.file" => ENV['STORE_FILE'],
@@ -66,7 +74,7 @@ platform :android do
       upload_to_play_store(
           release_status: 'draft',
           track: 'production',
-          aab: 'app/build/outputs/bundle/prodRelease/app-prod-release.aab',
+          aab: 'app/build/outputs/bundle/release/app-release.aab',
           skip_upload_screenshots: true,
           skip_upload_images: true
       )
