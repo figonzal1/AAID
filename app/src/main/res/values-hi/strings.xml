@@ -29,7 +29,6 @@
     <string name="suggestions_problems">सुझाव? समस्या?</string>
     <string name="email_subject">AID डेवलपर संपर्क</string>
     <string name="email_chooser_title">इसके साथ ईमेल भेजें:</string>
-    <string name="email_intent_fail">हमसे संपर्क करने के लिए आपके पास कोई ईमेल ऐप नहीं है</string>
     <string name="cd_about">खंड के बारे में</string>
     <string name="cd_navigate_up">ऊपर नेविगेट करें</string>
 </resources>

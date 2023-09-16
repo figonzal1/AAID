@@ -30,6 +30,5 @@
     <string name="email_subject">Contacto desarrollador AAID</string>
     <string name="email_chooser_title">Enviar email con:</string>
     <string name="cd_about">Sección acerca</string>
-    <string name="email_intent_fail">No tienes ninguna aplicación de correo electrónico para contactar con nosotros</string>
     <string name="cd_navigate_up">Navegar hacia arriba</string>
 </resources>

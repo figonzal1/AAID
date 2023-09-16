@@ -29,7 +29,6 @@
     <string name="suggestions_problems">Anregungen? Probleme?</string>
     <string name="email_subject">AAID-Entwicklerkontakt</string>
     <string name="email_chooser_title">E-Mail senden mit:</string>
-    <string name="email_intent_fail">Sie haben keine E-Mail-App, um uns zu kontaktieren</string>
     <string name="cd_about">Abschnitt Über</string>
     <string name="cd_navigate_up">Navigieren Sie nach oben</string>
 </resources>

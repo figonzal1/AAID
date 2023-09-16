@@ -29,7 +29,6 @@
     <string name="suggestions_problems">Ehdotukset? Ongelmia?</string>
     <string name="email_subject">AAID-kehittäjän yhteystiedot</string>
     <string name="email_chooser_title">Lähetä sähköpostia osoitteella:</string>
-    <string name="email_intent_fail">Sinulla ei ole sähköpostisovellusta, jonka avulla voit ottaa meihin yhteyttä</string>
     <string name="cd_about">Tietoja osiosta</string>
     <string name="cd_navigate_up">Navigoi ylös</string>
 </resources>

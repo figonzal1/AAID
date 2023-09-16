@@ -40,13 +40,13 @@ android {
     }
 
     namespace = "cl.figonzal.aaid"
-    compileSdk = 33
+    compileSdk = 34
     buildToolsVersion = "33.0.2"
 
     defaultConfig {
         applicationId = "cl.figonzal.aaid"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 6
         versionName = "1.2.3"
 
@@ -109,9 +109,6 @@ dependencies {
 
     //Compose navigation
     implementation(libs.androidx.navigation.navigation.compose)
-
-    //Animation
-    implementation(libs.com.google.accompanist.accompanist.navigation.animation)
 
     //AAID
     implementation(libs.bundles.google.play.ads)

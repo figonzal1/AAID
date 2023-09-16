@@ -29,7 +29,6 @@
     <string name="suggestions_problems">Suggesties? Problemen?</string>
     <string name="email_subject">Contactpersoon AAID-ontwikkelaar</string>
     <string name="email_chooser_title">E-mail sturen met:</string>
-    <string name="email_intent_fail">U heeft geen e-mailapp om contact met ons op te nemen</string>
     <string name="cd_about">Over sectie</string>
     <string name="cd_navigate_up">Navigeer omhoog</string>
 </resources>

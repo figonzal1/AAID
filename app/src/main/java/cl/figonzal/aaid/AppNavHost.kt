@@ -12,23 +12,20 @@
  * Last modified: 18-12-22 11:40
  */
 
-@file:OptIn(ExperimentalAnimationApi::class)
-
 package cl.figonzal.aaid
 
-import androidx.compose.animation.AnimatedContentScope
-import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import cl.figonzal.aaid.ui.navigation.NavigationItem
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import cl.figonzal.aaid.ui.screens.main.MainScreen
 import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import cl.figonzal.aaid.utils.contactIntent
-import com.google.accompanist.navigation.animation.AnimatedNavHost
-import com.google.accompanist.navigation.animation.composable
 
 private const val ANIMATION_DURATION = 300
 
@@ -37,7 +34,7 @@ fun AppNavHost(
     navController: NavHostController,
     viewModel: AAIDViewModel
 ) {
-    AnimatedNavHost(
+    NavHost(
         navController = navController,
         startDestination = NavigationItem.MainNavItem.baseRoute
     ) {
@@ -55,13 +52,13 @@ fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
         NavigationItem.SettingsNavItem.baseRoute,
         enterTransition = {
             slideIntoContainer(
-                AnimatedContentScope.SlideDirection.Left,
+                AnimatedContentTransitionScope.SlideDirection.Left,
                 animationSpec = tween(ANIMATION_DURATION)
             )
         },
         exitTransition = {
             slideOutOfContainer(
-                AnimatedContentScope.SlideDirection.Right,
+                AnimatedContentTransitionScope.SlideDirection.Right,
                 animationSpec = tween(ANIMATION_DURATION)
             )
         }
@@ -81,13 +78,13 @@ fun NavGraphBuilder.mainScreenComposable(
         NavigationItem.MainNavItem.baseRoute,
         enterTransition = {
             slideIntoContainer(
-                AnimatedContentScope.SlideDirection.Right,
+                AnimatedContentTransitionScope.SlideDirection.Right,
                 animationSpec = tween(ANIMATION_DURATION)
             )
         },
         exitTransition = {
             slideOutOfContainer(
-                AnimatedContentScope.SlideDirection.Left,
+                AnimatedContentTransitionScope.SlideDirection.Left,
                 animationSpec = tween(ANIMATION_DURATION)
             )
         }

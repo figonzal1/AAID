@@ -29,7 +29,6 @@
     <string name="suggestions_problems">提案？問題？</string>
     <string name="email_subject">AAID 開発者の連絡先</string>
     <string name="email_chooser_title">メールを送信:</string>
-    <string name="email_intent_fail">お問い合わせ用のメールアプリがありません</string>
     <string name="cd_about">セクションについて</string>
     <string name="cd_navigate_up">上に移動</string>
 </resources>
