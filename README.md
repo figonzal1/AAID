@@ -5,8 +5,8 @@
 
 <p align="center">
 
-  <a href="https://snyk.io/test/github/figonzal1/LastQuakeChile?targetFile=app/build.gradle" >
-        <img alt="Snyk" src="https://snyk.io/test/github/figonzal1/LastQuakeChile/badge.svg?targetFile=app/build.gradle" >
+  <a href="https://snyk.io/test/github/figonzal1/AAID/badge.svg" >
+        <img alt="Snyk" src="https://snyk.io/test/github/figonzal1/AAID/badge.svg" >
   </a>
 
   <a href="https://www.codefactor.io/repository/github/figonzal1/aaid" >
