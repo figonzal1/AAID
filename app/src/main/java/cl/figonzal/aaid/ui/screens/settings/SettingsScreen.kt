@@ -14,6 +14,7 @@
 
 package cl.figonzal.aaid.ui.screens.settings
 
+import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -21,7 +22,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Divider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -30,16 +33,29 @@ import androidx.compose.ui.unit.dp
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.core.BaseContainer
+import cl.figonzal.aaid.ui.theme.AAIDTheme
 
 
-@Preview(showBackground = true)
-@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES, name = "NightScreen")
+@Preview(
+    showBackground = true, name = "About Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+)
+@Preview(
+    showBackground = true,
+    uiMode = UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL, name = "About Night"
+)
 @Composable
 fun PreviewSettingsView() {
-    BaseContainer(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        SettingsView(onNavigateUp = {}, onDevContact = {})
+    AAIDTheme {
+        Surface(
+            color = MaterialTheme.colorScheme.background
+        ) {
+            BaseContainer(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                SettingsView(onNavigateUp = {}, onDevContact = {})
+            }
+        }
     }
 }
 

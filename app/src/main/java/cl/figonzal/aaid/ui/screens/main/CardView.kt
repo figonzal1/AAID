@@ -15,14 +15,30 @@
 package cl.figonzal.aaid.ui.screens.main
 
 import android.content.Context
+import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.Help
 import androidx.compose.material.icons.rounded.Share
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,15 +55,28 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
+import cl.figonzal.aaid.ui.theme.AAIDTheme
 import cl.figonzal.aaid.utils.copyToClipBoard
 import cl.figonzal.aaid.utils.shareAAID
 import cl.figonzal.aaid.utils.toast
 
-@Preview(showBackground = true)
-@Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
+@Preview(
+    showBackground = true, name = "CardView Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+)
+@Preview(
+    uiMode = UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
+    showBackground = true, name = "CardView Night"
+)
 @Composable
 fun DefaultCardAAID() {
-    CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1") {}
+    AAIDTheme {
+        Surface(
+            color = MaterialTheme.colorScheme.background
+        ) {
+            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1") {}
+        }
+    }
 }
 
 @Composable
