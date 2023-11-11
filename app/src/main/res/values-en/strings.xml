@@ -18,11 +18,12 @@
     <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="btn_copy">Copy</string>
     <string name="cd_share_id_btn">Share ID button</string>
-    <string name="cd_about_button">About button</string>
+    <string name="cd_settings_button">Settings button</string>
     <string name="btn_share">Share</string>
     <string name="intent_chooser">Share AAID</string>
     <string name="cv_subtitle">The advertising ID for this device is:</string>
     <string name="about_preference_title">About</string>
+    <string name="settings_screen_title">Settings</string>
     <string name="about_app_description">AAID app, get your advertising ID easily</string>
     <string name="version">Version</string>
     <string name="contact_developer">Contact developer</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">Send email with:</string>
     <string name="cd_about">About section</string>
     <string name="cd_navigate_up">Navigate up</string>
+    <string name="privacy_preference_title">Privacy</string>
+    <string name="consent_privacy_preference_title">Consent Policy</string>
+    <string name="conset_privacy_preference_subtitle">Personalized advertising</string>
+    <string name="cd_privacy_preference">Privacy section</string>
 </resources>

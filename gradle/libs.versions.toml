@@ -22,6 +22,7 @@ com-jakewharton-timber = "com.jakewharton.timber:timber:5.0.1"
 #ADS
 com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:22.5.0"
 com-google-android-gms-play-services-ads-identifier = "com.google.android.gms:play-services-ads-identifier:18.0.1"
+com-google-android-ump = "com.google.android.ump:user-messaging-platform:2.1.0"
 #LIFECYCLE
 androidx-lifecycle-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
 #FIREBASE

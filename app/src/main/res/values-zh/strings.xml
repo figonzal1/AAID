@@ -18,11 +18,12 @@
     <string name="btn_copy">复制</string>
     <string name="cd_copy_btn">复制 ID 按钮</string>
     <string name="cd_share_id_btn">共享 ID 按钮</string>
-    <string name="cd_about_button">关于按钮</string>
+    <string name="cd_settings_button">设置按钮</string>
     <string name="btn_share">分享</string>
     <string name="intent_chooser">分享AAID</string>
     <string name="cv_subtitle">此设备的广告 ID 是：</string>
     <string name="about_preference_title">关于</string>
+    <string name="settings_screen_title">设置</string>
     <string name="about_app_description">AAID app，轻松获取你的广告ID</string>
     <string name="version">版本</string>
     <string name="contact_developer">联系开发者</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">发送电子邮件：</string>
     <string name="cd_about">关于部分</string>
     <string name="cd_navigate_up">向上导航</string>
+    <string name="privacy_preference_title">隐私权</string>
+    <string name="consent_privacy_preference_title">同意政策</string>
+    <string name="conset_privacy_preference_subtitle">个性化广告</string>
+    <string name="cd_privacy_preference">隐私部分</string>
 </resources>

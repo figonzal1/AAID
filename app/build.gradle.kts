@@ -48,7 +48,7 @@ android {
         minSdk = 23
         targetSdk = 34
         versionCode = 7
-        versionName = "1.2.3"
+        versionName = "1.2.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -110,8 +110,9 @@ dependencies {
     //Compose navigation
     implementation(libs.androidx.navigation.navigation.compose)
 
-    //AAID
+    //ADS
     implementation(libs.bundles.google.play.ads)
+    implementation(libs.com.google.android.ump)
 
     //LIFECYCLE
     implementation(libs.androidx.lifecycle.lifecycle.viewmodel.compose)

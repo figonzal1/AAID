@@ -67,7 +67,7 @@ class CardViewTest {
 
         //Settings button
         composeTestRule
-            .onNodeWithContentDescription(context.getString(R.string.cd_about_button))
+            .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))
             .assertIsDisplayed()
 
         //Buttons

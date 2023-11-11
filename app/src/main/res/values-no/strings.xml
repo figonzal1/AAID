@@ -18,11 +18,12 @@
     <string name="btn_copy">Kopiere</string>
     <string name="cd_copy_btn">Kopier ID-knapp</string>
     <string name="cd_share_id_btn">Del ID-knapp</string>
-    <string name="cd_about_button">Om-knappen</string>
+    <string name="cd_settings_button">Knapp for innstillinger</string>
     <string name="btn_share">Dele</string>
     <string name="intent_chooser">Del AAID</string>
     <string name="cv_subtitle">Annonserings-ID-en for denne enheten er:</string>
     <string name="about_preference_title">Om</string>
+    <string name="settings_screen_title">Innstillinger</string>
     <string name="about_app_description">AAID-app, få din annonse-ID enkelt</string>
     <string name="version">Versjon</string>
     <string name="contact_developer">Kontakt utvikler</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">Send e-post med:</string>
     <string name="cd_about">Om delen</string>
     <string name="cd_navigate_up">Naviger opp</string>
+    <string name="privacy_preference_title">Personvern</string>
+    <string name="consent_privacy_preference_title">Retningslinjer for samtykke</string>
+    <string name="conset_privacy_preference_subtitle">Personlig tilpasset reklame</string>
+    <string name="cd_privacy_preference">Avsnitt om personvern</string>
 </resources>

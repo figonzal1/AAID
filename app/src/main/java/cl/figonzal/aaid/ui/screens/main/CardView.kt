@@ -29,7 +29,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentCopy
-import androidx.compose.material.icons.rounded.Help
+import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -146,8 +146,8 @@ private fun CardContent(
                     onClick = onSettingsClick
                 ) {
                     Icon(
-                        imageVector = Icons.Rounded.Help,
-                        contentDescription = stringResource(R.string.cd_about_button)
+                        imageVector = Icons.Rounded.Settings,
+                        contentDescription = stringResource(R.string.cd_settings_button)
                     )
                 }
             }

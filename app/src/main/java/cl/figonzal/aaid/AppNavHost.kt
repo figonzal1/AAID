@@ -14,6 +14,7 @@
 
 package cl.figonzal.aaid
 
+import android.app.Activity
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
@@ -26,6 +27,7 @@ import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import cl.figonzal.aaid.ui.screens.main.MainScreen
 import cl.figonzal.aaid.ui.screens.settings.SettingsView
 import cl.figonzal.aaid.utils.contactIntent
+import cl.figonzal.aaid.utils.contactPrivacy
 
 private const val ANIMATION_DURATION = 300
 
@@ -65,7 +67,8 @@ fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
     ) {
         SettingsView(
             onNavigateUp = { navController.navigateUp() },
-            onDevContact = { navController.context.contactIntent() }
+            onDevContact = { navController.context.contactIntent() },
+            onPrivacy = { contactPrivacy(navController.context as Activity) }
         )
     }
 }

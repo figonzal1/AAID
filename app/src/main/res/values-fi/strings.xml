@@ -18,11 +18,12 @@
     <string name="btn_copy">Kopio</string>
     <string name="cd_copy_btn">Kopioi ID-painike</string>
     <string name="cd_share_id_btn">Jaa ID-painike</string>
-    <string name="cd_about_button">Tietoja-painike</string>
+    <string name="cd_settings_button">Asetukset-painike</string>
     <string name="btn_share">Jaa</string>
     <string name="intent_chooser">Jaa AAID</string>
     <string name="cv_subtitle">Tämän laitteen mainostunnus on:</string>
     <string name="about_preference_title">Noin</string>
+    <string name="settings_screen_title">Asetukset</string>
     <string name="about_app_description">AAID-sovellus, saat mainostunnuksesi helposti</string>
     <string name="version">Versio</string>
     <string name="contact_developer">Ota yhteyttä developer</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">Lähetä sähköpostia osoitteella:</string>
     <string name="cd_about">Tietoja osiosta</string>
     <string name="cd_navigate_up">Navigoi ylös</string>
+    <string name="privacy_preference_title">Yksityisyys</string>
+    <string name="consent_privacy_preference_title">Suostumuspolitiikka</string>
+    <string name="conset_privacy_preference_subtitle">Henkilökohtainen mainonta</string>
+    <string name="cd_privacy_preference">Tietosuojaosio</string>
 </resources>

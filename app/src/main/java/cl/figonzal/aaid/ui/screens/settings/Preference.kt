@@ -23,7 +23,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ContactSupport
+import androidx.compose.material.icons.rounded.Abc
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -53,9 +53,10 @@ fun PreviewPreference() {
         ) {
             Column {
                 Preference(
-                    "Contacto desarrollador",
-                    "¿Sugerencias? ¿Problemas?", isTitlePresent = true
-                ) {}
+                    title = "Contacto desarrollador",
+                    subTitle = "¿Sugerencias? ¿Problemas?",
+                    isTitlePresent = true
+                )
             }
         }
     }
@@ -67,7 +68,7 @@ fun Preference(
     subTitle: String,
     modifier: Modifier = Modifier,
     isTitlePresent: Boolean = false,
-    onClick: () -> Unit
+    onClick: () -> Unit = {}
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -90,8 +91,8 @@ fun Preference(
             modifier = modifier.padding(start = 16.dp)
         ) {
             Icon(
-                modifier = Modifier.alpha(0f),
-                imageVector = Icons.Rounded.ContactSupport,
+                modifier = Modifier.alpha(0f), //invisible
+                imageVector = Icons.Rounded.Abc,
                 contentDescription = null
             )
         }

@@ -29,6 +29,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,7 +50,11 @@ fun PreviewPreferenceCategory() {
         Surface(
             color = MaterialTheme.colorScheme.background
         ) {
-            PreferenceCategory("Acerca")
+            PreferenceCategory(
+                title = "Acerca",
+                icon = Icons.Rounded.ContactSupport,
+                contentDescription = stringResource(id = R.string.cd_about)
+            )
         }
     }
 }
@@ -57,6 +62,8 @@ fun PreviewPreferenceCategory() {
 @Composable
 fun PreferenceCategory(
     title: String,
+    icon: ImageVector? = null,
+    contentDescription: String,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -69,10 +76,12 @@ fun PreferenceCategory(
             modifier = modifier.padding(start = 16.dp),
             verticalArrangement = Arrangement.Center
         ) {
-            Icon(
-                imageVector = Icons.Rounded.ContactSupport,
-                contentDescription = stringResource(R.string.cd_about)
-            )
+            icon?.let {
+                Icon(
+                    imageVector = it,
+                    contentDescription = contentDescription
+                )
+            }
         }
 
         Column(
