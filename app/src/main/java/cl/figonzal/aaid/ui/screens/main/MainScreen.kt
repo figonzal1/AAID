@@ -34,7 +34,7 @@ fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
     ) {
         CardAAID(viewModel.aaid, onSettingsClick)
         Column(verticalArrangement = Arrangement.Bottom) {
-            BannerView()
+            //BannerView()
         }
     }
 
