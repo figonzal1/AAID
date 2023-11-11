@@ -50,7 +50,8 @@ fun NavGraphBuilder.fakeSettingsScreenComposable(navController: NavHostControlle
     ) {
         SettingsView(
             onNavigateUp = { navController.navigateUp() },
-            onDevContact = { navController.context.contactIntent() }
+            onDevContact = { navController.context.contactIntent() },
+            onPrivacy = { }
         )
     }
 }
