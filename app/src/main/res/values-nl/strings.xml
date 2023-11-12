@@ -18,11 +18,12 @@
     <string name="btn_copy">Kopiëren</string>
     <string name="cd_copy_btn">Kopieer ID-knop</string>
     <string name="cd_share_id_btn">Deel ID-knop</string>
-    <string name="cd_about_button">Over knop</string>
+    <string name="cd_settings_button">Knop Instellingen</string>
     <string name="btn_share">Deel</string>
     <string name="intent_chooser">AAID delen</string>
     <string name="cv_subtitle">De advertentie-ID voor dit apparaat is:</string>
     <string name="about_preference_title">Over</string>
+    <string name="settings_screen_title">Instellingen</string>
     <string name="about_app_description">AAID-app, krijg eenvoudig uw advertentie-ID</string>
     <string name="version">Versie</string>
     <string name="contact_developer">Neem contact op met de developer</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">E-mail sturen met:</string>
     <string name="cd_about">Over sectie</string>
     <string name="cd_navigate_up">Navigeer omhoog</string>
+    <string name="privacy_preference_title">Datenschutz</string>
+    <string name="consent_privacy_preference_title">Toestemmingsbeleid</string>
+    <string name="conset_privacy_preference_subtitle">Gepersonaliseerde reclame</string>
+    <string name="cd_privacy_preference">Abschnitt Datenschutz</string>
 </resources>

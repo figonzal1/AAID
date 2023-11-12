@@ -18,11 +18,12 @@
     <string name="btn_copy">प्रतिलिपि</string>
     <string name="cd_copy_btn">कॉपी आईडी बटन</string>
     <string name="cd_share_id_btn">शेयर आईडी बटन</string>
-    <string name="cd_about_button">बटन के बारे में</string>
+    <string name="cd_settings_button">सेटिंग्स बटन</string>
     <string name="btn_share">शेयर करना</string>
     <string name="intent_chooser">एएआईडी साझा करें</string>
     <string name="cv_subtitle">इस डिवाइस की विज्ञापन आईडी है:</string>
     <string name="about_preference_title">के बारे में</string>
+    <string name="settings_screen_title">समायोजन</string>
     <string name="about_app_description">एएआईडी ऐप, अपनी विज्ञापन आईडी आसानी से प्राप्त करें</string>
     <string name="version">संस्करण</string>
     <string name="contact_developer">डेवलपर से संपर्क करें</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">इसके साथ ईमेल भेजें:</string>
     <string name="cd_about">खंड के बारे में</string>
     <string name="cd_navigate_up">ऊपर नेविगेट करें</string>
+    <string name="privacy_preference_title">गोपनीयता</string>
+    <string name="consent_privacy_preference_title">सहमति नीति</string>
+    <string name="conset_privacy_preference_subtitle">वैयक्तिकृत विज्ञापन</string>
+    <string name="cd_privacy_preference">गोपनीयता अनुभाग</string>
 </resources>

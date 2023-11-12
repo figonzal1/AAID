@@ -18,11 +18,12 @@
     <string name="btn_copy">Copie</string>
     <string name="cd_copy_btn">Bouton Copie ID</string>
     <string name="cd_share_id_btn">Bouton Partager ID</string>
-    <string name="cd_about_button">À propos du bouton</string>
+    <string name="cd_settings_button">Bouton de réglage</string>
     <string name="btn_share">Partager</string>
     <string name="intent_chooser">Partager aaid</string>
     <string name="cv_subtitle">L\'ID publicitaire de ce dispositif est:</string>
     <string name="about_preference_title">À propos de</string>
+    <string name="settings_screen_title">Paramètres</string>
     <string name="about_app_description">Application AAID, obtenez facilement votre identifiant publicitaire}</string>
     <string name="version">Version</string>
     <string name="contact_developer">Contacter le développeur</string>
@@ -31,4 +32,8 @@
     <string name="email_chooser_title">Envoyer un e-mail avec :</string>
     <string name="cd_about">Rubrique À propos</string>
     <string name="cd_navigate_up">Naviguer vers le haut</string>
+    <string name="privacy_preference_title">Vie privée</string>
+    <string name="consent_privacy_preference_title">Politique de consentement</string>
+    <string name="conset_privacy_preference_subtitle">Publicité personnalisée</string>
+    <string name="cd_privacy_preference">Section vie privée</string>
 </resources>

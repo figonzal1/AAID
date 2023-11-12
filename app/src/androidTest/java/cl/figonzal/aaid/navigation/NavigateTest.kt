@@ -58,7 +58,7 @@ class NavigateTest {
         //composeTestRule.onRoot().printToLog("TAG")
 
         composeTestRule
-            .onNodeWithContentDescription(context.getString(R.string.cd_about_button))
+            .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))
             .performClick()
 
         val route = navController.currentBackStackEntry?.destination?.route

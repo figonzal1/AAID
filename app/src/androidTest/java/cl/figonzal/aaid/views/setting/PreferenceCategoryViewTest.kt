@@ -15,10 +15,15 @@
 package cl.figonzal.aaid.views.setting
 
 import android.content.Context
-import androidx.compose.ui.test.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Abc
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
+import androidx.compose.ui.test.printToLog
 import androidx.test.platform.app.InstrumentationRegistry
-import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.settings.PreferenceCategory
 import org.junit.Before
 import org.junit.Rule
@@ -35,18 +40,24 @@ class PreferenceCategoryViewTest {
     fun setupAppNavHost() {
 
         composeTestRule.setContent {
-            PreferenceCategory(title = "Test title")
+            PreferenceCategory(
+                title = "Test title",
+                contentDescription = "Icon content",
+                icon = Icons.Rounded.Abc
+            )
         }
     }
 
     @Test
     fun appNavHost_verifyResources() {
 
+        Thread.sleep(4000)
+
         composeTestRule.onRoot().printToLog("TAG")
 
         //About section
         composeTestRule
-            .onNodeWithContentDescription(context.getString(R.string.cd_about))
+            .onNodeWithContentDescription("Icon content")
             .assertIsDisplayed()
 
         composeTestRule

@@ -14,6 +14,7 @@
 
 package cl.figonzal.aaid.utils
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
@@ -27,6 +28,8 @@ import androidx.annotation.StringRes
 import androidx.compose.ui.platform.ClipboardManager
 import androidx.compose.ui.text.AnnotatedString
 import cl.figonzal.aaid.R
+import com.google.android.ump.UserMessagingPlatform
+import timber.log.Timber
 
 
 fun Context.toast(@StringRes resId: Int) {
@@ -61,3 +64,10 @@ fun Context.contactIntent() {
         startActivity(createChooser(this, getString(R.string.email_chooser_title)))
     }
 }
+
+fun contactPrivacy(activity: Activity) =
+    UserMessagingPlatform.showPrivacyOptionsForm(activity) { formError ->
+        formError?.let {
+            Timber.w("Privacy options form: ${it.message}")
+        }
+    }
