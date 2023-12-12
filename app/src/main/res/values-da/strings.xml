@@ -22,6 +22,7 @@
     <string name="btn_share">Del</string>
     <string name="intent_chooser">Del AAID</string>
     <string name="cv_subtitle">Reklame-ID for denne enhed er:</string>
+    <string name="ads_preference_title">Annoncer</string>
     <string name="about_preference_title">Om</string>
     <string name="settings_screen_title">Indstillinger</string>
     <string name="about_app_description">AAID-app, få dit reklame-id nemt</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">Send e-mail med:</string>
     <string name="cd_about">Om afsnittet</string>
     <string name="cd_navigate_up">Naviger op</string>
-    <string name="privacy_preference_title">Privatlivets fred</string>
     <string name="consent_privacy_preference_title">Politik for samtykke</string>
     <string name="conset_privacy_preference_subtitle">Personaliseret reklame</string>
-    <string name="cd_privacy_preference">Sektion om privatlivets fred</string>
+    <string name="cd_privacy_preference">Sektion for annoncer</string>
 </resources>

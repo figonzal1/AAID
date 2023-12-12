@@ -22,6 +22,7 @@
     <string name="btn_share">Compartir</string>
     <string name="intent_chooser">Compartir AAID</string>
     <string name="cv_subtitle">El ID de publicidad para este dispositivo es:</string>
+    <string name="ads_preference_title">Publicidad</string>
     <string name="about_preference_title">Acerca</string>
     <string name="settings_screen_title">Configuración</string>
     <string name="version">Versión</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">Enviar email con:</string>
     <string name="cd_about">Sección acerca</string>
     <string name="cd_navigate_up">Navegar hacia arriba</string>
-    <string name="privacy_preference_title">Privacidad</string>
     <string name="consent_privacy_preference_title">Política de consentimiento</string>
     <string name="conset_privacy_preference_subtitle">Publicidad personalizada</string>
-    <string name="cd_privacy_preference">Sección privacidad</string>
+    <string name="cd_privacy_preference">Sección publicidad</string>
 </resources>

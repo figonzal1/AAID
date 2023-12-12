@@ -23,6 +23,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import com.google.android.gms.ads.MobileAds
+import com.google.android.ump.ConsentDebugSettings
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
@@ -60,8 +61,13 @@ class MainActivity : ComponentActivity() {
      */
     private fun checkConsent() {
 
+        val debugSettings = ConsentDebugSettings.Builder(this)
+            .setDebugGeography(ConsentDebugSettings.DebugGeography.DEBUG_GEOGRAPHY_EEA)
+            .addTestDeviceHashedId("8729C73F841DB3AF3B54659287642304")
+            .build()
         val params = ConsentRequestParameters
             .Builder()
+            .setConsentDebugSettings(debugSettings)
             .setTagForUnderAgeOfConsent(false)
             .build()
 

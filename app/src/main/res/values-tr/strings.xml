@@ -22,6 +22,7 @@
     <string name="btn_share">Paylaş</string>
     <string name="intent_chooser">AAID\'yi paylaşın</string>
     <string name="cv_subtitle">Bu cihaz için reklam kimliği şöyledir:</string>
+    <string name="ads_preference_title">Reklamlar</string>
     <string name="about_preference_title">Hakkında</string>
     <string name="settings_screen_title">Ayarlar</string>
     <string name="about_app_description">AAID uygulaması, reklam kimliğinizi kolayca alın</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">İle e-posta gönder:</string>
     <string name="cd_about">Hakkında bölümü</string>
     <string name="cd_navigate_up">Yukarı git</string>
-    <string name="privacy_preference_title">Gizlilik</string>
     <string name="consent_privacy_preference_title">Rıza politikası</string>
     <string name="conset_privacy_preference_subtitle">Kişiselleştirilmiş reklamcılık</string>
-    <string name="cd_privacy_preference">Gizlilik bölümü</string>
+    <string name="cd_privacy_preference">Reklamlar bölümü</string>
 </resources>

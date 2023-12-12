@@ -22,6 +22,7 @@
     <string name="btn_share">Partilhar</string>
     <string name="intent_chooser">Partilhar AAID</string>
     <string name="cv_subtitle">A identificação publicitária para este dispositivo é:</string>
+    <string name="ads_preference_title">Anúncios</string>
     <string name="about_preference_title">Sobre</string>
     <string name="settings_screen_title">Configurações</string>
     <string name="about_app_description">Aplicativo AAID, obtenha seu ID de publicidade facilmente</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">Enviar e-mail com:</string>
     <string name="cd_about">Sobre a seção</string>
     <string name="cd_navigate_up">Navegar para cima</string>
-    <string name="privacy_preference_title">Privacidade</string>
     <string name="consent_privacy_preference_title">Política de consentimento</string>
     <string name="conset_privacy_preference_subtitle">Publicidade personalizada</string>
-    <string name="cd_privacy_preference">Secção de privacidade</string>
+    <string name="cd_privacy_preference">"Secção de anúncios "</string>
 </resources>

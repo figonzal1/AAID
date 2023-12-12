@@ -22,6 +22,7 @@
     <string name="btn_share">シェア</string>
     <string name="intent_chooser">AAIDをシェアする</string>
     <string name="cv_subtitle">このデバイスの広告IDは</string>
+    <string name="ads_preference_title">広告</string>
     <string name="about_preference_title">約</string>
     <string name="settings_screen_title">設定</string>
     <string name="about_app_description">AAID アプリ、広告 ID を簡単に取得</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">メールを送信:</string>
     <string name="cd_about">セクションについて</string>
     <string name="cd_navigate_up">上に移動</string>
-    <string name="privacy_preference_title">プライバシー</string>
     <string name="consent_privacy_preference_title">同意方針</string>
     <string name="conset_privacy_preference_subtitle">パーソナライズ広告</string>
-    <string name="cd_privacy_preference">プライバシー</string>
+    <string name="cd_privacy_preference">"広告セクション "</string>
 </resources>

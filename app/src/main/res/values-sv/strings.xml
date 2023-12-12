@@ -22,6 +22,7 @@
     <string name="btn_share">Dela</string>
     <string name="intent_chooser">Dela AAID</string>
     <string name="cv_subtitle">Reklam-ID för den här enheten är:</string>
+    <string name="ads_preference_title">Annonser</string>
     <string name="about_preference_title">Handla om</string>
     <string name="settings_screen_title">Inställningar</string>
     <string name="about_app_description">AAID-app, få ditt reklam-ID enkelt</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">Skicka e-post med:</string>
     <string name="cd_about">Om avsnitt</string>
     <string name="cd_navigate_up">Navigera upp</string>
-    <string name="privacy_preference_title">Integritet</string>
     <string name="consent_privacy_preference_title">Policy för samtycke</string>
     <string name="conset_privacy_preference_subtitle">Personligt anpassad reklam</string>
-    <string name="cd_privacy_preference">Avsnitt om integritet</string>
+    <string name="cd_privacy_preference">Avsnittet Annonser</string>
 </resources>

@@ -22,6 +22,7 @@
     <string name="btn_share">Condividi</string>
     <string name="intent_chooser">Condividi AAID</string>
     <string name="cv_subtitle">L\'ID pubblicitario di questo dispositivo è:</string>
+    <string name="ads_preference_title">Annunci</string>
     <string name="about_preference_title">Circa</string>
     <string name="settings_screen_title">Impostazioni</string>
     <string name="about_app_description">App AAID, ottieni facilmente il tuo ID pubblicitario</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">Invia email con:</string>
     <string name="cd_about">Informazioni sulla sezione</string>
     <string name="cd_navigate_up">Naviga verso l\'alto</string>
-    <string name="privacy_preference_title">La privacy</string>
     <string name="consent_privacy_preference_title">Politica di consenso</string>
     <string name="conset_privacy_preference_subtitle">Pubblicità personalizzata</string>
-    <string name="cd_privacy_preference">Sezione Privacy</string>
+    <string name="cd_privacy_preference">Sezione annunci</string>
 </resources>

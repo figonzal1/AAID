@@ -22,6 +22,7 @@
     <string name="btn_share">Deel</string>
     <string name="intent_chooser">AAID delen</string>
     <string name="cv_subtitle">De advertentie-ID voor dit apparaat is:</string>
+    <string name="ads_preference_title">Advertentie</string>
     <string name="about_preference_title">Over</string>
     <string name="settings_screen_title">Instellingen</string>
     <string name="about_app_description">AAID-app, krijg eenvoudig uw advertentie-ID</string>
@@ -32,8 +33,7 @@
     <string name="email_chooser_title">E-mail sturen met:</string>
     <string name="cd_about">Over sectie</string>
     <string name="cd_navigate_up">Navigeer omhoog</string>
-    <string name="privacy_preference_title">Datenschutz</string>
     <string name="consent_privacy_preference_title">Toestemmingsbeleid</string>
     <string name="conset_privacy_preference_subtitle">Gepersonaliseerde reclame</string>
-    <string name="cd_privacy_preference">Abschnitt Datenschutz</string>
+    <string name="cd_privacy_preference">"Abschnitt Anzeigen "</string>
 </resources>

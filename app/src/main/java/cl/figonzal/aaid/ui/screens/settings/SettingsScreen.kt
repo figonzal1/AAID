@@ -114,7 +114,7 @@ private fun SettingsPreferenceList(
 
                     item {
                         PreferenceCategory(
-                            title = stringResource(R.string.privacy_preference_title),
+                            title = stringResource(R.string.ads_preference_title),
                             icon = Icons.Rounded.Policy,
                             contentDescription = stringResource(R.string.cd_privacy_preference),
                             modifier = Modifier.padding(bottom = 8.dp)

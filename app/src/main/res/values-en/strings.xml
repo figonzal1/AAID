@@ -32,8 +32,8 @@
     <string name="email_chooser_title">Send email with:</string>
     <string name="cd_about">About section</string>
     <string name="cd_navigate_up">Navigate up</string>
-    <string name="privacy_preference_title">Privacy</string>
+    <string name="ads_preference_title">Ads</string>
     <string name="consent_privacy_preference_title">Consent Policy</string>
     <string name="conset_privacy_preference_subtitle">Personalized advertising</string>
-    <string name="cd_privacy_preference">Privacy section</string>
+    <string name="cd_privacy_preference">Ads section</string>
 </resources>
