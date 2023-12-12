@@ -41,7 +41,7 @@ android {
 
     namespace = "cl.figonzal.aaid"
     compileSdk = 34
-    buildToolsVersion = "33.0.2"
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "cl.figonzal.aaid"
@@ -91,6 +91,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
