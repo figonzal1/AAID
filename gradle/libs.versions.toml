@@ -1,9 +1,9 @@
 [versions]
-androidx-activity = "1.8.1"
+androidx-activity = "1.8.2"
 androidx-compose-material = "1.5.4"
 androidx-compose-ui = "1.5.4"
 androidx-lifecycle = "2.6.2"
-androidx-navigation = "2.7.5"
+androidx-navigation = "2.7.6"
 androidx-test-espresso = "3.5.1"
 
 [libraries]
@@ -67,6 +67,6 @@ com-google-android-libraries-mapsplatform-secrets-gradle-plugin = "com.google.an
 com-google-firebase-crashlytics = "com.google.firebase.crashlytics:2.9.9"
 com-google-firebase-firebase-perf = "com.google.firebase.firebase-perf:1.4.2"
 com-google-gms-google-services = "com.google.gms.google-services:4.4.0"
-nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.1"
+nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.2"
 org-jetbrains-kotlin-android = "org.jetbrains.kotlin.android:1.8.10"
 org-sonarqube = "org.sonarqube:4.4.1.3373"
