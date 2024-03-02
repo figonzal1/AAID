@@ -41,9 +41,9 @@ class PreferenceCategoryViewTest {
 
         composeTestRule.setContent {
             PreferenceCategory(
+                icon = Icons.Rounded.Abc,
                 title = "Test title",
-                contentDescription = "Icon content",
-                icon = Icons.Rounded.Abc
+                contentDescription = "Icon content"
             )
         }
     }

@@ -22,9 +22,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ContactSupport
+import androidx.compose.material.icons.automirrored.rounded.ContactSupport
 import androidx.compose.material.icons.rounded.Policy
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -114,10 +114,10 @@ private fun SettingsPreferenceList(
 
                     item {
                         PreferenceCategory(
-                            title = stringResource(R.string.ads_preference_title),
+                            modifier = Modifier.padding(bottom = 8.dp),
                             icon = Icons.Rounded.Policy,
-                            contentDescription = stringResource(R.string.cd_privacy_preference),
-                            modifier = Modifier.padding(bottom = 8.dp)
+                            title = stringResource(R.string.ads_preference_title),
+                            contentDescription = stringResource(R.string.cd_privacy_preference)
                         )
                     }
 
@@ -131,7 +131,7 @@ private fun SettingsPreferenceList(
                         )
                     }
 
-                    item { Divider() }
+                    item { HorizontalDivider() }
 
                     aboutModifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
                 }
@@ -143,10 +143,10 @@ private fun SettingsPreferenceList(
 
             item {
                 PreferenceCategory(
+                    modifier = aboutModifier,
+                    icon = Icons.AutoMirrored.Rounded.ContactSupport,
                     title = stringResource(R.string.about_preference_title),
-                    icon = Icons.Rounded.ContactSupport,
-                    contentDescription = stringResource(id = R.string.cd_about),
-                    modifier = aboutModifier
+                    contentDescription = stringResource(id = R.string.cd_about)
                 )
             }
 
@@ -159,7 +159,7 @@ private fun SettingsPreferenceList(
                 )
             }
 
-            item { Divider() }
+            item { HorizontalDivider() }
 
             item {
                 Preference(
@@ -170,7 +170,7 @@ private fun SettingsPreferenceList(
                 )
             }
 
-            item { Divider() }
+            item { HorizontalDivider() }
 
             item {
                 Preference(

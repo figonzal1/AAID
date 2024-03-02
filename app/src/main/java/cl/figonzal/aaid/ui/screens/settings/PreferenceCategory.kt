@@ -21,7 +21,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ContactSupport
+import androidx.compose.material.icons.automirrored.rounded.ContactSupport
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -51,8 +51,8 @@ fun PreviewPreferenceCategory() {
             color = MaterialTheme.colorScheme.background
         ) {
             PreferenceCategory(
+                icon = Icons.AutoMirrored.Rounded.ContactSupport,
                 title = "Acerca",
-                icon = Icons.Rounded.ContactSupport,
                 contentDescription = stringResource(id = R.string.cd_about)
             )
         }
@@ -61,10 +61,10 @@ fun PreviewPreferenceCategory() {
 
 @Composable
 fun PreferenceCategory(
+    modifier: Modifier = Modifier,
     title: String,
     icon: ImageVector? = null,
-    contentDescription: String,
-    modifier: Modifier = Modifier
+    contentDescription: String
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
