@@ -1,7 +1,7 @@
 [versions]
 androidx-activity = "1.8.2"
-androidx-compose-material = "1.6.2"
-androidx-compose-ui = "1.6.2"
+androidx-compose-material = "1.6.3"
+androidx-compose-ui = "1.6.3"
 androidx-lifecycle = "2.7.0"
 androidx-navigation = "2.7.7"
 androidx-test-espresso = "3.5.1"
@@ -11,7 +11,7 @@ androidx-core-core-ktx = "androidx.core:core-ktx:1.12.0"
 androidx-core-core-splashscreen = "androidx.core:core-splashscreen:1.0.1"
 androidx-activity-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 #COMPOSE
-androidx-compose-material3 = "androidx.compose.material3:material3:1.2.0"
+androidx-compose-material3 = "androidx.compose.material3:material3:1.2.1"
 androidx-compose-ui-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose-ui" }
 androidx-compose-ui-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose-ui" }
 androidx-compose-ui-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose-ui" }
@@ -20,13 +20,13 @@ androidx-navigation-navigation-compose = { module = "androidx.navigation:navigat
 androidx-navigation-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "androidx-navigation" }
 com-jakewharton-timber = "com.jakewharton.timber:timber:5.0.1"
 #ADS
-com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:22.6.0"
+com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:23.0.0"
 com-google-android-gms-play-services-ads-identifier = "com.google.android.gms:play-services-ads-identifier:18.0.1"
 com-google-android-ump = "com.google.android.ump:user-messaging-platform:2.2.0"
 #LIFECYCLE
 androidx-lifecycle-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
 #FIREBASE
-com-google-firebase-firebase-bom = "com.google.firebase:firebase-bom:32.7.3"
+com-google-firebase-firebase-bom = "com.google.firebase:firebase-bom:32.7.4"
 com-google-firebase-firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
 com-google-firebase-firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
 com-google-firebase-firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
