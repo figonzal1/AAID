@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2023
+ * Copyright (c) 2024
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 02-02-23 19:27
+ * Last modified: 28-07-24 14:57
  */
 
 import java.io.FileInputStream
@@ -24,10 +24,14 @@ plugins {
     alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
+secrets {
+    propertiesFileName = "secrets.properties"
+}
+
 android {
 
     val prop = Properties().apply {
-        load(FileInputStream(File(rootProject.rootDir, "keystore.properties")))
+        load(FileInputStream(File(rootProject.rootDir, "keys/keystore.properties")))
     }
 
     signingConfigs {

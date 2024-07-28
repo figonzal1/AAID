@@ -1,23 +1,33 @@
-*.iml
 .gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/deploymentTargetDropDown.xml
-/.idea/androidTestResultsUserPreferences.xml
-/.idea/discord.xml
+
+# IntelliJ
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+# Android Studio 3 in .gitignore file.
+.idea/caches
+.idea/modules.xml
+# Comment next line if keeping position of elements in Navigation Editor is relevant for you
+.idea/navEditor.xml
+
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
+
 local.properties
+secrets.properties
+
 /app/google-services.json
-/app/key_pkcs.jks
-/keystore.properties
 /fastlane/google-play-fastlane.json
 /fastlane/.env
+/keys/key_pkcs.jks
+/keys/keystore.properties
+
+/.idea/discord.xml
+/.idea/aws.xml
