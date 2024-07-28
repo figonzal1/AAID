@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2024
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 15-12-22 22:59
+ * Last modified: 28-07-24 16:30
  */
 
 package cl.figonzal.aaid
@@ -48,11 +48,11 @@ class MainActivity : ComponentActivity() {
             AppNavHost(navController, viewModel)
         }
 
-        checkConsent()
+        /*checkConsent()
 
         if (consentInformation.canRequestAds()) {
             initializeMobileAdsSdk()
-        }
+        }*/
     }
 
     /**
