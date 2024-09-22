@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2023
+ * Copyright (c) 2024
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 13-01-23 17:48
+ * Last modified: 22-09-24 14:36
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -24,17 +24,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Abc
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cl.figonzal.aaid.ui.theme.AAIDTheme
@@ -76,11 +75,7 @@ fun Preference(
             .fillMaxWidth()
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(
-                    bounded = false,
-                    radius = 80.dp,
-                    color = Color.Black
-                ),
+                indication = ripple(),
                 enabled = true,
                 onClick = onClick
             )

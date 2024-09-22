@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2023
+ * Copyright (c) 2024
  *
  * Project: AAID
  * Module: AAID
- * Last modified: 13-01-23 15:28
+ * Last modified: 01-09-24 15:31
  */
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
@@ -17,6 +17,7 @@ plugins {
     alias(libs.plugins.com.android.application) apply false
     alias(libs.plugins.com.android.library) apply false
     alias(libs.plugins.org.jetbrains.kotlin.android) apply false
+    alias(libs.plugins.compose.compiler) apply false
 
     //FIREBASE CRASH ANALYTICS
     alias(libs.plugins.com.google.gms.google.services) apply false

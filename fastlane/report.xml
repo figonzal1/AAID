@@ -10,19 +10,19 @@
   ~
   ~ Project: AAID
   ~ Module: AAID
-  ~ Last modified: 28-07-24 16:48
+  ~ Last modified: 22-09-24 14:36
   -->
 
 <testsuites>
     <testsuite name="fastlane.lanes">
 
 
-        <testcase name="0: default_platform" classname="fastlane.lanes" time="0.0023541">
+        <testcase name="0: default_platform" classname="fastlane.lanes" time="0.002803">
 
         </testcase>
 
 
-        <testcase name="1: connectedDebug" classname="fastlane.lanes" time="654.9937244">
+        <testcase name="1: connectedDebug" classname="fastlane.lanes" time="156.8054326">
 
         </testcase>
 

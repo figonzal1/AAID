@@ -9,7 +9,7 @@
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 28-07-24 14:57
+ * Last modified: 01-09-24 15:33
  */
 
 import java.io.FileInputStream
@@ -18,6 +18,7 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.com.google.gms.google.services)
     alias(libs.plugins.com.google.firebase.crashlytics)
     alias(libs.plugins.com.google.firebase.firebase.perf)
@@ -96,9 +97,6 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.12"
     }
 }
 
