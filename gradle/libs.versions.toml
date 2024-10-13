@@ -21,7 +21,7 @@ androidx-navigation-navigation-compose = { module = "androidx.navigation:navigat
 androidx-navigation-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "androidx-navigation" }
 com-jakewharton-timber = "com.jakewharton.timber:timber:5.0.1"
 #ADS
-com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:23.4.0"
+com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:23.3.0"
 com-google-android-gms-play-services-ads-identifier = "com.google.android.gms:play-services-ads-identifier:18.1.0"
 com-google-android-ump = "com.google.android.ump:user-messaging-platform:3.0.0"
 #LIFECYCLE
