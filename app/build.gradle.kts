@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2024
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 01-09-24 15:33
+ * Last modified: 02-03-25, 21:15
  */
 
 import java.io.FileInputStream
@@ -45,13 +45,13 @@ android {
     }
 
     namespace = "cl.figonzal.aaid"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "cl.figonzal.aaid"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 13
         versionName = "1.2.9"
 
