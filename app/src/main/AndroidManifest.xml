@@ -5,11 +5,11 @@
   ~ Author: Felipe González Alarcón
   ~ email: felipe.gonzalezalarcon94@gmail.com
   ~
-  ~ Copyright (c) 2022
+  ~ Copyright (c) 2025
   ~
   ~ Project: AAID
   ~ Module: AAID.app.main
-  ~ Last modified: 15-12-22 22:46
+  ~ Last modified: 02-03-25, 21:48
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -47,12 +47,6 @@
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="true" />
-
-        <!-- https://stackoverflow.com/questions/78085458/manifest-merger-failed-with-agp-8-3-0 -->
-        <property
-            android:name="android.adservices.AD_SERVICES_CONFIG"
-            android:resource="@xml/gma_ad_services_config"
-            tools:replace="android:resource" />
 
     </application>
 
