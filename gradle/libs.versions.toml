@@ -61,8 +61,8 @@ compose = [
 ]
 
 [plugins]
-com-android-application = "com.android.application:8.6.1"
-com-android-library = "com.android.library:8.6.1"
+com-android-application = "com.android.application:8.8.2"
+com-android-library = "com.android.library:8.8.2"
 com-github-ben-manes-versions = "com.github.ben-manes.versions:0.51.0"
 com-google-android-libraries-mapsplatform-secrets-gradle-plugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:2.0.1"
 com-google-firebase-crashlytics = "com.google.firebase.crashlytics:3.0.2"
