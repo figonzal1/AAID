@@ -5,23 +5,20 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 15-12-22 22:46
+ * Last modified: 06-03-25, 22:53
  */
 
 package cl.figonzal.aaid.ui.screens.settings
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.WindowInsetsSides
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -78,12 +75,7 @@ fun SettingsToolbar(
                 )
             }
         },
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(
-                paddingValues = WindowInsets.statusBars
-                    .only(WindowInsetsSides.Horizontal + WindowInsetsSides.Top)
-                    .asPaddingValues()
-            )
+        modifier = Modifier.windowInsetsPadding(WindowInsets.statusBars) // Asegúrate de que el TopAppBar respete los insets
+
     )
 }

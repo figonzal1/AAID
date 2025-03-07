@@ -5,19 +5,22 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 15-12-22 22:46
+ * Last modified: 06-03-25, 22:53
  */
 
 package cl.figonzal.aaid.ui.screens.main
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -48,11 +51,15 @@ fun BannerView(modifier: Modifier = Modifier) {
                 text = "AdView here..."
             )
         }
+
         else -> {
 
             val adId = stringResource(R.string.ADMOB_ID_BANNER)
             AndroidView(
-                modifier = modifier.fillMaxWidth(),
+                modifier = modifier
+                    .fillMaxWidth()
+                    .windowInsetsPadding(WindowInsets.safeDrawing)
+                    .background(Color.Transparent),
                 factory = { context ->
                     AdView(context).apply {
                         setAdSize(AdSize.BANNER)

@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2024
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 28-07-24 16:30
+ * Last modified: 06-03-25, 22:53
  */
 
 package cl.figonzal.aaid

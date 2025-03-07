@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 17-12-22 13:18
+ * Last modified: 06-03-25, 21:32
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -17,9 +17,11 @@ package cl.figonzal.aaid.ui.screens.settings
 import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ContactSupport
@@ -82,7 +84,8 @@ fun SettingsView(
                     onNavigateUp = onNavigateUp
                 )
             },
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize(),
+            contentWindowInsets = WindowInsets.systemBars
         ) { padding ->
             SettingsPreferenceList(onDevContact, onPrivacy, padding)
         }

@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2023
+ * Copyright (c) 2025
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 13-01-23 17:48
+ * Last modified: 06-03-25, 22:53
  */
 
 package cl.figonzal.aaid.ui.theme
@@ -67,16 +67,27 @@ fun AAIDTheme(
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
-        /* getting the current window by tapping into the Activity */
-        val currentWindow = (view.context as? Activity)?.window
-            ?: throw Exception("Not in an activity - unable to get Window reference")
 
         SideEffect {
-            /* the default code did the same cast here - might as well use our new variable! */
-            currentWindow.statusBarColor = colorScheme.primary.toArgb()
-            /* accessing the insets controller to change appearance of the status bar, with 100% less deprecation warnings */
-            WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =
-                darkTheme
+            val currentWindow = (view.context as? Activity)?.window
+                ?: throw Exception("Not in an activity - unable to get Window reference")
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) { // Android 15+
+                currentWindow.decorView.setOnApplyWindowInsetsListener { view, insets ->
+                    // Establece el color de fondo de la ventana
+                    view.setBackgroundColor(colorScheme.primary.toArgb())
+
+                    // No ajustes manualmente el padding, Compose lo maneja automáticamente
+                    insets
+                }
+            } else {
+                // Configura el color de la barra de estado (status bar)
+                currentWindow.statusBarColor = colorScheme.primary.toArgb()
+
+                // Configura el tema claro/oscuro de la barra de estado
+                WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =
+                    !darkTheme
+            }
         }
     }
 
