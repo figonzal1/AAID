@@ -9,7 +9,7 @@
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 06-03-25, 22:53
+ * Last modified: 07-03-25, 23:58
  */
 
 package cl.figonzal.aaid.ui.theme
@@ -77,6 +77,13 @@ fun AAIDTheme(
                     // Establece el color de fondo de la ventana
                     view.setBackgroundColor(colorScheme.primary.toArgb())
 
+                    // Configura el tema claro/oscuro de la barra de estado
+                    WindowCompat.getInsetsController(
+                        currentWindow,
+                        view
+                    ).isAppearanceLightStatusBars =
+                        !darkTheme
+
                     // No ajustes manualmente el padding, Compose lo maneja automáticamente
                     insets
                 }
@@ -84,10 +91,11 @@ fun AAIDTheme(
                 // Configura el color de la barra de estado (status bar)
                 currentWindow.statusBarColor = colorScheme.primary.toArgb()
 
-                // Configura el tema claro/oscuro de la barra de estado
                 WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =
-                    !darkTheme
+                    darkTheme
             }
+
+
         }
     }
 

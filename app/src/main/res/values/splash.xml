@@ -5,11 +5,11 @@
   ~ Author: Felipe González Alarcón
   ~ email: felipe.gonzalezalarcon94@gmail.com
   ~
-  ~ Copyright (c) 2022
+  ~ Copyright (c) 2025
   ~
   ~ Project: AAID
   ~ Module: AAID.app.main
-  ~ Last modified: 14-12-22 19:28
+  ~ Last modified: 08-03-25, 00:05
   -->
 
 <resources>
@@ -20,7 +20,6 @@
         <item name="postSplashScreenTheme">@style/AppTheme</item>
 
         <!-- Status bar and Nav bar configs -->
-        <item name="android:statusBarColor">@color/figonzal_purple</item>
         <item name="android:navigationBarColor">@color/figonzal_purple</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>

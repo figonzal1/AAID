@@ -9,7 +9,7 @@
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 06-03-25, 22:53
+ * Last modified: 08-03-25, 00:06
  */
 
 package cl.figonzal.aaid
@@ -48,11 +48,11 @@ class MainActivity : ComponentActivity() {
             AppNavHost(navController, viewModel)
         }
 
-        /*checkConsent()
+        checkConsent()
 
         if (consentInformation.canRequestAds()) {
             initializeMobileAdsSdk()
-        }*/
+        }
     }
 
     /**
