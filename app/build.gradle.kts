@@ -9,7 +9,7 @@
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 07-03-25, 23:22
+ * Last modified: 06-10-25, 11:51
  */
 
 import java.io.FileInputStream
@@ -45,13 +45,13 @@ android {
     }
 
     namespace = "cl.figonzal.aaid"
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 36
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
         applicationId = "cl.figonzal.aaid"
         minSdk = 27
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 14
         versionName = "1.2.10"
 
