@@ -1,5 +1,6 @@
 [versions]
 androidx-activity = "1.12.4"
+kotlinx-coroutines = "1.10.2"
 androidx-compose-material = "1.7.8"
 androidx-compose-ui = "1.10.4"
 androidx-lifecycle = "2.10.0"
@@ -33,6 +34,7 @@ com-google-firebase-firebase-crashlytics = { module = "com.google.firebase:fireb
 com-google-firebase-firebase-perf = { module = "com.google.firebase:firebase-perf" }
 # TESTING
 junit = "junit:junit:4.13.2"
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 androidx-test-rules = "androidx.test:rules:1.7.0"
 androidx-test-espresso-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" }
 androidx-test-espresso-espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "androidx-test-espresso" }

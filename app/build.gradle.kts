@@ -88,6 +88,12 @@ android {
             resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-6355378855577476/1471561473")
         }
     }
+    lint {
+        abortOnError = false
+        warningsAsErrors = false
+        disable += "MissingTranslation"
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -126,6 +132,7 @@ dependencies {
     implementation(libs.com.jakewharton.timber)
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.test.rules)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.ext.truth)

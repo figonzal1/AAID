@@ -14,40 +14,38 @@
 
 package cl.figonzal.aaid.ui.screens.main
 
-import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.android.gms.ads.identifier.AdvertisingIdClient
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException
-import com.google.android.gms.common.GooglePlayServicesRepairableException
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import java.io.IOException
 
-class AAIDViewModel : ViewModel() {
+sealed interface AaidState {
+    data object Loading : AaidState
+    data class Success(val aaid: String) : AaidState
+    data class Error(val message: String) : AaidState
+}
 
-    private var _aaid by mutableStateOf("")
-    val aaid: String get() = _aaid
+class AAIDViewModel(
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+) : ViewModel() {
 
-    fun requestAAID(context: Context, dispatcher: CoroutineDispatcher) {
-        viewModelScope.launch(dispatcher) {
+    var state: AaidState by mutableStateOf(AaidState.Loading)
+        private set
 
-            try {
-                val adInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
-                adInfo.id?.let { id ->
-                    _aaid = id
-                    Timber.d("Advertising id: $id")
-                } ?: Timber.e("AAID information not available")
-            } catch (e: GooglePlayServicesNotAvailableException) {
-                Timber.e("AAID information not available: ${e.message}")
-            } catch (e: GooglePlayServicesRepairableException) {
-                Timber.e("AAID information not available: ${e.message}")
-            } catch (e: IOException) {
-                Timber.e("AAID information not available: ${e.message}")
+    fun requestAAID(fetchAaid: suspend () -> String) {
+        viewModelScope.launch(ioDispatcher) {
+            state = try {
+                val id = fetchAaid()
+                Timber.d("Advertising id: $id")
+                AaidState.Success(id)
+            } catch (e: Exception) {
+                Timber.e("AAID not available: ${e.message}")
+                AaidState.Error(e.message ?: "Unknown error")
             }
         }
     }

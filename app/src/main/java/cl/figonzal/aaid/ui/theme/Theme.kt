@@ -92,6 +92,7 @@ fun AAIDTheme(
                 }
             } else {
                 // Configura el color de la barra de estado (status bar)
+                @Suppress("DEPRECATION")
                 currentWindow.statusBarColor = colorScheme.primary.toArgb()
 
                 WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =

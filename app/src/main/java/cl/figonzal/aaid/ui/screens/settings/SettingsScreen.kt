@@ -136,7 +136,7 @@ private fun SettingsPreferenceList(
                 item {
                     Preference(
                         title = stringResource(R.string.consent_privacy_preference_title),
-                        subTitle = stringResource(R.string.conset_privacy_preference_subtitle),
+                        subTitle = stringResource(R.string.consent_privacy_preference_subtitle),
                         modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
                         isTitlePresent = true,
                         onClick = onPrivacy

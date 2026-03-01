@@ -34,18 +34,21 @@ import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.ClipboardManager
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.Clipboard
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -74,14 +77,14 @@ fun DefaultCardAAID() {
         Surface(
             color = MaterialTheme.colorScheme.background
         ) {
-            CardAAID("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1") {}
+            CardAAID(AaidState.Success("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")) {}
         }
     }
 }
 
 @Composable
 fun CardAAID(
-    aaid: String,
+    state: AaidState,
     onSettingsClick: () -> Unit
 ) {
     Column(
@@ -92,14 +95,14 @@ fun CardAAID(
             .padding(16.dp)
     ) {
         Card(modifier = Modifier.fillMaxWidth()) {
-            CardContent(aaid, onSettingsClick)
+            CardContent(state, onSettingsClick)
         }
     }
 }
 
 @Composable
 private fun CardContent(
-    aaid: String,
+    state: AaidState,
     onSettingsClick: () -> Unit
 ) {
     Column(
@@ -108,7 +111,7 @@ private fun CardContent(
     ) {
 
         val context = LocalContext.current
-        val clipboardManager = LocalClipboardManager.current
+        val clipboard = LocalClipboard.current
 
         //Header section
         Box {
@@ -160,29 +163,48 @@ private fun CardContent(
             modifier = Modifier.padding(bottom = 16.dp)
         )
 
-        //AAID
-        Text(
-            text = aaid,
-            style = MaterialTheme.typography.labelLarge,
-            fontFamily = FontFamily.Monospace,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 32.dp)
-        )
+        when (state) {
+            is AaidState.Loading -> {
+                CircularProgressIndicator(
+                    modifier = Modifier
+                        .padding(bottom = 32.dp)
+                        .align(Alignment.CenterHorizontally)
+                )
+            }
 
-        ActionsButtons(context, clipboardManager, aaid)
+            is AaidState.Error -> {
+                Text(
+                    text = state.message,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.error,
+                    modifier = Modifier.padding(bottom = 32.dp)
+                )
+            }
+
+            is AaidState.Success -> {
+                Text(
+                    text = state.aaid,
+                    style = MaterialTheme.typography.labelLarge,
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(bottom = 32.dp)
+                )
+                ActionsButtons(context, clipboard, state.aaid)
+            }
+        }
     }
 }
 
 @Composable
-private fun ActionsButtons(context: Context, clipboardManager: ClipboardManager, aaid: String) {
+private fun ActionsButtons(context: Context, clipboard: Clipboard, aaid: String) {
 
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.Bottom,
         horizontalArrangement = Arrangement.End
     ) {
-        ClipBoardButton(context, clipboardManager, aaid)
-        ShareButton(context, clipboardManager, aaid)
+        ClipBoardButton(context, clipboard, aaid)
+        ShareButton(context, clipboard, aaid)
     }
 }
 
@@ -190,14 +212,16 @@ private fun ActionsButtons(context: Context, clipboardManager: ClipboardManager,
 @Composable
 private fun ClipBoardButton(
     context: Context,
-    clipboardManager: ClipboardManager,
+    clipboard: Clipboard,
     aaid: String
 ) {
-
+    val scope = rememberCoroutineScope()
     Button(
         onClick = {
-            copyToClipBoard(clipboardManager, aaid)
-            context.toast(R.string.copy_to_clipboard)
+            scope.launch {
+                copyToClipBoard(clipboard, aaid)
+                context.toast(R.string.copy_to_clipboard)
+            }
         },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
         modifier = Modifier.padding(end = 8.dp)
@@ -211,13 +235,16 @@ private fun ClipBoardButton(
 @Composable
 private fun ShareButton(
     context: Context,
-    clipboardManager: ClipboardManager,
+    clipboard: Clipboard,
     aaid: String
 ) {
+    val scope = rememberCoroutineScope()
     Button(
         onClick = {
-            copyToClipBoard(clipboardManager, aaid)
-            context.shareAAID(clipboardManager)
+            scope.launch {
+                copyToClipBoard(clipboard, aaid)
+                context.shareAAID(aaid)
+            }
         },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding
     ) {

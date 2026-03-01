@@ -34,6 +34,6 @@
     <string name="cd_about">खंड के बारे में</string>
     <string name="cd_navigate_up">ऊपर नेविगेट करें</string>
     <string name="consent_privacy_preference_title">सहमति नीति</string>
-    <string name="conset_privacy_preference_subtitle">वैयक्तिकृत विज्ञापन</string>
+    <string name="consent_privacy_preference_subtitle">वैयक्तिकृत विज्ञापन</string>
     <string name="cd_privacy_preference">विज्ञापन अनुभाग</string>
 </resources>

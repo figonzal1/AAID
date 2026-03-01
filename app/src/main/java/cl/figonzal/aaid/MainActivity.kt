@@ -24,10 +24,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
-import kotlinx.coroutines.Dispatchers
 import timber.log.Timber
 import java.util.concurrent.atomic.AtomicBoolean
 
@@ -45,7 +45,10 @@ class MainActivity : ComponentActivity() {
             val viewModel: AAIDViewModel = viewModel()
             val context = LocalContext.current
             LaunchedEffect(Unit) {
-                viewModel.requestAAID(context, Dispatchers.IO)
+                viewModel.requestAAID {
+                    AdvertisingIdClient.getAdvertisingIdInfo(context).id
+                        ?: throw Exception("AAID not available")
+                }
             }
 
             val navController = rememberNavController()

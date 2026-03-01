@@ -34,6 +34,6 @@
     <string name="cd_about">Hakkında bölümü</string>
     <string name="cd_navigate_up">Yukarı git</string>
     <string name="consent_privacy_preference_title">Rıza politikası</string>
-    <string name="conset_privacy_preference_subtitle">Kişiselleştirilmiş reklamcılık</string>
+    <string name="consent_privacy_preference_subtitle">Kişiselleştirilmiş reklamcılık</string>
     <string name="cd_privacy_preference">Reklamlar bölümü</string>
 </resources>
