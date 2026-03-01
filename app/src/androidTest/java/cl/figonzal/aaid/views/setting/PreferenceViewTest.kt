@@ -17,9 +17,9 @@ package cl.figonzal.aaid.views.setting
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
-import androidx.compose.ui.test.printToLog
+import androidx.compose.ui.test.performClick
 import cl.figonzal.aaid.ui.screens.settings.Preference
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 
@@ -29,15 +29,12 @@ class PreferenceViewTest {
     val composeTestRule = createComposeRule()
 
     @Test
-    fun appNavHost_verifyResources_whenTitleIsPresent() {
+    fun preference_whenTitleIsPresent_showsTitleAndSubtitle() {
 
         composeTestRule.setContent {
             Preference(title = "Test title", subTitle = "test subtitle", isTitlePresent = true) {}
         }
 
-        composeTestRule.onRoot().printToLog("TAG")
-
-        //About section
         composeTestRule
             .onNodeWithText("test subtitle")
             .assertIsDisplayed()
@@ -45,19 +42,15 @@ class PreferenceViewTest {
         composeTestRule
             .onNodeWithText("Test title")
             .assertIsDisplayed()
-
     }
 
     @Test
-    fun appNavHost_verifyResources_whenTitleIsAbsent() {
+    fun preference_whenTitleIsAbsent_showsOnlySubtitle() {
 
         composeTestRule.setContent {
             Preference(title = "Test title", subTitle = "test subtitle", isTitlePresent = false) {}
         }
 
-        composeTestRule.onRoot().printToLog("TAG")
-
-        //About section
         composeTestRule
             .onNodeWithText("test subtitle")
             .assertIsDisplayed()
@@ -65,6 +58,26 @@ class PreferenceViewTest {
         composeTestRule
             .onNodeWithText("Test title")
             .assertDoesNotExist()
+    }
 
+    @Test
+    fun preference_click_invokesCallback() {
+
+        var clicked = false
+
+        composeTestRule.setContent {
+            Preference(
+                title = "Test title",
+                subTitle = "test subtitle",
+                isTitlePresent = true,
+                onClick = { clicked = true }
+            )
+        }
+
+        composeTestRule
+            .onNodeWithText("test subtitle")
+            .performClick()
+
+        assertTrue(clicked)
     }
 }

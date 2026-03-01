@@ -20,41 +20,41 @@ import androidx.activity.compose.setContent
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
-import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasExtra
+import androidx.test.espresso.intent.rule.IntentsRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import cl.figonzal.aaid.MainActivity
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.main.AAIDViewModel
 import cl.figonzal.aaid.utils.FakeAppNavHost
-import org.hamcrest.Matchers.*
+import cl.figonzal.aaid.utils.ScreengrabBaseTest
+import cl.figonzal.aaid.utils.TestConstants.FAKE_AAID
+import org.hamcrest.Matchers.allOf
+import org.hamcrest.Matchers.equalTo
+import org.hamcrest.Matchers.`is`
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import tools.fastlane.screengrab.Screengrab
-import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
-import tools.fastlane.screengrab.cleanstatusbar.BluetoothState
-import tools.fastlane.screengrab.cleanstatusbar.CleanStatusBar
-import tools.fastlane.screengrab.cleanstatusbar.MobileDataType
-import tools.fastlane.screengrab.locale.LocaleTestRule
 
 
-class MainScreenTest {
-
-    @Rule
-    @JvmField
-    val localeTestRule = LocaleTestRule()
+class MainScreenTest : ScreengrabBaseTest() {
 
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
+
+    @get:Rule
+    val intentsRule = IntentsRule()
+
     private lateinit var navController: TestNavHostController
 
     private val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
@@ -62,22 +62,12 @@ class MainScreenTest {
     @Before
     fun setupAppNavHost() {
 
-        Screengrab.setDefaultScreenshotStrategy(
-            UiAutomatorScreenshotStrategy()
-        )
-        CleanStatusBar()
-            .setBluetoothState(BluetoothState.DISCONNECTED)
-            .setMobileNetworkDataType(MobileDataType.LTE)
-            .setClock("0900")
-            .setBatteryLevel(100)
-            .enable()
-
         composeTestRule.activity.setContent {
             navController = TestNavHostController(LocalContext.current)
             navController.navigatorProvider.addNavigator(ComposeNavigator())
 
             val viewModel: AAIDViewModel = viewModel()
-            viewModel.requestAAID { "01bv0b8c-578c-4e26-bb5a-10ca1ad1abe1" }
+            viewModel.requestAAID { FAKE_AAID }
             FakeAppNavHost(navController = navController, viewModel)
         }
     }
@@ -85,9 +75,13 @@ class MainScreenTest {
     @Test
     fun appNavHost_verifyResources() {
 
-        Thread.sleep(2000)
+        composeTestRule.waitUntil(timeoutMillis = 3_000) {
+            composeTestRule
+                .onAllNodesWithText(context.getString(R.string.btn_copy))
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
 
-        //Buttons
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_copy))
             .assertIsDisplayed()
@@ -102,14 +96,19 @@ class MainScreenTest {
     @Test
     fun appNavHost_clickShareButton() {
 
-        Thread.sleep(2000)
-
-        Intents.init()
+        composeTestRule.waitUntil(timeoutMillis = 3_000) {
+            composeTestRule
+                .onAllNodesWithText(context.getString(R.string.btn_share))
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
 
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_share))
             .assertIsDisplayed()
             .performClick()
+
+        composeTestRule.waitForIdle()
 
         val expectedIntent = allOf(
             hasAction(Intent.ACTION_CHOOSER),
@@ -128,9 +127,5 @@ class MainScreenTest {
         intended(expectedIntent)
 
         UiDevice.getInstance(InstrumentationRegistry.getInstrumentation()).pressBack()
-
-        Intents.release()
-
-        Thread.sleep(2000)
     }
 }

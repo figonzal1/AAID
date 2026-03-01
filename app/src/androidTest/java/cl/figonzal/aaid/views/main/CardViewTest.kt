@@ -24,7 +24,7 @@ import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.main.AaidState
 import cl.figonzal.aaid.ui.screens.main.CardAAID
-import org.junit.Before
+import cl.figonzal.aaid.utils.TestConstants.FAKE_AAID
 import org.junit.Rule
 import org.junit.Test
 
@@ -35,43 +35,33 @@ class CardViewTest {
 
     private val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
 
-    @Before
-    fun setupAppNavHost() {
+    @Test
+    fun cardView_successState_verifyResources() {
 
         composeTestRule.setContent {
-            CardAAID(state = AaidState.Success("01bv0b8c-578c-4e26-bb5a-10ca1ad1abe1")) { }
+            CardAAID(state = AaidState.Success(FAKE_AAID)) { }
         }
-    }
 
-    @Test
-    fun cardView_verifyResources() {
-
-        //Card view text
         composeTestRule
             .onNodeWithText(context.getString(R.string.cv_title))
             .assertIsDisplayed()
 
-        //Description text
         composeTestRule
             .onNodeWithText(context.getString(R.string.cv_subtitle))
             .assertIsDisplayed()
 
-        //Version text
         composeTestRule
             .onNodeWithText("v${BuildConfig.VERSION_NAME}")
             .assertIsDisplayed()
 
-        //Background image in card view
         composeTestRule
             .onNodeWithContentDescription(context.getString(R.string.cd_background_image))
             .assertIsDisplayed()
 
-        //Settings button
         composeTestRule
             .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))
             .assertIsDisplayed()
 
-        //Buttons
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_copy))
             .assertIsDisplayed()
@@ -79,5 +69,68 @@ class CardViewTest {
         composeTestRule
             .onNodeWithText(context.getString(R.string.btn_share))
             .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithText(FAKE_AAID)
+            .assertIsDisplayed()
+    }
+
+    @Test
+    fun cardView_loadingState_hidesActionButtons() {
+
+        composeTestRule.setContent {
+            CardAAID(state = AaidState.Loading) { }
+        }
+
+        // Header always visible
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.cv_title))
+            .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))
+            .assertIsDisplayed()
+
+        // Action buttons must not be shown while loading
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.btn_copy))
+            .assertDoesNotExist()
+
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.btn_share))
+            .assertDoesNotExist()
+    }
+
+    @Test
+    fun cardView_errorState_showsErrorMessageAndHidesActionButtons() {
+
+        val errorMessage = "GMS not available"
+
+        composeTestRule.setContent {
+            CardAAID(state = AaidState.Error(errorMessage)) { }
+        }
+
+        // Header always visible
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.cv_title))
+            .assertIsDisplayed()
+
+        composeTestRule
+            .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))
+            .assertIsDisplayed()
+
+        // Error message visible
+        composeTestRule
+            .onNodeWithText(errorMessage)
+            .assertIsDisplayed()
+
+        // Action buttons must not be shown on error
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.btn_copy))
+            .assertDoesNotExist()
+
+        composeTestRule
+            .onNodeWithText(context.getString(R.string.btn_share))
+            .assertDoesNotExist()
     }
 }
