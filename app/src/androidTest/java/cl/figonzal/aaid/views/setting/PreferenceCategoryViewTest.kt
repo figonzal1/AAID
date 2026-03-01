@@ -21,8 +21,6 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
-import androidx.compose.ui.test.printToLog
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.ui.screens.settings.PreferenceCategory
 import org.junit.Before
@@ -38,7 +36,6 @@ class PreferenceCategoryViewTest {
 
     @Before
     fun setupAppNavHost() {
-
         composeTestRule.setContent {
             PreferenceCategory(
                 icon = Icons.Rounded.Abc,
@@ -49,13 +46,8 @@ class PreferenceCategoryViewTest {
     }
 
     @Test
-    fun appNavHost_verifyResources() {
+    fun preferenceCategory_verifyIconAndTitle() {
 
-        Thread.sleep(4000)
-
-        composeTestRule.onRoot().printToLog("TAG")
-
-        //About section
         composeTestRule
             .onNodeWithContentDescription("Icon content")
             .assertIsDisplayed()
@@ -63,7 +55,5 @@ class PreferenceCategoryViewTest {
         composeTestRule
             .onNodeWithText("Test title")
             .assertIsDisplayed()
-
     }
-
 }

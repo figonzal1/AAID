@@ -5,18 +5,18 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2025
+ * Copyright (c) 2022
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 06-10-25, 11:44
+ * Last modified: 15-12-22 22:46
  */
 
 package cl.figonzal.aaid.core
 
 import android.util.Log
-import com.google.firebase.Firebase
 import com.google.firebase.crashlytics.crashlytics
+import com.google.firebase.Firebase
 import timber.log.Timber
 
 

@@ -68,7 +68,7 @@ fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
         SettingsView(
             onNavigateUp = { navController.navigateUp() },
             onDevContact = { navController.context.contactIntent() },
-            onPrivacy = { contactPrivacy(navController.context as Activity) }
+            onPrivacy = { (navController.context as? Activity)?.let { contactPrivacy(it) } }
         )
     }
 }

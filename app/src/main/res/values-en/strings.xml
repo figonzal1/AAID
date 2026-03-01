@@ -34,6 +34,6 @@
     <string name="cd_navigate_up">Navigate up</string>
     <string name="ads_preference_title">Ads</string>
     <string name="consent_privacy_preference_title">Consent Policy</string>
-    <string name="conset_privacy_preference_subtitle">Personalized advertising</string>
+    <string name="consent_privacy_preference_subtitle">Personalized advertising</string>
     <string name="cd_privacy_preference">Ads section</string>
 </resources>

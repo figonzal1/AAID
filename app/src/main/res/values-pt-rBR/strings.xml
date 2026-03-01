@@ -34,6 +34,6 @@
     <string name="cd_about">Sobre a seção</string>
     <string name="cd_navigate_up">Navegar para cima</string>
     <string name="consent_privacy_preference_title">Política de consentimento</string>
-    <string name="conset_privacy_preference_subtitle">Publicidade personalizada</string>
+    <string name="consent_privacy_preference_subtitle">Publicidade personalizada</string>
     <string name="cd_privacy_preference">"Secção de anúncios "</string>
 </resources>

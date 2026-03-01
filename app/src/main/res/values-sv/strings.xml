@@ -34,6 +34,6 @@
     <string name="cd_about">Om avsnitt</string>
     <string name="cd_navigate_up">Navigera upp</string>
     <string name="consent_privacy_preference_title">Policy för samtycke</string>
-    <string name="conset_privacy_preference_subtitle">Personligt anpassad reklam</string>
+    <string name="consent_privacy_preference_subtitle">Personligt anpassad reklam</string>
     <string name="cd_privacy_preference">Avsnittet Annonser</string>
 </resources>

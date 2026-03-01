@@ -19,27 +19,17 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
-import androidx.compose.ui.test.printToLog
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.settings.SettingsView
+import cl.figonzal.aaid.utils.ScreengrabBaseTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import tools.fastlane.screengrab.Screengrab
-import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
-import tools.fastlane.screengrab.cleanstatusbar.BluetoothState
-import tools.fastlane.screengrab.cleanstatusbar.CleanStatusBar
-import tools.fastlane.screengrab.cleanstatusbar.MobileDataType
-import tools.fastlane.screengrab.locale.LocaleTestRule
 
-class SettingsScreenTest {
-
-    @Rule
-    @JvmField
-    val localeTestRule = LocaleTestRule()
+class SettingsScreenTest : ScreengrabBaseTest() {
 
     @get:Rule
     val composeTestRule = createComposeRule()
@@ -47,28 +37,15 @@ class SettingsScreenTest {
     private val context: Context = InstrumentationRegistry.getInstrumentation().targetContext
 
     @Before
-    fun setupAppNavHost() {
-
-        Screengrab.setDefaultScreenshotStrategy(
-            UiAutomatorScreenshotStrategy()
-        )
-        CleanStatusBar()
-            .setBluetoothState(BluetoothState.DISCONNECTED)
-            .setMobileNetworkDataType(MobileDataType.LTE)
-            .setClock("0900")
-            .setBatteryLevel(100)
-            .enable()
-
+    fun setupSettingsView() {
         composeTestRule.setContent {
             SettingsView(onNavigateUp = { }, onDevContact = {}, onPrivacy = {})
         }
     }
 
     @Test
-    fun appNavHost_verifyResources() {
-        composeTestRule.onRoot().printToLog("TAG")
+    fun settingsScreen_verifyResources() {
 
-        //About section
         composeTestRule
             .onNodeWithContentDescription(
                 context.getString(R.string.cd_about),
@@ -83,7 +60,6 @@ class SettingsScreenTest {
             )
             .assertIsDisplayed()
 
-        //Version preference
         composeTestRule
             .onNodeWithText(context.getString(R.string.version), useUnmergedTree = true)
             .assertIsDisplayed()
@@ -92,7 +68,6 @@ class SettingsScreenTest {
             .onNodeWithText(BuildConfig.VERSION_NAME, useUnmergedTree = true)
             .assertIsDisplayed()
 
-        //Contact preference
         composeTestRule
             .onNodeWithText(context.getString(R.string.contact_developer), useUnmergedTree = true)
             .assertIsDisplayed()

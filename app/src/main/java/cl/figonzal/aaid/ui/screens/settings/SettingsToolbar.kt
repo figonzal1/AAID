@@ -68,7 +68,7 @@ fun SettingsToolbar(
             Text(text = title, modifier = modifier.padding(start = 16.dp))
         },
         navigationIcon = {
-            IconButton(onClick = { onNavigateUp() }) {
+            IconButton(onClick = onNavigateUp) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
                     contentDescription = stringResource(R.string.cd_navigate_up)

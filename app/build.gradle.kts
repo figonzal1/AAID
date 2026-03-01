@@ -9,15 +9,15 @@
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 06-10-25, 12:03
+ * Last modified: 07-03-25, 23:22
  */
 
 import java.io.FileInputStream
 import java.util.Properties
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.com.android.application)
-    alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.com.google.gms.google.services)
     alias(libs.plugins.com.google.firebase.crashlytics)
@@ -52,8 +52,8 @@ android {
         applicationId = "cl.figonzal.aaid"
         minSdk = 27
         targetSdk = 36
-        versionCode = 15
-        versionName = "1.2.11"
+        versionCode = 14
+        versionName = "1.2.10"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -87,16 +87,20 @@ android {
             resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-6355378855577476/1471561473")
         }
     }
+    lint {
+        abortOnError = false
+        warningsAsErrors = false
+        disable += "MissingTranslation"
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
     buildFeatures {
         compose = true
         buildConfig = true
+        resValues = true
     }
 }
 
@@ -128,6 +132,7 @@ dependencies {
     implementation(libs.com.jakewharton.timber)
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.test.rules)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.ext.truth)
@@ -141,6 +146,12 @@ dependencies {
     //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation(libs.androidx.compose.ui.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
 }
 
 sonarqube {

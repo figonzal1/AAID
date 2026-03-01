@@ -34,6 +34,6 @@
     <string name="cd_about">セクションについて</string>
     <string name="cd_navigate_up">上に移動</string>
     <string name="consent_privacy_preference_title">同意方針</string>
-    <string name="conset_privacy_preference_subtitle">パーソナライズ広告</string>
+    <string name="consent_privacy_preference_subtitle">パーソナライズ広告</string>
     <string name="cd_privacy_preference">"広告セクション "</string>
 </resources>

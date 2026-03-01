@@ -31,6 +31,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -101,47 +104,46 @@ private fun SettingsPreferenceList(
 ) {
 
     val context = LocalContext.current
-    val consentInformation = UserMessagingPlatform.getConsentInformation(context)
+    val consentInformation = remember(context) {
+        UserMessagingPlatform.getConsentInformation(context)
+    }
+    val isPrivacyOptionsRequired by remember(consentInformation) {
+        derivedStateOf {
+            consentInformation.privacyOptionsRequirementStatus ==
+                    ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
+        }
+    }
 
-    val isPrivacyOptionsRequired = consentInformation.privacyOptionsRequirementStatus ==
-            ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
+    val aboutModifier = if (isPrivacyOptionsRequired)
+        Modifier.padding(top = 8.dp, bottom = 8.dp)
+    else
+        Modifier.padding(bottom = 8.dp)
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         content = {
 
-            val aboutModifier: Modifier
-
-            when {
-                isPrivacyOptionsRequired -> {
-
-                    item {
-                        PreferenceCategory(
-                            modifier = Modifier.padding(bottom = 8.dp),
-                            icon = Icons.Rounded.Policy,
-                            title = stringResource(R.string.ads_preference_title),
-                            contentDescription = stringResource(R.string.cd_privacy_preference)
-                        )
-                    }
-
-                    item {
-                        Preference(
-                            title = stringResource(R.string.consent_privacy_preference_title),
-                            subTitle = stringResource(R.string.conset_privacy_preference_subtitle),
-                            modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
-                            isTitlePresent = true,
-                            onClick = onPrivacy
-                        )
-                    }
-
-                    item { HorizontalDivider() }
-
-                    aboutModifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+            if (isPrivacyOptionsRequired) {
+                item {
+                    PreferenceCategory(
+                        modifier = Modifier.padding(bottom = 8.dp),
+                        icon = Icons.Rounded.Policy,
+                        title = stringResource(R.string.ads_preference_title),
+                        contentDescription = stringResource(R.string.cd_privacy_preference)
+                    )
                 }
 
-                else -> {
-                    aboutModifier = Modifier.padding(bottom = 8.dp)
+                item {
+                    Preference(
+                        title = stringResource(R.string.consent_privacy_preference_title),
+                        subTitle = stringResource(R.string.consent_privacy_preference_subtitle),
+                        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
+                        isTitlePresent = true,
+                        onClick = onPrivacy
+                    )
                 }
+
+                item { HorizontalDivider() }
             }
 
             item {

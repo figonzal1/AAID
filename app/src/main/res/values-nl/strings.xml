@@ -34,6 +34,6 @@
     <string name="cd_about">Over sectie</string>
     <string name="cd_navigate_up">Navigeer omhoog</string>
     <string name="consent_privacy_preference_title">Toestemmingsbeleid</string>
-    <string name="conset_privacy_preference_subtitle">Gepersonaliseerde reclame</string>
+    <string name="consent_privacy_preference_subtitle">Gepersonaliseerde reclame</string>
     <string name="cd_privacy_preference">"Abschnitt Anzeigen "</string>
 </resources>

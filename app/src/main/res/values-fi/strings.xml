@@ -34,6 +34,6 @@
     <string name="cd_about">Tietoja osiosta</string>
     <string name="cd_navigate_up">Navigoi ylös</string>
     <string name="consent_privacy_preference_title">Suostumuspolitiikka</string>
-    <string name="conset_privacy_preference_subtitle">Henkilökohtainen mainonta</string>
+    <string name="consent_privacy_preference_subtitle">Henkilökohtainen mainonta</string>
     <string name="cd_privacy_preference">Mainokset osio</string>
 </resources>

@@ -25,8 +25,9 @@ import android.content.Intent.createChooser
 import android.net.Uri
 import android.widget.Toast
 import androidx.annotation.StringRes
-import androidx.compose.ui.platform.ClipboardManager
-import androidx.compose.ui.text.AnnotatedString
+import android.content.ClipData
+import androidx.compose.ui.platform.Clipboard
+import androidx.compose.ui.platform.ClipEntry
 import cl.figonzal.aaid.R
 import com.google.android.ump.UserMessagingPlatform
 import timber.log.Timber
@@ -36,15 +37,15 @@ fun Context.toast(@StringRes resId: Int) {
     Toast.makeText(this, this.getString(resId), Toast.LENGTH_SHORT).show()
 }
 
-fun copyToClipBoard(clipboardManager: ClipboardManager, aaid: String) {
-    clipboardManager.setText(AnnotatedString(aaid))
+suspend fun copyToClipBoard(clipboard: Clipboard, aaid: String) {
+    clipboard.setClipEntry(ClipEntry(ClipData.newPlainText(null, aaid)))
 }
 
-fun Context.shareAAID(clipboardManager: ClipboardManager) {
+fun Context.shareAAID(aaid: String) {
 
     val sendIntent = Intent().apply {
         action = ACTION_SEND
-        putExtra(EXTRA_TEXT, clipboardManager.getText())
+        putExtra(EXTRA_TEXT, aaid)
         type = "text/plain"
     }
 

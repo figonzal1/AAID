@@ -34,6 +34,6 @@
     <string name="cd_about">Om delen</string>
     <string name="cd_navigate_up">Naviger opp</string>
     <string name="consent_privacy_preference_title">Retningslinjer for samtykke</string>
-    <string name="conset_privacy_preference_subtitle">Personlig tilpasset reklame</string>
+    <string name="consent_privacy_preference_subtitle">Personlig tilpasset reklame</string>
     <string name="cd_privacy_preference">Seksjon for annonser</string>
 </resources>

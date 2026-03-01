@@ -34,6 +34,6 @@
     <string name="cd_about">关于部分</string>
     <string name="cd_navigate_up">向上导航</string>
     <string name="consent_privacy_preference_title">同意政策</string>
-    <string name="conset_privacy_preference_subtitle">个性化广告</string>
+    <string name="consent_privacy_preference_subtitle">个性化广告</string>
     <string name="cd_privacy_preference">广告部分</string>
 </resources>
