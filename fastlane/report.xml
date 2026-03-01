@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ This file is subject to the terms and conditions defined in
-  ~ file 'LICENSE', which is part of this source code package
-  ~
-  ~ Author: Felipe González Alarcón
-  ~ email: felipe.gonzalezalarcon94@gmail.com
-  ~
-  ~ Copyright (c) 2025
-  ~
-  ~ Project: AAID
-  ~ Module: AAID
-  ~ Last modified: 08-03-25, 00:07
-  -->
-
 <testsuites>
-    <testsuite name="fastlane.lanes">
-
-
-        <testcase name="0: default_platform" classname="fastlane.lanes" time="0.0014742">
-
-        </testcase>
-
-
-        <testcase name="1: connectedDebug" classname="fastlane.lanes" time="152.2294854">
-
-        </testcase>
-
-    </testsuite>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.0022153">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: connectedDebug" time="291.8367727">
+        
+      </testcase>
+    
+  </testsuite>
 </testsuites>
