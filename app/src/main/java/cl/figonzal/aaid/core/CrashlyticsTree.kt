@@ -15,8 +15,8 @@
 package cl.figonzal.aaid.core
 
 import android.util.Log
-import com.google.firebase.crashlytics.ktx.crashlytics
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.crashlytics.crashlytics
+import com.google.firebase.Firebase
 import timber.log.Timber
 
 

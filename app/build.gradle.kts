@@ -14,6 +14,7 @@
 
 import java.io.FileInputStream
 import java.util.Properties
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.com.android.application)
@@ -45,13 +46,13 @@ android {
     }
 
     namespace = "cl.figonzal.aaid"
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 36
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
         applicationId = "cl.figonzal.aaid"
         minSdk = 27
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 14
         versionName = "1.2.10"
 
@@ -90,9 +91,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -141,6 +139,12 @@ dependencies {
     //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation(libs.androidx.compose.ui.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
 }
 
 sonarqube {
