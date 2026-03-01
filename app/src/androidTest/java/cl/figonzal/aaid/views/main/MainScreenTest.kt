@@ -77,6 +77,7 @@ class MainScreenTest {
             navController.navigatorProvider.addNavigator(ComposeNavigator())
 
             val viewModel: AAIDViewModel = viewModel()
+            viewModel.requestAAID { "01bv0b8c-578c-4e26-bb5a-10ca1ad1abe1" }
             FakeAppNavHost(navController = navController, viewModel)
         }
     }

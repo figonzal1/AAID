@@ -22,6 +22,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.test.platform.app.InstrumentationRegistry
 import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
+import cl.figonzal.aaid.ui.screens.main.AaidState
 import cl.figonzal.aaid.ui.screens.main.CardAAID
 import org.junit.Before
 import org.junit.Rule
@@ -38,7 +39,7 @@ class CardViewTest {
     fun setupAppNavHost() {
 
         composeTestRule.setContent {
-            CardAAID(aaid = "01bv0b8c-578c-4e26-bb5a-10ca1ad1abe1") { }
+            CardAAID(state = AaidState.Success("01bv0b8c-578c-4e26-bb5a-10ca1ad1abe1")) { }
         }
     }
 
