@@ -30,23 +30,18 @@ import java.io.IOException
 
 class AAIDViewModel : ViewModel() {
 
-    var aaid by mutableStateOf("")
+    private var _aaid by mutableStateOf("")
+    val aaid: String get() = _aaid
 
     fun requestAAID(context: Context, dispatcher: CoroutineDispatcher) {
         viewModelScope.launch(dispatcher) {
 
             try {
                 val adInfo = AdvertisingIdClient.getAdvertisingIdInfo(context)
-                when {
-                    adInfo.id != null -> {
-                        aaid = adInfo.id!!
-                        Timber.d("Advertising id: $aaid")
-
-                    }
-                    else -> {
-                        Timber.e("AAID information not available")
-                    }
-                }
+                adInfo.id?.let { id ->
+                    _aaid = id
+                    Timber.d("Advertising id: $id")
+                } ?: Timber.e("AAID information not available")
             } catch (e: GooglePlayServicesNotAvailableException) {
                 Timber.e("AAID information not available: ${e.message}")
             } catch (e: GooglePlayServicesRepairableException) {

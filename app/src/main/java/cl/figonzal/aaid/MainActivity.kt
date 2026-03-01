@@ -17,6 +17,7 @@ package cl.figonzal.aaid
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -42,7 +43,10 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             val viewModel: AAIDViewModel = viewModel()
-            viewModel.requestAAID(LocalContext.current, Dispatchers.IO)
+            val context = LocalContext.current
+            LaunchedEffect(Unit) {
+                viewModel.requestAAID(context, Dispatchers.IO)
+            }
 
             val navController = rememberNavController()
             AppNavHost(navController, viewModel)

@@ -69,13 +69,14 @@ fun Preference(
     isTitlePresent: Boolean = false,
     onClick: () -> Unit = {}
 ) {
+    val rippleIndication = remember { ripple() }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = ripple(),
+                indication = rippleIndication,
                 enabled = true,
                 onClick = onClick
             )
