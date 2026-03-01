@@ -15,6 +15,10 @@
 import java.io.FileInputStream
 import java.util.Properties
 
+val gitVersionCode = providers.exec {
+    commandLine("git", "rev-list", "--count", "HEAD")
+}.standardOutput.asText.get().trim().toInt()
+
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
@@ -52,8 +56,8 @@ android {
         applicationId = "cl.figonzal.aaid"
         minSdk = 27
         targetSdk = 35
-        versionCode = 14
-        versionName = "1.2.10"
+        versionCode = gitVersionCode
+        versionName = "1.2.10" // x-release-please-version
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
