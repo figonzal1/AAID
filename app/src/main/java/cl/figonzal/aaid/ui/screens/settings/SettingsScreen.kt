@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2025
+ * Copyright (c) 2026
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 06-03-25, 21:32
+ * Last modified: 02-03-26, 20:47
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -88,6 +88,7 @@ fun SettingsView(
                 )
             },
             modifier = Modifier.fillMaxSize(),
+            containerColor = MaterialTheme.colorScheme.surfaceContainer,
             contentWindowInsets = WindowInsets.systemBars
         ) { padding ->
             SettingsPreferenceList(onDevContact, onPrivacy, padding)

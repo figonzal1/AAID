@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2025
+ * Copyright (c) 2026
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 06-03-25, 22:53
+ * Last modified: 02-03-26, 20:48
  */
 
 package cl.figonzal.aaid.ui.screens.settings
@@ -25,6 +25,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -72,5 +73,8 @@ fun SettingsToolbar(
                 )
             }
         },
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainer
+        ),
     )
 }
