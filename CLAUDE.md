@@ -82,3 +82,4 @@ bundle exec fastlane googleplay       # Upload AAB to Google Play (draft)
 - **UMP consent**: `MobileAds.initialize()` is only called after `consentInformation.canRequestAds()` returns true. Do not move or skip this check.
 - **Firebase aliases**: Firebase libraries use non-`-ktx` aliases (e.g., `firebase-analytics`, not `firebase-analytics-ktx`) since the BOM ≥ 33.x unifies APIs.
 - **Compose state**: `AAIDViewModel.state` uses `mutableStateOf` (not `StateFlow`) — Compose reads it directly without `collectAsState()`.
+- **Native ActionBar with enableEdgeToEdge()**: `enableEdgeToEdge()` triggers DecorView creation using the active theme at that moment (`AppTheme.Starting` / `Theme.SplashScreen`). That theme lacks the framework-level attributes `android:windowNoTitle` and `android:windowActionBar`, so Android shows the native ActionBar. Fix: keep both attributes in `AppTheme.Starting` inside `values/splash.xml` and `values-night/splash.xml`.

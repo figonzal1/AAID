@@ -20,6 +20,7 @@ androidx-compose-ui-ui-tooling = { module = "androidx.compose.ui:ui-tooling", ve
 androidx-compose-material-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "androidx-compose-material" }
 androidx-navigation-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 androidx-navigation-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "androidx-navigation" }
+com-google-android-material = "com.google.android.material:material:1.13.0"
 com-jakewharton-timber = "com.jakewharton.timber:timber:5.0.1"
 #ADS
 com-google-android-gms-play-services-ads = "com.google.android.gms:play-services-ads:25.0.0"

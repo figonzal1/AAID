@@ -19,6 +19,10 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
 
+        <!-- Disable native ActionBar when DecorView is created with this theme -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
         <!-- Status bar and Nav bar configs -->
         <item name="android:navigationBarColor">@color/splash_screen</item>
         <item name="android:windowLightStatusBar">false</item>

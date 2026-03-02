@@ -35,7 +35,9 @@ import cl.figonzal.aaid.ui.theme.AAIDTheme
 fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
 
     BaseContainer(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .windowInsetsPadding(WindowInsets.safeDrawing)
     ) {
         CardAAID(viewModel.state, onSettingsClick)
         Column(verticalArrangement = Arrangement.Bottom) {

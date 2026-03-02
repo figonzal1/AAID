@@ -15,10 +15,7 @@
 package cl.figonzal.aaid.ui.screens.settings
 
 import android.content.res.Configuration
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBars
-import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -75,7 +72,5 @@ fun SettingsToolbar(
                 )
             }
         },
-        modifier = Modifier.windowInsetsPadding(WindowInsets.statusBars) // Asegúrate de que el TopAppBar respete los insets
-
     )
 }

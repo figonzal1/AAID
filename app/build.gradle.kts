@@ -112,6 +112,7 @@ dependencies {
 
     implementation(libs.androidx.core.core.ktx)
     implementation(libs.androidx.activity.activity.compose)
+    implementation(libs.com.google.android.material)
 
     implementation(libs.androidx.core.core.splashscreen)
 
