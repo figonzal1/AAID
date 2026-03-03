@@ -5,16 +5,17 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2022
+ * Copyright (c) 2026
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 14-12-22 19:28
+ * Last modified: 02-03-26, 21:00
  */
 
 package cl.figonzal.aaid.utils
 
 import android.app.Activity
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
@@ -22,12 +23,11 @@ import android.content.Intent.ACTION_SENDTO
 import android.content.Intent.EXTRA_SUBJECT
 import android.content.Intent.EXTRA_TEXT
 import android.content.Intent.createChooser
-import android.net.Uri
 import android.widget.Toast
 import androidx.annotation.StringRes
-import android.content.ClipData
-import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.ClipEntry
+import androidx.compose.ui.platform.Clipboard
+import androidx.core.net.toUri
 import cl.figonzal.aaid.R
 import com.google.android.ump.UserMessagingPlatform
 import timber.log.Timber
@@ -56,10 +56,8 @@ fun Context.shareAAID(aaid: String) {
 fun Context.contactIntent() {
     Intent(
         ACTION_SENDTO,
-        Uri.parse(
-            "mailto:${getString(R.string.mail_to_felipe)}" +
-                    "?subject=${getString(R.string.email_subject)}"
-        )
+        ("mailto:${getString(R.string.mail_to_felipe)}" +
+                "?subject=${getString(R.string.email_subject)}").toUri()
     ).apply {
         putExtra(EXTRA_SUBJECT, getString(R.string.email_subject))
         startActivity(createChooser(this, getString(R.string.email_chooser_title)))

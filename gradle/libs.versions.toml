@@ -73,5 +73,4 @@ com-google-firebase-firebase-perf = "com.google.firebase.firebase-perf:2.0.2"
 com-google-gms-google-services = "com.google.gms.google-services:4.4.4"
 nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:1.1.0"
 org-sonarqube = "org.sonarqube:7.2.2.6593"
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2025
+ * Copyright (c) 2026
  *
  * Project: AAID
  * Module: AAID.app.main
- * Last modified: 07-03-25, 23:58
+ * Last modified: 02-03-26, 21:02
  */
 
 package cl.figonzal.aaid.ui.theme
@@ -25,12 +25,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 
-private val _darkColorScheme = darkColorScheme(
+private val darkColorScheme = darkColorScheme(
     primary = figonzalPurpleNight,
     secondary = figonzalAquaNight
 )
 
-private val _lightColorScheme = lightColorScheme(
+private val lightColorScheme = lightColorScheme(
     primary = figonzalPurple,
     secondary = figonzalAqua
 
@@ -59,8 +59,8 @@ fun AAIDTheme(
                 if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
             }
 
-            darkTheme -> _darkColorScheme
-            else -> _lightColorScheme
+            darkTheme -> darkColorScheme
+            else -> lightColorScheme
         }
     }
     MaterialTheme(
