@@ -46,23 +46,24 @@ import cl.figonzal.aaid.ui.theme.AAIDTheme
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.UserMessagingPlatform
 
-
 @Preview(
-    showBackground = true, name = "About Light",
-    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "About Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Preview(
     showBackground = true,
-    uiMode = UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL, name = "About Night"
+    uiMode = UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
+    name = "About Night",
 )
 @Composable
 fun PreviewSettingsView() {
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             BaseContainer(
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.fillMaxSize(),
             ) {
                 SettingsView(onNavigateUp = {}, onDevContact = {}, onPrivacy = {})
             }
@@ -74,36 +75,33 @@ fun PreviewSettingsView() {
 fun SettingsView(
     onNavigateUp: () -> Unit,
     onDevContact: () -> Unit,
-    onPrivacy: () -> Unit
+    onPrivacy: () -> Unit,
 ) {
-
     BaseContainer(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
     ) {
         Scaffold(
             topBar = {
                 SettingsToolbar(
                     title = stringResource(R.string.settings_screen_title),
-                    onNavigateUp = onNavigateUp
+                    onNavigateUp = onNavigateUp,
                 )
             },
             modifier = Modifier.fillMaxSize(),
             containerColor = MaterialTheme.colorScheme.surfaceContainer,
-            contentWindowInsets = WindowInsets.systemBars
+            contentWindowInsets = WindowInsets.systemBars,
         ) { padding ->
             SettingsPreferenceList(onDevContact, onPrivacy, padding)
         }
     }
-
 }
 
 @Composable
 private fun SettingsPreferenceList(
     onDevContact: () -> Unit,
     onPrivacy: () -> Unit,
-    padding: PaddingValues
+    padding: PaddingValues,
 ) {
-
     val context = LocalContext.current
     val consentInformation = remember(context) {
         UserMessagingPlatform.getConsentInformation(context)
@@ -111,26 +109,26 @@ private fun SettingsPreferenceList(
     val isPrivacyOptionsRequired by remember(consentInformation) {
         derivedStateOf {
             consentInformation.privacyOptionsRequirementStatus ==
-                    ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
+                ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
         }
     }
 
-    val aboutModifier = if (isPrivacyOptionsRequired)
+    val aboutModifier = if (isPrivacyOptionsRequired) {
         Modifier.padding(top = 8.dp, bottom = 8.dp)
-    else
+    } else {
         Modifier.padding(bottom = 8.dp)
+    }
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         content = {
-
             if (isPrivacyOptionsRequired) {
                 item {
                     PreferenceCategory(
                         modifier = Modifier.padding(bottom = 8.dp),
                         icon = Icons.Rounded.Policy,
                         title = stringResource(R.string.ads_preference_title),
-                        contentDescription = stringResource(R.string.cd_privacy_preference)
+                        contentDescription = stringResource(R.string.cd_privacy_preference),
                     )
                 }
 
@@ -140,7 +138,7 @@ private fun SettingsPreferenceList(
                         subTitle = stringResource(R.string.consent_privacy_preference_subtitle),
                         modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
                         isTitlePresent = true,
-                        onClick = onPrivacy
+                        onClick = onPrivacy,
                     )
                 }
 
@@ -152,7 +150,7 @@ private fun SettingsPreferenceList(
                     modifier = aboutModifier,
                     icon = Icons.AutoMirrored.Rounded.ContactSupport,
                     title = stringResource(R.string.about_preference_title),
-                    contentDescription = stringResource(id = R.string.cd_about)
+                    contentDescription = stringResource(id = R.string.cd_about),
                 )
             }
 
@@ -161,7 +159,7 @@ private fun SettingsPreferenceList(
                     title = "",
                     subTitle = stringResource(R.string.about_app_description),
                     modifier = Modifier.padding(bottom = 8.dp),
-                    isTitlePresent = false
+                    isTitlePresent = false,
                 )
             }
 
@@ -172,7 +170,7 @@ private fun SettingsPreferenceList(
                     title = stringResource(R.string.version),
                     subTitle = BuildConfig.VERSION_NAME,
                     modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
-                    isTitlePresent = true
+                    isTitlePresent = true,
                 )
             }
 
@@ -186,10 +184,10 @@ private fun SettingsPreferenceList(
                         .fillMaxHeight()
                         .padding(top = 8.dp, bottom = 8.dp),
                     isTitlePresent = true,
-                    onClick = onDevContact
+                    onClick = onDevContact,
                 )
             }
         },
-        contentPadding = padding
+        contentPadding = padding,
     )
 }

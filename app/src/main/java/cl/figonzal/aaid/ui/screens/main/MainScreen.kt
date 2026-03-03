@@ -36,23 +36,22 @@ import cl.figonzal.aaid.ui.theme.AAIDTheme
 
 @Composable
 fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
-
     BaseContainer(modifier = Modifier.fillMaxSize()) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             containerColor = MaterialTheme.colorScheme.surfaceContainer,
-            contentWindowInsets = WindowInsets.systemBars
+            contentWindowInsets = WindowInsets.systemBars,
         ) { paddingValues ->
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues)
+                    .padding(paddingValues),
             ) {
                 Box(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth(),
-                    contentAlignment = Alignment.Center
+                    contentAlignment = Alignment.Center,
                 ) {
                     CardAAID(viewModel.state, onSettingsClick)
                 }
@@ -60,7 +59,6 @@ fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
             }
         }
     }
-
 }
 
 @Preview(showBackground = true, showSystemUi = true, name = "Main Screen Light")
@@ -68,32 +66,31 @@ fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
     showBackground = true,
     showSystemUi = true,
     uiMode = UI_MODE_NIGHT_YES,
-    name = "Main Screen Night"
+    name = "Main Screen Night",
 )
 @Composable
 fun PreviewMainScreen() {
-
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             CompositionLocalProvider(LocalInspectionMode provides true) {
                 BaseContainer(modifier = Modifier.fillMaxSize()) {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                         containerColor = MaterialTheme.colorScheme.surfaceContainer,
-                        contentWindowInsets = WindowInsets.systemBars
+                        contentWindowInsets = WindowInsets.systemBars,
                     ) { paddingValues ->
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(paddingValues)
+                                .padding(paddingValues),
                         ) {
                             Box(
                                 modifier = Modifier
                                     .weight(1f)
                                     .fillMaxWidth(),
-                                contentAlignment = Alignment.Center
+                                contentAlignment = Alignment.Center,
                             ) {
                                 CardAAID(AaidState.Success("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")) {}
                             }
@@ -104,5 +101,4 @@ fun PreviewMainScreen() {
             }
         }
     }
-
 }

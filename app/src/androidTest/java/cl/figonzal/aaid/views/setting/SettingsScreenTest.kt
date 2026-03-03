@@ -45,18 +45,17 @@ class SettingsScreenTest : ScreengrabBaseTest() {
 
     @Test
     fun settingsScreen_verifyResources() {
-
         composeTestRule
             .onNodeWithContentDescription(
                 context.getString(R.string.cd_about),
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertIsDisplayed()
 
         composeTestRule
             .onNodeWithText(
                 context.getString(R.string.about_app_description),
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertIsDisplayed()
 
@@ -75,7 +74,7 @@ class SettingsScreenTest : ScreengrabBaseTest() {
         composeTestRule
             .onNodeWithText(
                 context.getString(R.string.suggestions_problems),
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertIsDisplayed()
 

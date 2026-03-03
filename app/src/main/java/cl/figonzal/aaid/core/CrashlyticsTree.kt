@@ -15,15 +15,13 @@
 package cl.figonzal.aaid.core
 
 import android.util.Log
-import com.google.firebase.crashlytics.crashlytics
 import com.google.firebase.Firebase
+import com.google.firebase.crashlytics.crashlytics
 import timber.log.Timber
-
 
 class CrashlyticsTree : Timber.Tree() {
 
     override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-
         when (priority) {
             Log.VERBOSE, Log.DEBUG, Log.INFO -> return
             else -> {

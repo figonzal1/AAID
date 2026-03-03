@@ -40,14 +40,13 @@ class PreferenceCategoryViewTest {
             PreferenceCategory(
                 icon = Icons.Rounded.Abc,
                 title = "Test title",
-                contentDescription = "Icon content"
+                contentDescription = "Icon content",
             )
         }
     }
 
     @Test
     fun preferenceCategory_verifyIconAndTitle() {
-
         composeTestRule
             .onNodeWithContentDescription("Icon content")
             .assertIsDisplayed()

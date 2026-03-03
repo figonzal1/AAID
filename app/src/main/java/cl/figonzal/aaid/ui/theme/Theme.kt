@@ -27,12 +27,12 @@ import androidx.compose.ui.platform.LocalContext
 
 private val darkColorScheme = darkColorScheme(
     primary = figonzalPurpleNight,
-    secondary = figonzalAquaNight
+    secondary = figonzalAquaNight,
 )
 
 private val lightColorScheme = lightColorScheme(
     primary = figonzalPurple,
-    secondary = figonzalAqua
+    secondary = figonzalAqua,
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -42,7 +42,7 @@ private val lightColorScheme = lightColorScheme(
     onTertiary = Color.White,
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
-    */
+     */
 )
 
 @Composable
@@ -50,7 +50,7 @@ fun AAIDTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     val colorScheme = remember(darkTheme, dynamicColor) {
@@ -66,6 +66,6 @@ fun AAIDTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content
+        content = content,
     )
 }

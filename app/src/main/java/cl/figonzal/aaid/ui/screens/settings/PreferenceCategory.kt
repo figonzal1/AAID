@@ -37,23 +37,25 @@ import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.theme.AAIDTheme
 
 @Preview(
-    showBackground = true, name = "PrefCategory Light",
-    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "PrefCategory Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Preview(
-    showBackground = true, name = "PrefCategory Night",
-    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "PrefCategory Night",
+    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Composable
 fun PreviewPreferenceCategory() {
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             PreferenceCategory(
                 icon = Icons.AutoMirrored.Rounded.ContactSupport,
                 title = "Acerca",
-                contentDescription = stringResource(id = R.string.cd_about)
+                contentDescription = stringResource(id = R.string.cd_about),
             )
         }
     }
@@ -64,22 +66,21 @@ fun PreferenceCategory(
     modifier: Modifier = Modifier,
     title: String,
     icon: ImageVector? = null,
-    contentDescription: String
+    contentDescription: String,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .fillMaxWidth()
+            .fillMaxWidth(),
     ) {
-
         Column(
             modifier = modifier.padding(start = 16.dp),
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Center,
         ) {
             icon?.let {
                 Icon(
                     imageVector = it,
-                    contentDescription = contentDescription
+                    contentDescription = contentDescription,
                 )
             }
         }
@@ -88,11 +89,12 @@ fun PreferenceCategory(
             modifier = modifier
                 .padding(start = 32.dp, end = 16.dp)
                 .fillMaxWidth(),
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Center,
         ) {
             Text(
-                title, color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.fillMaxWidth()
+                title,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.fillMaxWidth(),
             )
         }
     }

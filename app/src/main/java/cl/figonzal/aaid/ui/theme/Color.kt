@@ -16,7 +16,7 @@ package cl.figonzal.aaid.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-//New Colors
+// New Colors
 val figonzalPurple = Color(0xFF5919CF)
 val figonzalAqua = Color(0xFF26D6AD)
 

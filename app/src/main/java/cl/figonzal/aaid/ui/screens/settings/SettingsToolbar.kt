@@ -35,18 +35,20 @@ import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.theme.AAIDTheme
 
 @Preview(
-    showBackground = true, name = "Setting Toolbar Light",
-    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "Setting Toolbar Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Preview(
-    showBackground = true, name = "Setting Toolbar Night",
-    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "Setting Toolbar Night",
+    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Composable
 fun PreviewToolbar() {
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             SettingsToolbar("Configuración") {}
         }
@@ -58,9 +60,8 @@ fun PreviewToolbar() {
 fun SettingsToolbar(
     title: String,
     modifier: Modifier = Modifier,
-    onNavigateUp: () -> Unit
+    onNavigateUp: () -> Unit,
 ) {
-
     TopAppBar(
         title = {
             Text(text = title, modifier = modifier.padding(start = 16.dp))
@@ -69,12 +70,12 @@ fun SettingsToolbar(
             IconButton(onClick = onNavigateUp) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-                    contentDescription = stringResource(R.string.cd_navigate_up)
+                    contentDescription = stringResource(R.string.cd_navigate_up),
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer
+            containerColor = MaterialTheme.colorScheme.surfaceContainer,
         ),
     )
 }

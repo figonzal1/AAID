@@ -34,13 +34,12 @@ private const val ANIMATION_DURATION = 300
 @Composable
 fun AppNavHost(
     navController: NavHostController,
-    viewModel: AAIDViewModel
+    viewModel: AAIDViewModel,
 ) {
     NavHost(
         navController = navController,
-        startDestination = NavigationItem.MainNavItem.baseRoute
+        startDestination = NavigationItem.MainNavItem.baseRoute,
     ) {
-
         with(navController) {
             mainScreenComposable(viewModel, this)
             settingsScreenComposable(this)
@@ -49,51 +48,51 @@ fun AppNavHost(
 }
 
 fun NavGraphBuilder.settingsScreenComposable(navController: NavHostController) {
-
     composable(
         NavigationItem.SettingsNavItem.baseRoute,
         enterTransition = {
             slideIntoContainer(
                 AnimatedContentTransitionScope.SlideDirection.Left,
-                animationSpec = tween(ANIMATION_DURATION)
+                animationSpec = tween(ANIMATION_DURATION),
             )
         },
         exitTransition = {
             slideOutOfContainer(
                 AnimatedContentTransitionScope.SlideDirection.Right,
-                animationSpec = tween(ANIMATION_DURATION)
+                animationSpec = tween(ANIMATION_DURATION),
             )
-        }
+        },
     ) {
         SettingsView(
             onNavigateUp = { navController.navigateUp() },
             onDevContact = { navController.context.contactIntent() },
-            onPrivacy = { (navController.context as? Activity)?.let { contactPrivacy(it) } }
+            onPrivacy = { (navController.context as? Activity)?.let { contactPrivacy(it) } },
         )
     }
 }
 
 fun NavGraphBuilder.mainScreenComposable(
     viewModel: AAIDViewModel,
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     composable(
         NavigationItem.MainNavItem.baseRoute,
         enterTransition = {
             slideIntoContainer(
                 AnimatedContentTransitionScope.SlideDirection.Right,
-                animationSpec = tween(ANIMATION_DURATION)
+                animationSpec = tween(ANIMATION_DURATION),
             )
         },
         exitTransition = {
             slideOutOfContainer(
                 AnimatedContentTransitionScope.SlideDirection.Left,
-                animationSpec = tween(ANIMATION_DURATION)
+                animationSpec = tween(ANIMATION_DURATION),
             )
-        }
+        },
     ) {
         MainScreen(
             viewModel,
-            onSettingsClick = { navController.navigate(NavigationItem.SettingsNavItem.baseRoute) })
+            onSettingsClick = { navController.navigate(NavigationItem.SettingsNavItem.baseRoute) },
+        )
     }
 }

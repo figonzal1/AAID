@@ -32,7 +32,6 @@ import com.google.android.ump.UserMessagingPlatform
 import timber.log.Timber
 import java.util.concurrent.atomic.AtomicBoolean
 
-
 class MainActivity : ComponentActivity() {
 
     private lateinit var consentInformation: ConsentInformation
@@ -43,7 +42,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         installSplashScreen()
         setContent {
-
             val viewModel: AAIDViewModel = viewModel()
             val context = LocalContext.current
             LaunchedEffect(Unit) {
@@ -68,7 +66,6 @@ class MainActivity : ComponentActivity() {
      * Check consent privacy for UE users
      */
     private fun checkConsent() {
-
         val params = ConsentRequestParameters
             .Builder()
             .setTagForUnderAgeOfConsent(false)
@@ -80,15 +77,15 @@ class MainActivity : ComponentActivity() {
             params,
             {
                 UserMessagingPlatform.loadAndShowConsentFormIfRequired(
-                    this@MainActivity
+                    this@MainActivity,
                 ) { loadAndShowError ->
                     // Consent gathering failed.
                     Timber.w(
                         String.format(
                             "%s: %s",
                             loadAndShowError?.errorCode,
-                            loadAndShowError?.message
-                        )
+                            loadAndShowError?.message,
+                        ),
                     )
                     // Consent has been gathered.
                     if (consentInformation.canRequestAds()) {
@@ -102,10 +99,11 @@ class MainActivity : ComponentActivity() {
                     String.format(
                         "%s: %s",
                         requestConsentError.errorCode,
-                        requestConsentError.message
-                    )
+                        requestConsentError.message,
+                    ),
                 )
-            })
+            },
+        )
     }
 
     private fun initializeMobileAdsSdk() {
@@ -116,5 +114,4 @@ class MainActivity : ComponentActivity() {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.initialize(this)
     }
-
 }

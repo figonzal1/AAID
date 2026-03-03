@@ -12,13 +12,14 @@
  * Last modified: 07-03-25, 23:22
  */
 
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.io.FileInputStream
 import java.util.Properties
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-val gitVersionCode = providers.exec {
-    commandLine("git", "rev-list", "--count", "HEAD")
-}.standardOutput.asText.get().trim().toInt()
+val gitVersionCode =
+    providers.exec {
+        commandLine("git", "rev-list", "--count", "HEAD")
+    }.standardOutput.asText.get().trim().toInt()
 
 plugins {
     alias(libs.plugins.com.android.application)
@@ -35,9 +36,10 @@ secrets {
 
 android {
 
-    val prop = Properties().apply {
-        load(FileInputStream(File(rootProject.rootDir, "keys/keystore.properties")))
-    }
+    val prop =
+        Properties().apply {
+            load(FileInputStream(File(rootProject.rootDir, "keys/keystore.properties")))
+        }
 
     signingConfigs {
         create("aaidsign") {
@@ -83,7 +85,8 @@ android {
             isMinifyEnabled = true
             isDebuggable = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
             )
             signingConfig = signingConfigs.getByName("aaidsign")
 
@@ -116,24 +119,24 @@ dependencies {
 
     implementation(libs.androidx.core.core.splashscreen)
 
-    //Compose
+    // Compose
     implementation(libs.bundles.compose)
 
-    //Compose navigation
+    // Compose navigation
     implementation(libs.androidx.navigation.navigation.compose)
 
-    //ADS
+    // ADS
     implementation(libs.bundles.google.play.ads)
     implementation(libs.com.google.android.ump)
 
-    //LIFECYCLE
+    // LIFECYCLE
     implementation(libs.androidx.lifecycle.lifecycle.viewmodel.compose)
 
-    //FIREBASE BOM
+    // FIREBASE BOM
     implementation(platform(libs.com.google.firebase.firebase.bom))
     implementation(libs.bundles.firebase)
 
-    //TIMBER
+    // TIMBER
     implementation(libs.com.jakewharton.timber)
 
     testImplementation(libs.junit)
@@ -148,7 +151,7 @@ dependencies {
     androidTestImplementation(libs.androidx.navigation.navigation.testing)
     androidTestImplementation(libs.tools.fastlane.screengrab)
 
-    //debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
+    // debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
     debugImplementation(libs.androidx.compose.ui.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
 }

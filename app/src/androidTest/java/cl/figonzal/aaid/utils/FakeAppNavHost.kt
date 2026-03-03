@@ -29,13 +29,12 @@ import cl.figonzal.aaid.ui.screens.settings.SettingsView
 @Composable
 fun FakeAppNavHost(
     navController: NavHostController,
-    viewModel: AAIDViewModel
+    viewModel: AAIDViewModel,
 ) {
     NavHost(
         navController = navController,
-        startDestination = NavigationItem.MainNavItem.baseRoute
+        startDestination = NavigationItem.MainNavItem.baseRoute,
     ) {
-
         with(navController) {
             fakeMainScreenComposable(viewModel, this)
             fakeSettingsScreenComposable(this)
@@ -44,27 +43,27 @@ fun FakeAppNavHost(
 }
 
 fun NavGraphBuilder.fakeSettingsScreenComposable(navController: NavHostController) {
-
     composable(
-        NavigationItem.SettingsNavItem.baseRoute
+        NavigationItem.SettingsNavItem.baseRoute,
     ) {
         SettingsView(
             onNavigateUp = { navController.navigateUp() },
             onDevContact = { navController.context.contactIntent() },
-            onPrivacy = { }
+            onPrivacy = { },
         )
     }
 }
 
 fun NavGraphBuilder.fakeMainScreenComposable(
     viewModel: AAIDViewModel,
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     composable(
-        NavigationItem.MainNavItem.baseRoute
+        NavigationItem.MainNavItem.baseRoute,
     ) {
         MainScreen(
             viewModel,
-            onSettingsClick = { navController.navigate(NavigationItem.SettingsNavItem.baseRoute) })
+            onSettingsClick = { navController.navigate(NavigationItem.SettingsNavItem.baseRoute) },
+        )
     }
 }

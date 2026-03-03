@@ -20,9 +20,9 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -36,23 +36,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cl.figonzal.aaid.ui.theme.AAIDTheme
 
-
 @Preview(showBackground = true, name = "Preference Light")
 @Preview(
-    name = "Preference Dark", showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL
+    name = "Preference Dark",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Composable
 fun PreviewPreference() {
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             Column {
                 Preference(
                     title = "Contacto desarrollador",
                     subTitle = "¿Sugerencias? ¿Problemas?",
-                    isTitlePresent = true
+                    isTitlePresent = true,
                 )
             }
         }
@@ -65,7 +65,7 @@ fun Preference(
     subTitle: String,
     modifier: Modifier = Modifier,
     isTitlePresent: Boolean = false,
-    onClick: () -> Unit = {}
+    onClick: () -> Unit = {},
 ) {
     val rippleIndication = remember { ripple() }
     Row(
@@ -76,13 +76,12 @@ fun Preference(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = rippleIndication,
                 enabled = true,
-                onClick = onClick
-            )
+                onClick = onClick,
+            ),
 
     ) {
-
         Column(
-            modifier = modifier.padding(start = 16.dp)
+            modifier = modifier.padding(start = 16.dp),
         ) {
             Spacer(modifier = Modifier.size(24.dp))
         }
@@ -91,20 +90,20 @@ fun Preference(
             modifier = modifier
                 .fillMaxWidth()
                 .padding(start = 32.dp, end = 16.dp),
-            verticalArrangement = Arrangement.Top
+            verticalArrangement = Arrangement.Top,
         ) {
             if (isTitlePresent) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
                 )
             }
             Text(
                 text = subTitle,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             )
         }
     }

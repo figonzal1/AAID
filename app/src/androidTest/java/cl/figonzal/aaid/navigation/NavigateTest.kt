@@ -42,7 +42,6 @@ class NavigateTest {
 
     @Before
     fun setupAppNavHost() {
-
         composeTestRule.setContent {
             navController = TestNavHostController(LocalContext.current)
             navController.navigatorProvider.addNavigator(ComposeNavigator())
@@ -54,8 +53,7 @@ class NavigateTest {
 
     @Test
     fun appNavHost_navigateToSettings() {
-
-        //composeTestRule.onRoot().printToLog("TAG")
+        // composeTestRule.onRoot().printToLog("TAG")
 
         composeTestRule
             .onNodeWithContentDescription(context.getString(R.string.cd_settings_button))

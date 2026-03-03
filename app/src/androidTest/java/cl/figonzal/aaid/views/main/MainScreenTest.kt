@@ -46,7 +46,6 @@ import org.junit.Rule
 import org.junit.Test
 import tools.fastlane.screengrab.Screengrab
 
-
 class MainScreenTest : ScreengrabBaseTest() {
 
     @get:Rule
@@ -61,7 +60,6 @@ class MainScreenTest : ScreengrabBaseTest() {
 
     @Before
     fun setupAppNavHost() {
-
         composeTestRule.activity.setContent {
             navController = TestNavHostController(LocalContext.current)
             navController.navigatorProvider.addNavigator(ComposeNavigator())
@@ -74,7 +72,6 @@ class MainScreenTest : ScreengrabBaseTest() {
 
     @Test
     fun appNavHost_verifyResources() {
-
         composeTestRule.waitUntil(timeoutMillis = 3_000) {
             composeTestRule
                 .onAllNodesWithText(context.getString(R.string.btn_copy))
@@ -95,7 +92,6 @@ class MainScreenTest : ScreengrabBaseTest() {
 
     @Test
     fun appNavHost_clickShareButton() {
-
         composeTestRule.waitUntil(timeoutMillis = 3_000) {
             composeTestRule
                 .onAllNodesWithText(context.getString(R.string.btn_share))
@@ -115,13 +111,13 @@ class MainScreenTest : ScreengrabBaseTest() {
             hasExtra(
                 equalTo(Intent.EXTRA_INTENT),
                 allOf(
-                    hasAction(Intent.ACTION_SEND)
-                )
+                    hasAction(Intent.ACTION_SEND),
+                ),
             ),
             hasExtra(
                 `is`(Intent.EXTRA_TITLE),
-                `is`(context.getString(R.string.intent_chooser))
-            )
+                `is`(context.getString(R.string.intent_chooser)),
+            ),
         )
 
         intended(expectedIntent)

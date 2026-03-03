@@ -39,7 +39,6 @@ import com.google.android.gms.ads.AdView
 @SuppressLint("MissingPermission")
 @Composable
 fun BannerView(modifier: Modifier = Modifier) {
-
     when (LocalInspectionMode.current) {
         true -> {
             Text(
@@ -48,12 +47,11 @@ fun BannerView(modifier: Modifier = Modifier) {
                     .background(Color.Red)
                     .padding(horizontal = 2.dp, vertical = 6.dp),
                 textAlign = TextAlign.Center,
-                text = "AdView here..."
+                text = "AdView here...",
             )
         }
 
         else -> {
-
             val adId = stringResource(R.string.ADMOB_ID_BANNER)
             AndroidView(
                 modifier = modifier
@@ -66,7 +64,7 @@ fun BannerView(modifier: Modifier = Modifier) {
                         adUnitId = adId
                         loadAd(AdRequest.Builder().build())
                     }
-                }
+                },
             )
         }
     }

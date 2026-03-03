@@ -32,7 +32,6 @@ import cl.figonzal.aaid.R
 import com.google.android.ump.UserMessagingPlatform
 import timber.log.Timber
 
-
 fun Context.toast(@StringRes resId: Int) {
     Toast.makeText(this, this.getString(resId), Toast.LENGTH_SHORT).show()
 }
@@ -42,7 +41,6 @@ suspend fun copyToClipBoard(clipboard: Clipboard, aaid: String) {
 }
 
 fun Context.shareAAID(aaid: String) {
-
     val sendIntent = Intent().apply {
         action = ACTION_SEND
         putExtra(EXTRA_TEXT, aaid)
@@ -56,8 +54,10 @@ fun Context.shareAAID(aaid: String) {
 fun Context.contactIntent() {
     Intent(
         ACTION_SENDTO,
-        ("mailto:${getString(R.string.mail_to_felipe)}" +
-                "?subject=${getString(R.string.email_subject)}").toUri()
+        (
+            "mailto:${getString(R.string.mail_to_felipe)}" +
+                "?subject=${getString(R.string.email_subject)}"
+            ).toUri(),
     ).apply {
         putExtra(EXTRA_SUBJECT, getString(R.string.email_subject))
         startActivity(createChooser(this, getString(R.string.email_chooser_title)))
