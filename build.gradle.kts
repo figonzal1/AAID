@@ -18,18 +18,6 @@ plugins {
     alias(libs.plugins.com.android.library) apply false
     alias(libs.plugins.compose.compiler) apply false
 
-    //FIREBASE CRASH ANALYTICS
-    alias(libs.plugins.com.google.gms.google.services) apply false
-
-    //Crashlytics Gradle plugin
-    alias(libs.plugins.com.google.firebase.crashlytics) apply false
-
-    // Performance Monitoring plugin
-    alias(libs.plugins.com.google.firebase.firebase.perf) apply false
-
-    //Google maps secrets
-    alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
-
     //Sonaqube
     alias(libs.plugins.org.sonarqube)
 

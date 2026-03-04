@@ -21,8 +21,7 @@
     <string name="cd_settings_button">Asetukset-painike</string>
     <string name="btn_share">Jaa</string>
     <string name="intent_chooser">Jaa AAID</string>
-    <string name="cv_subtitle">Tämän laitteen mainostunnus on:</string>
-    <string name="ads_preference_title">Mainokset</string>
+    <string name="cv_subtitle">Tämän laitteen mainostunnus on:</string>
     <string name="about_preference_title">Noin</string>
     <string name="settings_screen_title">Asetukset</string>
     <string name="about_app_description">AAID-sovellus, saat mainostunnuksesi helposti</string>
@@ -32,8 +31,5 @@
     <string name="email_subject">AAID-kehittäjän yhteystiedot</string>
     <string name="email_chooser_title">Lähetä sähköpostia osoitteella:</string>
     <string name="cd_about">Tietoja osiosta</string>
-    <string name="cd_navigate_up">Navigoi ylös</string>
-    <string name="consent_privacy_preference_title">Suostumuspolitiikka</string>
-    <string name="consent_privacy_preference_subtitle">Henkilökohtainen mainonta</string>
-    <string name="cd_privacy_preference">Mainokset osio</string>
+    <string name="cd_navigate_up">Navigoi ylös</string>
 </resources>

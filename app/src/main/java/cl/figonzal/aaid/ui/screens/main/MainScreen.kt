@@ -15,8 +15,6 @@
 package cl.figonzal.aaid.ui.screens.main
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawing
@@ -38,9 +36,6 @@ fun MainScreen(viewModel: AAIDViewModel, onSettingsClick: () -> Unit) {
         modifier = Modifier.fillMaxSize()
     ) {
         CardAAID(viewModel.state, onSettingsClick)
-        Column(verticalArrangement = Arrangement.Bottom) {
-            BannerView()
-        }
     }
 
 }
@@ -66,9 +61,6 @@ fun PreviewMainScreen() {
                         .windowInsetsPadding(WindowInsets.safeDrawing)
                 ) {
                     CardAAID(AaidState.Success("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")) {}
-                    Column(verticalArrangement = Arrangement.Bottom) {
-                        BannerView()
-                    }
                 }
             }
         }

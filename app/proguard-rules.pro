@@ -27,8 +27,5 @@
 -keep class com.google.android.gms.ads.identifier.** { *; }
 -keep class com.google.android.gms.common.** { *; }
 
-# Firebase Crashlytics
--keep class com.google.firebase.crashlytics.** { *; }
-
 # Timber
 -keep class timber.log.** { *; }

@@ -25,17 +25,12 @@ import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ContactSupport
-import androidx.compose.material.icons.rounded.Policy
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -43,8 +38,6 @@ import cl.figonzal.aaid.BuildConfig
 import cl.figonzal.aaid.R
 import cl.figonzal.aaid.ui.screens.core.BaseContainer
 import cl.figonzal.aaid.ui.theme.AAIDTheme
-import com.google.android.ump.ConsentInformation
-import com.google.android.ump.UserMessagingPlatform
 
 
 @Preview(
@@ -64,7 +57,7 @@ fun PreviewSettingsView() {
             BaseContainer(
                 modifier = Modifier.fillMaxSize()
             ) {
-                SettingsView(onNavigateUp = {}, onDevContact = {}, onPrivacy = {})
+                SettingsView(onNavigateUp = {}, onDevContact = {})
             }
         }
     }
@@ -73,8 +66,7 @@ fun PreviewSettingsView() {
 @Composable
 fun SettingsView(
     onNavigateUp: () -> Unit,
-    onDevContact: () -> Unit,
-    onPrivacy: () -> Unit
+    onDevContact: () -> Unit
 ) {
 
     BaseContainer(
@@ -90,7 +82,7 @@ fun SettingsView(
             modifier = Modifier.fillMaxSize(),
             contentWindowInsets = WindowInsets.systemBars
         ) { padding ->
-            SettingsPreferenceList(onDevContact, onPrivacy, padding)
+            SettingsPreferenceList(onDevContact, padding)
         }
     }
 
@@ -99,56 +91,16 @@ fun SettingsView(
 @Composable
 private fun SettingsPreferenceList(
     onDevContact: () -> Unit,
-    onPrivacy: () -> Unit,
     padding: PaddingValues
 ) {
-
-    val context = LocalContext.current
-    val consentInformation = remember(context) {
-        UserMessagingPlatform.getConsentInformation(context)
-    }
-    val isPrivacyOptionsRequired by remember(consentInformation) {
-        derivedStateOf {
-            consentInformation.privacyOptionsRequirementStatus ==
-                    ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED
-        }
-    }
-
-    val aboutModifier = if (isPrivacyOptionsRequired)
-        Modifier.padding(top = 8.dp, bottom = 8.dp)
-    else
-        Modifier.padding(bottom = 8.dp)
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         content = {
 
-            if (isPrivacyOptionsRequired) {
-                item {
-                    PreferenceCategory(
-                        modifier = Modifier.padding(bottom = 8.dp),
-                        icon = Icons.Rounded.Policy,
-                        title = stringResource(R.string.ads_preference_title),
-                        contentDescription = stringResource(R.string.cd_privacy_preference)
-                    )
-                }
-
-                item {
-                    Preference(
-                        title = stringResource(R.string.consent_privacy_preference_title),
-                        subTitle = stringResource(R.string.consent_privacy_preference_subtitle),
-                        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
-                        isTitlePresent = true,
-                        onClick = onPrivacy
-                    )
-                }
-
-                item { HorizontalDivider() }
-            }
-
             item {
                 PreferenceCategory(
-                    modifier = aboutModifier,
+                    modifier = Modifier.padding(bottom = 8.dp),
                     icon = Icons.AutoMirrored.Rounded.ContactSupport,
                     title = stringResource(R.string.about_preference_title),
                     contentDescription = stringResource(id = R.string.cd_about)

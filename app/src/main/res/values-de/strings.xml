@@ -21,8 +21,7 @@
     <string name="cd_settings_button">Schaltfläche Einstellungen</string>
     <string name="btn_share">Teilen Sie</string>
     <string name="intent_chooser">Teilen Sie AAID</string>
-    <string name="cv_subtitle">Die Werbe-ID für dieses Gerät lautet:</string>
-    <string name="ads_preference_title">Anzeigen</string>
+    <string name="cv_subtitle">Die Werbe-ID für dieses Gerät lautet:</string>
     <string name="about_preference_title">Über</string>
     <string name="settings_screen_title">Einstellungen</string>
     <string name="about_app_description">AAID App, erhalten Sie Ihre Werbe-ID ganz einfach</string>
@@ -32,8 +31,5 @@
     <string name="email_subject">AAID-Entwicklerkontakt</string>
     <string name="email_chooser_title">E-Mail senden mit:</string>
     <string name="cd_about">Abschnitt Über</string>
-    <string name="cd_navigate_up">Navigieren Sie nach oben</string>
-    <string name="consent_privacy_preference_title">Zustimmungspolitik</string>
-    <string name="consent_privacy_preference_subtitle">Personalisierte Werbung</string>
-    <string name="cd_privacy_preference">Abschnitt Anzeigen</string>
+    <string name="cd_navigate_up">Navigieren Sie nach oben</string>
 </resources>

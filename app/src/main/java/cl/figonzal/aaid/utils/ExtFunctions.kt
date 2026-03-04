@@ -14,7 +14,6 @@
 
 package cl.figonzal.aaid.utils
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_SEND
@@ -29,8 +28,6 @@ import android.content.ClipData
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.ClipEntry
 import cl.figonzal.aaid.R
-import com.google.android.ump.UserMessagingPlatform
-import timber.log.Timber
 
 
 fun Context.toast(@StringRes resId: Int) {
@@ -66,9 +63,3 @@ fun Context.contactIntent() {
     }
 }
 
-fun contactPrivacy(activity: Activity) =
-    UserMessagingPlatform.showPrivacyOptionsForm(activity) { formError ->
-        formError?.let {
-            Timber.w("Privacy options form: ${it.message}")
-        }
-    }

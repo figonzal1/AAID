@@ -23,28 +23,23 @@ val gitVersionCode = providers.exec {
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.com.google.gms.google.services)
-    alias(libs.plugins.com.google.firebase.crashlytics)
-    alias(libs.plugins.com.google.firebase.firebase.perf)
-    alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin)
-}
-
-secrets {
-    propertiesFileName = "secrets.properties"
 }
 
 android {
 
+    val keystoreFile = File(rootProject.rootDir, "keys/keystore.properties")
     val prop = Properties().apply {
-        load(FileInputStream(File(rootProject.rootDir, "keys/keystore.properties")))
+        if (keystoreFile.exists()) load(FileInputStream(keystoreFile))
     }
 
     signingConfigs {
         create("aaidsign") {
-            storeFile = file(prop.getProperty("storeFile"))
-            storePassword = prop.getProperty("storePassword").toString()
-            keyPassword = prop.getProperty("keyPassword").toString()
-            keyAlias = prop.getProperty("keyAlias").toString()
+            if (keystoreFile.exists()) {
+                storeFile = file(prop.getProperty("storeFile"))
+                storePassword = prop.getProperty("storePassword").toString()
+                keyPassword = prop.getProperty("keyPassword").toString()
+                keyAlias = prop.getProperty("keyAlias").toString()
+            }
         }
     }
 
@@ -75,7 +70,6 @@ android {
             signingConfig = signingConfigs.getByName("debug")
 
             resValue("string", "app_name", "AAID-debug")
-            resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-3940256099942544/6300978111")
         }
 
         getByName("release") {
@@ -88,7 +82,6 @@ android {
             signingConfig = signingConfigs.getByName("aaidsign")
 
             resValue("string", "app_name", "AAID")
-            resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-6355378855577476/1471561473")
         }
     }
     lint {
@@ -121,16 +114,11 @@ dependencies {
     //Compose navigation
     implementation(libs.androidx.navigation.navigation.compose)
 
-    //ADS
-    implementation(libs.bundles.google.play.ads)
-    implementation(libs.com.google.android.ump)
+    //ADS identifier (AAID lookup only)
+    implementation(libs.com.google.android.gms.play.services.ads.identifier)
 
     //LIFECYCLE
     implementation(libs.androidx.lifecycle.lifecycle.viewmodel.compose)
-
-    //FIREBASE BOM
-    implementation(platform(libs.com.google.firebase.firebase.bom))
-    implementation(libs.bundles.firebase)
 
     //TIMBER
     implementation(libs.com.jakewharton.timber)
