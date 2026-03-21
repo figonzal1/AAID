@@ -27,6 +27,12 @@ jobs:
         with:
           cache: true
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 36
+          build-tools: 36.1.0
+
       - name: Create keystore from secrets
         run: |
           mkdir -p keys
