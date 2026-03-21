@@ -32,8 +32,8 @@ jobs:
       - name: Create secrets.properties
         run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Fix gradlew line endings and permissions
+        run: sed -i 's/\r$//' gradlew && chmod +x gradlew
 
       - name: Spotless check
         run: ./gradlew spotlessCheck
@@ -66,8 +66,8 @@ jobs:
       - name: Create secrets.properties
         run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Fix gradlew line endings and permissions
+        run: sed -i 's/\r$//' gradlew && chmod +x gradlew
 
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
