@@ -22,8 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Java via mise
-        run: mise install
+      - name: Install mise and Java
+        uses: jdx/mise-action@v3
+        with:
+          cache: true
 
       - name: Create secrets.properties
         run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
@@ -32,10 +34,10 @@ jobs:
         run: sed -i 's/\r$//' gradlew && chmod +x gradlew
 
       - name: Spotless check
-        run: mise exec -- ./gradlew spotlessCheck
+        run: ./gradlew spotlessCheck
 
       - name: Android Lint
-        run: mise exec -- ./gradlew lintDebug
+        run: ./gradlew lintDebug
 
       - name: Upload Lint report
         if: always()
@@ -52,8 +54,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Java via mise
-        run: mise install
+      - name: Install mise and Java
+        uses: jdx/mise-action@v3
+        with:
+          cache: true
 
       - name: Create secrets.properties
         run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
@@ -62,7 +66,7 @@ jobs:
         run: sed -i 's/\r$//' gradlew && chmod +x gradlew
 
       - name: Run unit tests
-        run: mise exec -- ./gradlew testDebugUnitTest
+        run: ./gradlew testDebugUnitTest
 
       - name: Upload unit test results
         if: always()
