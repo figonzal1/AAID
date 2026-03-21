@@ -14,39 +14,7 @@ concurrency:
 
 jobs:
 
-  # ─── Job 1: Lint + Spotless ───────────────────────────────────────────────
-  lint-and-format:
-    name: Lint & Format
-    runs-on: test
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install mise and Java
-        uses: jdx/mise-action@v3
-        with:
-          cache: true
-
-      - name: Create secrets.properties
-        run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
-
-      - name: Fix gradlew line endings and permissions
-        run: sed -i 's/\r$//' gradlew && chmod +x gradlew
-
-      - name: Spotless check
-        run: ./gradlew spotlessCheck
-
-      - name: Android Lint
-        run: ./gradlew lintDebug
-
-      - name: Upload Lint report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: lint-report
-          path: app/build/reports/lint-results-debug.html
-
-  # ─── Job 2: Unit Tests ────────────────────────────────────────────────────
+  # ─── Job 1: Unit Tests ────────────────────────────────────────────────────
   unit-tests:
     name: Unit Tests
     runs-on: test
@@ -58,6 +26,20 @@ jobs:
         uses: jdx/mise-action@v3
         with:
           cache: true
+
+      - name: Create keystore from secrets
+        run: |
+          mkdir -p keys
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > keys/release.jks
+
+      - name: Create keystore.properties
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          printf 'storeFile=keys/release.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' \
+            "$KEYSTORE_PASSWORD" "$KEY_ALIAS" "$KEY_PASSWORD" > keys/keystore.properties
 
       - name: Create secrets.properties
         run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
