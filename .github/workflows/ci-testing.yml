@@ -42,11 +42,8 @@ jobs:
           key: gradle-${{ hashFiles('**/*.gradle.kts', 'gradle/libs.versions.toml', 'gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: gradle-
 
-      - name: Set up Ruby and install gems
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
-          bundler-cache: true
+      - name: Install Ruby gems
+        run: bundle install
 
       - name: Create keystore from secrets
         run: |
