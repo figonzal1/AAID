@@ -2,11 +2,9 @@ name: CI - Testing
 
 on:
   push:
-    branches:
-      - 10-feat-ci-testing
+    branches: [dev]
   pull_request:
-    branches:
-      - 10-feat-ci-testing
+    branches: [dev]
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +19,7 @@ jobs:
   # ─── Job 1: Unit Tests ────────────────────────────────────────────────────
   unit-tests:
     name: Unit Tests
-    runs-on: test
+    runs-on: homelab
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
 
     steps:
