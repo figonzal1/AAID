@@ -36,17 +36,22 @@ secrets {
 
 android {
 
+    val keystoreFile = File(rootProject.rootDir, "keys/keystore.properties")
     val prop =
-        Properties().apply {
-            load(FileInputStream(File(rootProject.rootDir, "keys/keystore.properties")))
+        if (keystoreFile.exists()) {
+            Properties().apply { load(FileInputStream(keystoreFile)) }
+        } else {
+            null
         }
 
     signingConfigs {
-        create("aaidsign") {
-            storeFile = file(prop.getProperty("storeFile"))
-            storePassword = prop.getProperty("storePassword").toString()
-            keyPassword = prop.getProperty("keyPassword").toString()
-            keyAlias = prop.getProperty("keyAlias").toString()
+        if (prop != null) {
+            create("aaidsign") {
+                storeFile = file(prop.getProperty("storeFile"))
+                storePassword = prop.getProperty("storePassword").toString()
+                keyPassword = prop.getProperty("keyPassword").toString()
+                keyAlias = prop.getProperty("keyAlias").toString()
+            }
         }
     }
 
@@ -88,7 +93,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
-            signingConfig = signingConfigs.getByName("aaidsign")
+            signingConfig = if (prop != null) signingConfigs.getByName("aaidsign") else null
 
             resValue("string", "app_name", "AAID")
             resValue("string", "ADMOB_ID_BANNER", "ca-app-pub-6355378855577476/1471561473")
