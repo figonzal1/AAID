@@ -12,12 +12,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
 
   # ─── Job 1: Unit Tests ────────────────────────────────────────────────────
   unit-tests:
     name: Unit Tests
     runs-on: test
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
 
     steps:
       - uses: actions/checkout@v4
