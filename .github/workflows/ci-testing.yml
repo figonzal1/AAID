@@ -48,7 +48,9 @@ jobs:
             "$KEYSTORE_PASSWORD" "$KEY_ALIAS" "$KEY_PASSWORD" > keys/keystore.properties
 
       - name: Create secrets.properties
-        run: echo "ADMOB_APP_ID=${{ secrets.ADMOB_APP_ID }}" > secrets.properties
+        run: |
+          printf 'ADMOB_APP_ID=%s\nADMOB_MASTER_KEY=%s\n' \
+            "${{ secrets.ADMOB_APP_ID }}" "${{ secrets.ADMOB_MASTER_KEY }}" > secrets.properties
 
       - name: Create google-services.json
         run: |
