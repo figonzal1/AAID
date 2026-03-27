@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   release-please:
-    runs-on: homelab
+    runs-on: self-hosted
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       tag_name: ${{ steps.release.outputs.tag_name }}
@@ -24,7 +24,7 @@ jobs:
 
       - name: Trigger deploy on new release
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.actions.createWorkflowDispatch({

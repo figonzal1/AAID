@@ -19,19 +19,19 @@ jobs:
   # ─── Job 1: Unit Tests ────────────────────────────────────────────────────
   unit-tests:
     name: Unit Tests
-    runs-on: homelab
+    runs-on: self-hosted
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Install mise and Java
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
         with:
           cache: true
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
         with:
           api-level: 36
           build-tools: 36.1.0
