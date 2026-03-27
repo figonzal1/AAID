@@ -9,17 +9,15 @@
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 26-03-26, 22:40
+ * Last modified: 27-03-26, 16:37
  */
 
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.io.FileInputStream
 import java.util.Properties
 
-val gitVersionCode =
-    providers.exec {
-        commandLine("git", "rev-list", "--count", "HEAD")
-    }.standardOutput.asText.get().trim().toInt()
+val appVersionName = "1.4.1" // x-release-please-version
+val (vMajor, vMinor, vPatch) = appVersionName.split(".").map { it.toInt() }
 
 plugins {
     alias(libs.plugins.com.android.application)
@@ -63,8 +61,8 @@ android {
         applicationId = "cl.figonzal.aaid"
         minSdk = 27
         targetSdk = 36
-        versionCode = gitVersionCode
-        versionName = "1.4.1" // x-release-please-version
+        versionCode = vMajor * 1_000_000 + vMinor * 1_000 + vPatch
+        versionName = appVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
