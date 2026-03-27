@@ -5,11 +5,11 @@
  * Author: Felipe González Alarcón
  * email: felipe.gonzalezalarcon94@gmail.com
  *
- * Copyright (c) 2025
+ * Copyright (c) 2026
  *
  * Project: AAID
  * Module: AAID.app
- * Last modified: 07-03-25, 23:22
+ * Last modified: 26-03-26, 22:40
  */
 
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -47,7 +47,7 @@ android {
     signingConfigs {
         if (prop != null) {
             create("aaidsign") {
-                storeFile = file(prop.getProperty("storeFile"))
+                storeFile = rootProject.file(prop.getProperty("storeFile"))
                 storePassword = prop.getProperty("storePassword").toString()
                 keyPassword = prop.getProperty("keyPassword").toString()
                 keyAlias = prop.getProperty("keyAlias").toString()

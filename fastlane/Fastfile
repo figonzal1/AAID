@@ -64,13 +64,7 @@ platform :android do
     build_android_app(task: "clean")
     build_android_app(
         task: 'bundle',
-        build_type: 'Release',
-        properties: {
-             "android.injected.signing.store.file" => ENV['STORE_FILE'],
-             "android.injected.signing.store.password" => ENV['STORE_PASSWORD'],
-             "android.injected.signing.key.alias" => ENV['KEY_ALIAS'],
-             "android.injected.signing.key.password" => ENV['KEY_PASSWORD'],
-          }
+        build_type: 'Release'
     )
   end
 
