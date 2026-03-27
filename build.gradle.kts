@@ -18,24 +18,26 @@ plugins {
     alias(libs.plugins.com.android.library) apply false
     alias(libs.plugins.compose.compiler) apply false
 
-    //FIREBASE CRASH ANALYTICS
+    // FIREBASE CRASH ANALYTICS
     alias(libs.plugins.com.google.gms.google.services) apply false
 
-    //Crashlytics Gradle plugin
+    // Crashlytics Gradle plugin
     alias(libs.plugins.com.google.firebase.crashlytics) apply false
 
     // Performance Monitoring plugin
     alias(libs.plugins.com.google.firebase.firebase.perf) apply false
 
-    //Google maps secrets
+    // Google maps secrets
     alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
 
-    //Sonaqube
+    // Sonaqube
     alias(libs.plugins.org.sonarqube)
 
-    //Version catalog updater
+    // Version catalog updater
     alias(libs.plugins.com.github.ben.manes.versions)
     alias(libs.plugins.nl.littlerobots.version.catalog.update)
+
+    alias(libs.plugins.com.diffplug.spotless)
 }
 
 versionCatalogUpdate {
@@ -43,6 +45,25 @@ versionCatalogUpdate {
     sortByKey.set(false)
 }
 
+spotless {
+    kotlin {
+        target("**/*.kt")
+        targetExclude("**/build/**/*.kt")
+        ktlint("1.0.1").editorConfigOverride(
+            mapOf(
+                "ktlint_standard_function-naming" to "disabled",
+            ),
+        )
+        trimTrailingWhitespace()
+        indentWithSpaces()
+        endWithNewline()
+    }
+    kotlinGradle {
+        target("**/*.gradle.kts")
+        targetExclude("**/build/**/*.gradle.kts")
+        ktlint()
+    }
+}
 
 // https://github.com/ben-manes/gradle-versions-plugin
 tasks.withType<DependencyUpdatesTask> {

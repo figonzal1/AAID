@@ -23,14 +23,13 @@ import cl.figonzal.aaid.ui.theme.AAIDTheme
 @Composable
 fun BaseContainer(
     modifier: Modifier = Modifier,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
-
     AAIDTheme {
         // A surface container using the 'background' color from the theme
         Surface(
             modifier = modifier,
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) { content() }
     }
 }

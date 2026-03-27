@@ -48,7 +48,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
-import kotlinx.coroutines.launch
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -62,20 +61,23 @@ import cl.figonzal.aaid.ui.theme.AAIDTheme
 import cl.figonzal.aaid.utils.copyToClipBoard
 import cl.figonzal.aaid.utils.shareAAID
 import cl.figonzal.aaid.utils.toast
+import kotlinx.coroutines.launch
 
 @Preview(
-    showBackground = true, name = "CardView Light",
-    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL
+    showBackground = true,
+    name = "CardView Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
 )
 @Preview(
     uiMode = UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL,
-    showBackground = true, name = "CardView Night"
+    showBackground = true,
+    name = "CardView Night",
 )
 @Composable
 fun DefaultCardAAID() {
     AAIDTheme {
         Surface(
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
         ) {
             CardAAID(AaidState.Success("91cf0b4c-578c-4e26-bb5a-10ca1ad1abe1")) {}
         }
@@ -85,14 +87,14 @@ fun DefaultCardAAID() {
 @Composable
 fun CardAAID(
     state: AaidState,
-    onSettingsClick: () -> Unit
+    onSettingsClick: () -> Unit,
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
         Card(modifier = Modifier.fillMaxWidth()) {
             CardContent(state, onSettingsClick)
@@ -103,19 +105,17 @@ fun CardAAID(
 @Composable
 private fun CardContent(
     state: AaidState,
-    onSettingsClick: () -> Unit
+    onSettingsClick: () -> Unit,
 ) {
     Column(
         modifier = Modifier.padding(16.dp),
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Center,
     ) {
-
         val context = LocalContext.current
         val clipboard = LocalClipboard.current
 
-        //Header section
+        // Header section
         Box {
-
             Image(
                 painterResource(R.drawable.undraw_android_jr64),
                 contentDescription = stringResource(R.string.cd_background_image),
@@ -123,44 +123,43 @@ private fun CardContent(
                     .fillMaxWidth()
                     .height(200.dp)
                     .padding(bottom = 16.dp),
-                contentScale = ContentScale.Fit
+                contentScale = ContentScale.Fit,
             )
 
             Column {
                 Text(
                     stringResource(R.string.cv_title),
-                    style = MaterialTheme.typography.headlineMedium
+                    style = MaterialTheme.typography.headlineMedium,
                 )
                 Text(
                     text = "v${BuildConfig.VERSION_NAME}",
                     style = MaterialTheme.typography.bodySmall,
                     fontSize = 10.sp,
-                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
+                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f),
                 )
             }
 
             Column(
                 modifier = Modifier
                     .align(Alignment.TopEnd),
-                verticalArrangement = Arrangement.Top
+                verticalArrangement = Arrangement.Top,
             ) {
-
                 IconButton(
-                    onClick = onSettingsClick
+                    onClick = onSettingsClick,
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.Settings,
-                        contentDescription = stringResource(R.string.cd_settings_button)
+                        contentDescription = stringResource(R.string.cd_settings_button),
                     )
                 }
             }
         }
 
-        //Subtitle
+        // Subtitle
         Text(
             text = stringResource(R.string.cv_subtitle),
             style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
         )
 
         when (state) {
@@ -168,7 +167,7 @@ private fun CardContent(
                 CircularProgressIndicator(
                     modifier = Modifier
                         .padding(bottom = 32.dp)
-                        .align(Alignment.CenterHorizontally)
+                        .align(Alignment.CenterHorizontally),
                 )
             }
 
@@ -177,7 +176,7 @@ private fun CardContent(
                     text = state.message,
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.padding(bottom = 32.dp)
+                    modifier = Modifier.padding(bottom = 32.dp),
                 )
             }
 
@@ -187,7 +186,7 @@ private fun CardContent(
                     style = MaterialTheme.typography.labelLarge,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(bottom = 32.dp)
+                    modifier = Modifier.padding(bottom = 32.dp),
                 )
                 ActionsButtons(context, clipboard, state.aaid)
             }
@@ -197,23 +196,21 @@ private fun CardContent(
 
 @Composable
 private fun ActionsButtons(context: Context, clipboard: Clipboard, aaid: String) {
-
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.Bottom,
-        horizontalArrangement = Arrangement.End
+        horizontalArrangement = Arrangement.End,
     ) {
         ClipBoardButton(context, clipboard, aaid)
         ShareButton(context, clipboard, aaid)
     }
 }
 
-
 @Composable
 private fun ClipBoardButton(
     context: Context,
     clipboard: Clipboard,
-    aaid: String
+    aaid: String,
 ) {
     val scope = rememberCoroutineScope()
     Button(
@@ -224,7 +221,7 @@ private fun ClipBoardButton(
             }
         },
         contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
-        modifier = Modifier.padding(end = 8.dp)
+        modifier = Modifier.padding(end = 8.dp),
     ) {
         Icon(Icons.Rounded.ContentCopy, stringResource(R.string.cd_copy_btn))
         Spacer(Modifier.size(ButtonDefaults.IconSpacing))
@@ -236,7 +233,7 @@ private fun ClipBoardButton(
 private fun ShareButton(
     context: Context,
     clipboard: Clipboard,
-    aaid: String
+    aaid: String,
 ) {
     val scope = rememberCoroutineScope()
     Button(
@@ -246,7 +243,7 @@ private fun ShareButton(
                 context.shareAAID(aaid)
             }
         },
-        contentPadding = ButtonDefaults.ButtonWithIconContentPadding
+        contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
     ) {
         Icon(Icons.Rounded.Share, stringResource(R.string.cd_share_id_btn))
         Spacer(Modifier.size(ButtonDefaults.IconSpacing))

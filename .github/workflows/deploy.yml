@@ -1,0 +1,88 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+
+  # ─── Build & Deploy to Google Play ────────────────────────────────────────
+  deploy:
+    name: Build & Deploy to Google Play
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install mise and Java
+        uses: jdx/mise-action@v4
+        with:
+          cache: true
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          api-level: 36
+          build-tools: 36.1.0
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.gradle/build-cache
+          key: gradle-${{ hashFiles('**/*.gradle.kts', 'gradle/libs.versions.toml', 'gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: gradle-
+
+      - name: Cache Bundler gems
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: bundler-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: bundler-
+
+      - name: Install Ruby gems
+        run: bundle install --path vendor/bundle
+
+      - name: Create keystore from secrets
+        run: |
+          mkdir -p keys
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > keys/release.jks
+
+      - name: Create keystore.properties
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          printf 'storeFile=keys/release.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' \
+            "$KEYSTORE_PASSWORD" "$KEY_ALIAS" "$KEY_PASSWORD" > keys/keystore.properties
+
+      - name: Create secrets.properties
+        run: |
+          printf 'ADMOB_APP_ID=%s\nADMOB_MASTER_KEY=%s\n' \
+            "${{ secrets.ADMOB_APP_ID }}" "${{ secrets.ADMOB_MASTER_KEY }}" > secrets.properties
+
+      - name: Create google-services.json
+        run: |
+          echo "${{ secrets.GOOGLE_SERVICES_BASE64 }}" | base64 --decode > app/google-services.json
+
+      - name: Create Google Play service account key
+        run: |
+          echo "${{ secrets.FASTLANE_GOOGLE_PLAY_KEY_BASE64 }}" | base64 --decode > fastlane/google-play-fastlane.json
+
+      - name: Fix gradlew line endings and permissions
+        run: sed -i 's/\r$//' gradlew && chmod +x gradlew
+
+      - name: Build signed release AAB
+        run: bundle exec fastlane release
+
+      - name: Upload to Google Play
+        run: bundle exec fastlane googleplay

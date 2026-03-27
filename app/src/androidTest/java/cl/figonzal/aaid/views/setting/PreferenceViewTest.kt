@@ -30,7 +30,6 @@ class PreferenceViewTest {
 
     @Test
     fun preference_whenTitleIsPresent_showsTitleAndSubtitle() {
-
         composeTestRule.setContent {
             Preference(title = "Test title", subTitle = "test subtitle", isTitlePresent = true) {}
         }
@@ -46,7 +45,6 @@ class PreferenceViewTest {
 
     @Test
     fun preference_whenTitleIsAbsent_showsOnlySubtitle() {
-
         composeTestRule.setContent {
             Preference(title = "Test title", subTitle = "test subtitle", isTitlePresent = false) {}
         }
@@ -62,7 +60,6 @@ class PreferenceViewTest {
 
     @Test
     fun preference_click_invokesCallback() {
-
         var clicked = false
 
         composeTestRule.setContent {
@@ -70,7 +67,7 @@ class PreferenceViewTest {
                 title = "Test title",
                 subTitle = "test subtitle",
                 isTitlePresent = true,
-                onClick = { clicked = true }
+                onClick = { clicked = true },
             )
         }
 

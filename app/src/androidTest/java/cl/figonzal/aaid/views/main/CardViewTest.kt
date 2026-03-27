@@ -37,7 +37,6 @@ class CardViewTest {
 
     @Test
     fun cardView_successState_verifyResources() {
-
         composeTestRule.setContent {
             CardAAID(state = AaidState.Success(FAKE_AAID)) { }
         }
@@ -77,7 +76,6 @@ class CardViewTest {
 
     @Test
     fun cardView_loadingState_hidesActionButtons() {
-
         composeTestRule.setContent {
             CardAAID(state = AaidState.Loading) { }
         }
@@ -103,7 +101,6 @@ class CardViewTest {
 
     @Test
     fun cardView_errorState_showsErrorMessageAndHidesActionButtons() {
-
         val errorMessage = "GMS not available"
 
         composeTestRule.setContent {

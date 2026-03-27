@@ -31,7 +31,7 @@ sealed interface AaidState {
 }
 
 class AAIDViewModel(
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : ViewModel() {
 
     var state: AaidState by mutableStateOf(AaidState.Loading)
