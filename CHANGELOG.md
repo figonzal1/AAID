@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/figonzal1/AAID/compare/v1.4.0...v1.4.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* resolve release signing failures in CI and local builds ([a711802](https://github.com/figonzal1/AAID/commit/a711802cef494695eaf289195b61bfd7c8016158))
+
 ## [1.4.0](https://github.com/figonzal1/AAID/compare/v1.3.0...v1.4.0) (2026-03-27)
 
 
