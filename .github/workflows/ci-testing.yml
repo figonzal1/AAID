@@ -19,7 +19,7 @@ jobs:
   # ─── Job 1: Unit Tests ────────────────────────────────────────────────────
   unit-tests:
     name: Unit Tests
-    runs-on: homelab
+    runs-on: self-hosted
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
 
     steps:

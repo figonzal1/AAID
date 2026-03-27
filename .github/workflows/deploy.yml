@@ -15,7 +15,7 @@ jobs:
   # ─── Build & Deploy to Google Play ────────────────────────────────────────
   deploy:
     name: Build & Deploy to Google Play
-    runs-on: homelab
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v6
